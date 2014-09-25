@@ -106,7 +106,7 @@ void initMPU6050()
 	
 	//DLPF
 	sendbuffer[0] = MPU6050_RA_CONFIG; //Registeradresse 0x1a
-	sendbuffer[1] = MPU6050_DLPF_CFG_42HZ;	//EXT_SYNC_SET = 0, Digital Low Pass Filter
+	sendbuffer[1] = MPU6050_DLPF_CFG_20HZ;	//EXT_SYNC_SET = 0, Digital Low Pass Filter
 	TWI_MasterWrite(&twiMaster, SLAVE_ADDRESS, &sendbuffer[0], 2);
 	while (twiMaster.status != TWIM_STATUS_READY){}
 }

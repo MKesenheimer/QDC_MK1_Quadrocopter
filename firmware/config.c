@@ -21,24 +21,22 @@
 void configFirstRun()
 {
       //TODO: Aendern!
-	conf.KP[ROLL] = 26; //40 //Roll Bewegung (Drehung um x-Achse)
-	conf.KI[ROLL] = 200; //30
-	conf.KD[ROLL] = 7; //23
+	conf.KP[ROLL] = 145; //40 //Roll Bewegung (Drehung um x-Achse)
+	conf.KI[ROLL] = 130; //30
+	conf.KD[ROLL] = 50; //23
 	
-	conf.KP[PITCH] = 26; //40 //Nick Bewegung (Drehung um y-Achse)
-	conf.KI[PITCH] = 200; //30
-	conf.KD[PITCH] = 7; //23
-	
-	
-	conf.KP[YAW] = 40; //90 //Gier Bewegung (Drehung um z-Achse)
-	conf.KI[YAW] = 25; //65
+	conf.KP[PITCH] = 145; //40 //Nick Bewegung (Drehung um y-Achse)
+	conf.KI[PITCH] = 130; //30
+	conf.KD[PITCH] = 50; //23
+      
+	conf.KP[YAW] = 90; //90 //Gier Bewegung (Drehung um z-Achse)
+	conf.KI[YAW] = 60; //65
 	conf.KD[YAW] = 0;  //0
 	
-	conf.KP[7] = 70; //70 
-	conf.KI[7] = 10;	//10
-	conf.KD[7] = 100; //100
-	
-	
+      conf.KP[PIDLEVEL] = 0;
+      conf.KI[PIDLEVEL] = 0;
+      conf.KD[PIDLEVEL] = 0;
+      
 	conf.rcRate8 = 90; 
 	conf.rcExpo8 = 65;
 	conf.rollPitchRate = 0;
@@ -50,12 +48,6 @@ void configFirstRun()
 	
 	conf.angleTrim[0] = 0;
 	conf.angleTrim[1] = 0;
-    
-      #ifdef GYRO_SMOOTHING
-      conf.Smoothing[3] = GYRO_SMOOTHING;
-      #endif
-    
-	conf.checkNewConf = EEPROM_CONF_VERSION;
 }
 
 void config()
@@ -64,7 +56,7 @@ void config()
 	//Wenn das Programm auf den Mikrokontroller zum ersten mal geladen wird,
 	//mŸssen die Startwerte ins EEprom von Hand mit folgendem Code geschrieben werden.
 	//Dieser Code muss mit dem Setzen von FIRST_RUN auf 0 bei jedem nŠchsten
-	//Mal auskommentiert werden. Gleichzeitig kann mit FIRST_RUN = 1 das Eprom
+	//Mal auskommentiert werden. Gleichzeitig kann mit FIRST_RUN = 1 das EEprom
 	//auf die Startwerte zurŸckgesetzt werden.
 	
 	#if FIRST_RUN == 1
@@ -75,14 +67,10 @@ void config()
 	
 	EEpromReadBlock(&conf, (void*)&startAd, sizeof(conf));
 	
-	/* Ablauf mit Eprom
-	 sobald von der GUI andere Configwerte empfangen werden conf.checkNewConf++ und die neuen Werte gleich ins Eprom schreiben.
-	 das nŠchste mal, wenn beim Starten config() aufgerufen wird, wird die erste Abfrage Ÿbersprungen und 
-	 if conf.checkNewConf >= conf.versionNumber
-	*/
-	
 	uint8_t i;
 	for (i=0; i<8;i++)
-		rcData[i] = 0; //Startwerte setzen
+		rcData[i] = (RCMIN+RCMAX)/2; //Startwerte setzen
+      
+      rcData[THROTTLE] = RCMIN;
 }
 

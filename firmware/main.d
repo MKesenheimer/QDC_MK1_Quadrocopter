@@ -6,8 +6,8 @@ main.d main.o: main.c /opt/local/avr/include/stdlib.h \
  /opt/local/avr/include/stdint.h /opt/local/avr/include/avr/iox32a4.h \
  /opt/local/avr/include/avr/portpins.h \
  /opt/local/avr/include/avr/common.h /opt/local/avr/include/avr/version.h \
- /opt/local/avr/include/avr/fuse.h /opt/local/avr/include/avr/lock.h \
- /opt/local/avr/include/util/delay.h \
+ /opt/local/avr/include/avr/xmega.h /opt/local/avr/include/avr/fuse.h \
+ /opt/local/avr/include/avr/lock.h /opt/local/avr/include/util/delay.h \
  /opt/local/avr/include/util/delay_basic.h /opt/local/avr/include/math.h \
  /opt/local/avr/include/string.h avr_compiler.h \
  /opt/local/lib/gcc/avr/4.9.1/include/stdbool.h \
@@ -38,6 +38,8 @@ main.d main.o: main.c /opt/local/avr/include/stdlib.h \
 /opt/local/avr/include/avr/common.h:
 
 /opt/local/avr/include/avr/version.h:
+
+/opt/local/avr/include/avr/xmega.h:
 
 /opt/local/avr/include/avr/fuse.h:
 

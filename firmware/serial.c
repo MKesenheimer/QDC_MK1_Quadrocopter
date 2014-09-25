@@ -37,6 +37,7 @@ void changeConfig()
 {	
 	//neue Daten gleich ins EEPROM schreiben
 	EEpromWriteBlock(&conf, (void*)&startAd, sizeof(conf));
+      EEpromReadBlock(&conf, (void*)&startAd, sizeof(conf));
 }
 
 void send16(int16_t a)

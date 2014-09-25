@@ -26,8 +26,8 @@
 #define AUX1       4
 #define AUX2       5
 #define AUX3       6
-#define PIDLEVEL   7
 #define AUX4       7
+#define PIDLEVEL   7
 #define PIDITEMS   4
 
 //Senden und Empfangen
@@ -46,7 +46,7 @@ static uint8_t before = 0;
 static uint8_t whichPIDToSend = 0;
 static uint8_t motorsActive = 0;
 
-//Konfigurationsvariablen, ggf ins EEPROM zur Speicherung schreiben
+//Konfigurationsvariablen
 static struct
 {
 	uint8_t checkNewConf;
@@ -64,8 +64,7 @@ static struct
 } conf;
 
 static uint8_t EEMEM startAd[sizeof(conf)];
-#define FIRST_RUN 0 //auf Null setzen, wenn das Programm zum ersten Mal auf den QDC geladen wurde. Ist nur dazu da, das EEPROM zu initialiseren/formatieren. vielleicht kann man das auch irgendwie anders lösen!
-#define EEPROM_CONF_VERSION 1
+#define FIRST_RUN 0 //auf Eins setzen, wenn das Programm zum ersten Mal auf den QDC geladen wird. Ist nur dazu da, das EEPROM zu initialiseren/formatieren.
 
 // WATCHDOG
 #define WATCHDOG_TIMEOUT WDT_PER_1KCLK_gc
@@ -81,7 +80,7 @@ static uint8_t EEMEM startAd[sizeof(conf)];
 #define BAUD_PRESCALED1 ((F_CPU / ((int16_t)(pow (2.0, USART_BSCALED1)) * (USART_BAUDRATED1 * 16UL)))  - 1)
 
 //DEBUG
-static float debug[10];
+//static float debug[10];
 static uint32_t meanTime = 0;
 static uint32_t sumTime = 0;
 static int num = 0;
@@ -92,7 +91,7 @@ static uint32_t ms10 = 0;
 static uint32_t currentTime = 0;
 static uint32_t previousTime = 0;
 static uint16_t cycleTime = 0;
-static float dt = 0.0025; //sec
+static float dt = 0.00125; //sec
 static uint8_t a = 0; //Laufvariable für die _delay_loop2
 
 //I2C Einstellungen für MPU6050

@@ -1,5 +1,4 @@
-/* 
- /*
+/*
  QDC MK1 v1.0 - September 2014
  http://deralchemist.wordpress.com/
  Copyright (c) 2014 Matthias Kesenheimer.  All rights reserved.
