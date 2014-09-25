@@ -17,3 +17,11 @@ Erzeugen der GUI QuadroCalibration:
 Sonstiges:
 - der Quadrocopter muss über die serielle Schnittstelle USARTD1 mit dem Computer verbunden werden. Dazu bietet sich ein Arduino an, der standardmäßig ein USB-zu-Seriell-Konverter besitzt. Wichtig: Pegel von 3.3V nicht überschreiten!
 - an der seriellen Schnittstelle USARTD0 muss der RC-Empfänger angeschlossen werden (nicht im SChaltplan verzeichnet). In dieser Software Version wird ein DSM2 fähiger Deltang rx31b-K1 verwendet.
+
+Der Quadrocopter lässt sich über die Hebelstellung der Fernsteuerung scharfstellen (Motoren an/aus) und neu initialisieren (Selbstkalibrierung von GYRO und ACCELEROMETER). Siehe dazu main.c 
+
+Bekannte Fehler
+---------------
+- kein Failsafe implementiert
+- keine Spannungsüberwachung
+- PID-Werte noch nicht optimal
