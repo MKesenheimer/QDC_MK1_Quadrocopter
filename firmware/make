@@ -1,0 +1,5 @@
+#!/bin/sh
+make clean
+avr-gcc -funsigned-char -funsigned-bitfields -O1 -w -fpack-struct -fshort-enums -g2 -c -std=gnu99 -MD -MP -MF "main.d" -MT"main.d" -MT"main.o"  -mmcu=atxmega32a4 -o"main.o" main.c
+avr-gcc -o main.elf  main.o -Wl,-Map="main.map" -Wl,--start-group -Wl,-lm  -Wl,--end-group  -mmcu=atxmega32a4
+avr-objcopy -O ihex -R .eeprom -R .fuse -R .lock -R .signature  "main.elf" "main.hex"

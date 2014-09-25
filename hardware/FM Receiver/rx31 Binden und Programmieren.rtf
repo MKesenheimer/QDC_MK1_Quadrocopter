@@ -1,0 +1,87 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14660\viewh11860\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\b\fs24 \cf0 Binden und Programmieren von rx31 (RX, Receiver) und DX6i (TX, Transmitter)
+\b0 \
+\
+
+\b Binden
+\b0 \
+Um RX und TX zu Binden, muss die LED vom RX schnell blinken. Dazu sch\'e4lt man den RX ein und wartet mehrere Minuten. Das anf\'e4ngliche langsame Blinken der LED geht nun in ein schnelles Blinken \'fcber und der RX ist bereit mit einem TX verbunden zu werden. Jetzt kann der TX mit gedr\'fcckter Trainer-Taste eingeschaltet werden, was das Binden von RX und TX einleitet.\
+\
+
+\b Programmieren
+\b0 \
+Es gibt f\'fcr den Receiver rx31 mehrere M\'f6glichkeiten die empfangenen Rc-Werte auszugeben. Um zwischen den Modi zu wechseln, muss der RX umprogrammiert werden. Das Programmieren kann nach dem Binden von RX und TX wie folgt eingeleitet werden:\
+- RX ausschalten (von Spannungsquelle trennen)\
+- TX einschalten\
+- rechten und linken Steuerkn\'fcppel in die Mitte dr\'fccken (d.h. YAW nach rechts und ROLL nach links)\
+- RX einschalten, w\'e4hrend die Steuerkn\'fcppel in die Mitte gedr\'fcckt werden, blinkt die LED des RX sehr schnell, das Programmieren ist bereit.\
+\
+
+\b Es gibt zwei Programm Level
+\b0 \
+
+\b \ul Level 1: 
+\b0 Low Voltage Cutoff (brushed ESC only)\ulnone \
+1x pro Sekunde Blinken: Disabled\
+2x pro Sekunde Blinken: Enabled (Default)\
+\
+
+\b \ul Level 2: 
+\b0 Servo/Sum-PPM outputs\ulnone \
+1x pro Sekunde Blinken: Sum-PPM on Pin3\
+2x pro Sekunde Blinken: Serial Data on Pin3\
+3x pro Sekunde Blinken: Servo outputs on all pads (Default)\
+\
+Der RX zeigt nun seine derzeitige Konfiguration des ersten Programm Levels an. Blinkt er nach dem Einleiten der Programmieren ein mal pro Sekunde, hei\'dft das, dass die Option Low Voltage Cutoff ausgeschaltet ist. Blinkt er zwei mal pro Sekunde ist die Option Low Voltage Cutoff eingeschaltet. Die derzeitige Option kann entweder mit dem rechten Steuerkn\'fcppel nach oben (NICK nach oben) akzeptiert oder mit dem rechten Steuerkn\'fcppel nach unten (NICK nach unten) verweigert werden. Wird die Option akzeptiert, geht der RX zum zweiten Level \'fcber und zeigt dort seine Konfiguration mit der entsprechenden Anzahl von Blinken pro Sekunde an. Wird die derzeitige Option allerdings verweigert, wechselt der RX zur n\'e4chsten Option, die entweder akzeptiert (weiter zum n\'e4chsten Level) oder verweigert werden kann (weiter zur n\'e4chsten Option des derzeitigen Levels).\
+\
+
+\b Beispiel:\
+
+\b0 Der RX befindet sich im Werkszustand, d.h. er blinkt im ersten Level zwei mal pro Sekunde und im zweiten Level drei mal pro Sekunde.\
+Nun soll die folgende Konfiguration eingestellt werden:\
+- Low Voltage Cutoff disabled\
+- Serial on Pin3\
+Nach dem Starten des Programmiervorgangs blinkt der RX zwei mal pro Sekunden (Low Voltage Cutoff enabled). Diese Option verweigert man mit dem rechten Kn\'fcppel nach unten, weshalb der RX nun zur n\'e4chsten Option wechselt, was daran zu erkennen ist, dass der RX nur noch ein mal pro Sekunde blinkt (Low Voltage Cutoff disabled). Akzeptiert man mit dem rechten Steuerkn\'fcppel nach oben, wechselt der RX zum zweiten Programm Level und blinkt drei mal pro Sekunde. Nachdem der rechte Steuerkn\'fcppel zwei mal nach unten gedr\'fcckt wurde, ist die Option 2 ausgew\'e4hlt (Serial on Pin3) und der RX blinkt zwei mal pro Sekunde. Akzeptiert man mit dem Steuerkn\'fcppel nach oben, wird die LED statisch und das Programmieren ist beendet.\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\b \cf0 Kurzversion Serial on Pin3
+\b0 :\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 (rechter Steuerkn\'fcppel nach oben H, rechter Steuerkn\'fcppel nach unten L)
+\b \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 Level 1:
+\b0 \
+2x Blinken: L\
+1x Blinken: H (Low Voltage Cutoff disabled)\
+->
+\b  Level 2:
+\b0 \
+3x Blinken: L\
+1x Blinken: L\
+2x Blinken: H (Serial on Pin3)\
+-> LED statisch\
+\
+
+\b Kurzversion SUM-PPM on Pin3:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0 Level 1:
+\b0 \
+2x Blinken: L\
+1x Blinken: H (Low Voltage Cutoff disabled)\
+-> 
+\b Level 2:\
+
+\b0 3x Blinken: L\
+1x Blinken: H (SUM-PPM on Pin3)\
+-> LED statisch\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+\cf0  \
+}

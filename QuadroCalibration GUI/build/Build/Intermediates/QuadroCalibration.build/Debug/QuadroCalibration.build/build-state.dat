@@ -1,0 +1,482 @@
+TQuadroCalibration
+v6
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Info.plist /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Resources/QuadroCalibration-Info.plist
+cProcessPCH /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/PrecompiledHeaders/QuadroCalibration-Prefix-gmcnspfkihonjfglctaqpwpbfoeo/QuadroCalibration-Prefix.pch.pch Sources/QuadroCalibration-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/main.o /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/AppDelegate.o /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/QuadroCalibrationAppController.o /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/QuadroCalibrationAppController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPort.o /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/ORSSerialPort.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPortManager.o /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/ORSSerialPortManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/MacOS/QuadroCalibration normal x86_64
+cCopyStringsFile /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources/en.lproj/InfoPlist.strings Resources/en.lproj/InfoPlist.strings
+cCompileXIB /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Resources/en.lproj/MainMenu.xib
+cCpResource Untitled-1.icns /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources/Untitled-1.icns
+cTouch /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk
+c000000005243E79F00000000000000AA
+t1380181919
+s170
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/SDKSettings.plist
+c0000000052BAC993000000000000044C
+t1387973011
+s1100
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/CoreServices/SystemVersion.plist
+c0000000052BAC99300000000000001DB
+t1387973011
+s475
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework/Cocoa
+c0000000052BAC994000000000000253C
+t1387973012
+s9532
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/IOKit
+c0000000052BAC9960000000000044270
+t1387973014
+s279152
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c0000000052BAC9990000000000054D00
+t1387973017
+s347392
+
+N/Library/Frameworks/CorePlot.framework/CorePlot
+c00000000524715AC00000000000F19E0
+t1380390316
+s989664
+
+N/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Resources/QuadroCalibration-Info.plist
+c00000000520F8BB80000000000000466
+t1376750520
+s1126
+
+N/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Resources/en.lproj/InfoPlist.strings
+c0000000050C80910000000000000002D
+t1355286800
+s45
+
+N/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Resources/en.lproj/MainMenu.xib
+c000000005300F895000000000002500A
+t1392572565
+s151562
+
+N/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/AppDelegate.m
+c00000000516FE4A40000000000000164
+t1366287524
+s356
+
+N/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/ORSSerialPort.m
+c000000005300F81A0000000000005648
+t1392572442
+s22088
+
+N/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/ORSSerialPortManager.m
+c0000000050C8091000000000000031DB
+t1355286800
+s12763
+
+N/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/QuadroCalibration-Prefix.pch
+c0000000050C8091000000000000000A2
+t1355286800
+s162
+
+N/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/QuadroCalibrationAppController.m
+c0000000052A43E00000000000000AFDD
+t1386495488
+s45021
+
+N/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/main.m
+c0000000050C809100000000000000546
+t1355286800
+s1350
+
+N/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Untitled-1.icns
+c00000000520F89F0000000000002F5B7
+t1376750064
+s193975
+
+N/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/PrecompiledHeaders/QuadroCalibration-Prefix-gmcnspfkihonjfglctaqpwpbfoeo/QuadroCalibration-Prefix.pch.pch
+t1392572644
+s13701020
+
+N/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/AppDelegate.o
+t1392572644
+s30720
+
+N/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPort.o
+t1392572645
+s104928
+
+N/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPortManager.o
+t1392572645
+s52916
+
+N/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/QuadroCalibration.LinkFileList
+c000000005300F8E2000000000000043B
+t1392572642
+s1083
+
+N/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/QuadroCalibrationAppController.o
+t1392572645
+s266672
+
+N/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/main.o
+t1392572644
+s2856
+
+N/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app
+t1392572642
+s102
+
+N/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Info.plist
+t1392572642
+s1516
+
+N/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/MacOS/QuadroCalibration
+t1392572646
+s233600
+
+N/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/PkgInfo
+t1392572642
+s8
+
+N/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources/Untitled-1.icns
+t1392572646
+s193975
+
+N/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources/en.lproj/InfoPlist.strings
+t1392572646
+s92
+
+N/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources/en.lproj/MainMenu.nib
+t1392572646
+s69318
+
+CBuild AST from /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/AppDelegate.m
+r0
+
+CBuild AST from /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/ORSSerialPort.m
+r0
+
+CBuild AST from /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/ORSSerialPortManager.m
+r0
+
+CBuild AST from /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/QuadroCalibrationAppController.m
+r0
+
+CBuild AST from /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/main.m
+r0
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies4fcc5a6230b1b841^9e24716230b1b841^---0#1#1#--18"Check dependencies36"2958FEB9-8165-4931-AD71-3AF79A115BE3-
+
+CCompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/AppDelegate.o /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s414265444.686610
+e414265444.860670
+r1
+xCompileC
+x/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/AppDelegate.o
+x/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/AppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/AppDelegate.m
+d/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/AppDelegate.h
+d/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/ORSSerialPortManager.h
+d/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/ORSSerialPort.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection119"Compile /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/AppDelegate.m312"CompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/AppDelegate.o Sources/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler7fdfaf6430b1b841^bc58dc6430b1b841^---0#0#1#-19%DVTDocumentLocation2@126"file:///Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration%20QDC%20MK%20I/QuadroCalibration%20Main/Sources/AppDelegate.m0000000000000000^4260"CompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/AppDelegate.o Sources/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-sign-conversion -iquote /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-generated-files.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-own-target-headers.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-all-target-headers.hmap -iquote /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-project-headers.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/DerivedSources/x86_64 -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/DerivedSources -F/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug -F/Library/Frameworks -include /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/PrecompiledHeaders/QuadroCalibration-Prefix-gmcnspfkihonjfglctaqpwpbfoeo/QuadroCalibration-Prefix.pch -MMD -MT dependencies -MF /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/AppDelegate.d --serialize-diagnostics /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/AppDelegate.dia -c /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/AppDelegate.m -o /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/AppDelegate.o36"DE2AE8DF-8565-4654-87A2-1350473CD168-
+b8255E887-FEC8-48F8-9ADC-44201E1F0E6D
+
+CCompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPort.o /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/ORSSerialPort.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s414265444.860983
+e414265445.039140
+r1
+xCompileC
+x/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPort.o
+x/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/ORSSerialPort.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/ORSSerialPort.m
+d/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/ORSSerialPort.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Compile /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/ORSSerialPort.m316"CompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPort.o Sources/ORSSerialPort.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler9085dc6430b1b841^ef560a6530b1b841^---0#0#1#-19%DVTDocumentLocation2@128"file:///Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration%20QDC%20MK%20I/QuadroCalibration%20Main/Sources/ORSSerialPort.m0000000000000000^4272"CompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPort.o Sources/ORSSerialPort.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-sign-conversion -iquote /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-generated-files.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-own-target-headers.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-all-target-headers.hmap -iquote /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-project-headers.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/DerivedSources/x86_64 -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/DerivedSources -F/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug -F/Library/Frameworks -include /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/PrecompiledHeaders/QuadroCalibration-Prefix-gmcnspfkihonjfglctaqpwpbfoeo/QuadroCalibration-Prefix.pch -MMD -MT dependencies -MF /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPort.d --serialize-diagnostics /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPort.dia -c /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/ORSSerialPort.m -o /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPort.o36"30A95C25-FD8D-4F09-9726-4CC14BB9205A-
+b8255E887-FEC8-48F8-9ADC-44201E1F0E6D
+
+CCompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPortManager.o /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/ORSSerialPortManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s414265445.039493
+e414265445.137704
+r1
+xCompileC
+x/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPortManager.o
+x/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/ORSSerialPortManager.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/ORSSerialPortManager.m
+d/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/ORSSerialPortManager.h
+d/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/ORSSerialPort.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection128"Compile /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/ORSSerialPortManager.m330"CompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPortManager.o Sources/ORSSerialPortManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler583b0a6530b1b841^1841236530b1b841^---0#0#1#-19%DVTDocumentLocation2@135"file:///Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration%20QDC%20MK%20I/QuadroCalibration%20Main/Sources/ORSSerialPortManager.m0000000000000000^4314"CompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPortManager.o Sources/ORSSerialPortManager.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-sign-conversion -iquote /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-generated-files.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-own-target-headers.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-all-target-headers.hmap -iquote /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-project-headers.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/DerivedSources/x86_64 -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/DerivedSources -F/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug -F/Library/Frameworks -include /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/PrecompiledHeaders/QuadroCalibration-Prefix-gmcnspfkihonjfglctaqpwpbfoeo/QuadroCalibration-Prefix.pch -MMD -MT dependencies -MF /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPortManager.d --serialize-diagnostics /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPortManager.dia -c /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/ORSSerialPortManager.m -o /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPortManager.o36"5FD19E05-ECDB-49AE-9A3A-2A351BA8CA80-
+b8255E887-FEC8-48F8-9ADC-44201E1F0E6D
+
+CCompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/QuadroCalibrationAppController.o /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/QuadroCalibrationAppController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s414265444.809271
+e414265445.236871
+r1
+xCompileC
+x/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/QuadroCalibrationAppController.o
+x/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/QuadroCalibrationAppController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/QuadroCalibrationAppController.m
+d/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/QuadroCalibrationAppController.h
+d/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/ORSSerialPort.h
+d/Library/Frameworks/CorePlot.framework/Headers/CorePlot.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTAnimation.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTAnimationOperation.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTDefinitions.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTAnimationPeriod.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTAnnotation.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTAnnotationHostLayer.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTLayer.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTResponder.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTPlatformSpecificDefines.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTAxis.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTTextStyle.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTTextStylePlatformSpecific.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTAxisLabel.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTAxisSet.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTAxisTitle.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTBarPlot.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTPlot.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTNumericDataType.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTBorderedLayer.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTCalendarFormatter.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTColor.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTColorSpace.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTConstraints.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTDecimalNumberValueTransformer.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTExceptions.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTFill.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTFunctionDataSource.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTGradient.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTGraph.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTImage.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTLayerAnnotation.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTLegend.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTLegendEntry.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTLimitBand.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTLineCap.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTLineStyle.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTMutableLineStyle.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTMutableNumericData.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTNumericData.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTMutableNumericData+TypeConversion.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTMutablePlotRange.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTPlotRange.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTMutableShadow.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTShadow.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTMutableTextStyle.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTNumericData+TypeConversion.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTPieChart.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTPlatformSpecificFunctions.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTPlatformSpecificCategories.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTPathExtensions.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTPlotArea.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTPlotAreaFrame.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTPlotSpace.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTPlotSpaceAnnotation.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTPlotSymbol.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTRangePlot.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTScatterPlot.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTTextLayer.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTTradingRangePlot.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTTheme.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTTimeFormatter.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTUtilities.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTXYAxis.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTXYAxisSet.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTXYGraph.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTXYPlotSpace.h
+d/Library/Frameworks/CorePlot.framework/Headers/CPTGraphHostingView.h
+d/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/ORSSerialPortManager.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection138"Compile /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/QuadroCalibrationAppController.m350"CompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/QuadroCalibrationAppController.o Sources/QuadroCalibrationAppController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler3256cf6430b1b841^37a53c6530b1b841^---0#0#1#-19%DVTDocumentLocation2@145"file:///Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration%20QDC%20MK%20I/QuadroCalibration%20Main/Sources/QuadroCalibrationAppController.m0000000000000000^4374"CompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/QuadroCalibrationAppController.o Sources/QuadroCalibrationAppController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-sign-conversion -iquote /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-generated-files.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-own-target-headers.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-all-target-headers.hmap -iquote /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-project-headers.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/DerivedSources/x86_64 -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/DerivedSources -F/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug -F/Library/Frameworks -include /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/PrecompiledHeaders/QuadroCalibration-Prefix-gmcnspfkihonjfglctaqpwpbfoeo/QuadroCalibration-Prefix.pch -MMD -MT dependencies -MF /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/QuadroCalibrationAppController.d --serialize-diagnostics /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/QuadroCalibrationAppController.dia -c /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/QuadroCalibrationAppController.m -o /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/QuadroCalibrationAppController.o36"019EAEF7-EF65-4C10-BA4E-66E7954C9870-
+b8255E887-FEC8-48F8-9ADC-44201E1F0E6D
+
+CCompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/main.o /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s414265444.685082
+e414265444.808588
+r1
+xCompileC
+x/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/main.o
+x/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/main.m
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Compile /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/main.m298"CompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/main.o Sources/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerba84af6430b1b841^de04cf6430b1b841^---0#0#1#-19%DVTDocumentLocation2@119"file:///Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration%20QDC%20MK%20I/QuadroCalibration%20Main/Sources/main.m0000000000000000^4218"CompileC /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/main.o Sources/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-sign-conversion -iquote /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-generated-files.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-own-target-headers.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-all-target-headers.hmap -iquote /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-project-headers.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/DerivedSources/x86_64 -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/DerivedSources -F/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug -F/Library/Frameworks -include /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/PrecompiledHeaders/QuadroCalibration-Prefix-gmcnspfkihonjfglctaqpwpbfoeo/QuadroCalibration-Prefix.pch -MMD -MT dependencies -MF /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/main.dia -c /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/main.m -o /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/main.o36"227BD2B9-3423-472A-B9C6-57D05C3823A8-
+b8255E887-FEC8-48F8-9ADC-44201E1F0E6D
+
+CCompileXIB /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Resources/en.lproj/MainMenu.xib
+s414265446.036348
+e414265446.484132
+r1
+xCompileXIB
+x/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Resources/en.lproj/MainMenu.xib
+o/* com.apple.ibtool.document.warnings */
+o/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Resources/en.lproj/MainMenu.xib:371: warning: Content rectangle not entirely on screen with the menu bar (May not be completely visible for all screen resolutions and configurations) [9]
+o/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Resources/en.lproj/MainMenu.xib:786: warning: Automatically Recalculates Cell Size on OS X versions prior to 10.8 [5]
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection131"Compiling /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Resources/en.lproj/MainMenu.xib42"CompileXIB Resources/en.lproj/MainMenu.xib815d096630b1b841^56f07b6630b1b841^-518"/* com.apple.ibtool.document.warnings *//Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Resources/en.lproj/MainMenu.xib:371: warning: Content rectangle not entirely on screen with the menu bar (May not be completely visible for all screen resolutions and configurations)/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Resources/en.lproj/MainMenu.xib:786: warning: Automatically Recalculates Cell Size on OS X versions prior to 10.82(21%IDEActivityLogMessage2@136"Content rectangle not entirely on screen with the menu bar (May not be completely visible for all screen resolutions and configurations)58"Content rectangle not entirely on screen with the menu bar414265446#18446744073709551615#0#-1#-23%DVTTextDocumentLocation3@136"file:///Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration%20QDC%20MK%20I/QuadroCalibration%20Main/Resources/en.lproj/MainMenu.xib0000000000000000^370#18446744073709551615#370#18446744073709551615#18446744073709551615#0#25"Unsupported Configuration--2@67"Automatically Recalculates Cell Size on OS X versions prior to 10.8-414265446#18446744073709551615#0#-1#-3@136"file:///Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration%20QDC%20MK%20I/QuadroCalibration%20Main/Resources/en.lproj/MainMenu.xib0000000000000000^785#18446744073709551615#785#18446744073709551615#18446744073709551615#0#21"Attribute Unavailable--0#0#1#-19%DVTDocumentLocation4@136"file:///Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration%20QDC%20MK%20I/QuadroCalibration%20Main/Resources/en.lproj/MainMenu.xib0000000000000000^715"CompileXIB Resources/en.lproj/MainMenu.xib    cd "/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 10.6 --output-format human-readable-text --compile /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources/en.lproj/MainMenu.nib /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Resources/en.lproj/MainMenu.xib36"A122D37B-D800-4C6A-9E9D-1518E7375971-
+b8255E887-FEC8-48F8-9ADC-44201E1F0E6D
+
+CCopyStringsFile /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources/en.lproj/InfoPlist.strings Resources/en.lproj/InfoPlist.strings
+s414265446.035718
+e414265446.081016
+r1
+xCopyStringsFile
+x/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources/en.lproj/InfoPlist.strings
+xResources/en.lproj/InfoPlist.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy Resources/en.lproj/InfoPlist.strings243"CopyStringsFile /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources/en.lproj/InfoPlist.strings Resources/en.lproj/InfoPlist.stringsc93d096630b1b841^48a31a6630b1b841^---0#0#1#-19%DVTDocumentLocation2@141"file:///Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration%20QDC%20MK%20I/QuadroCalibration%20Main/Resources/en.lproj/InfoPlist.strings0000000000000000^646"CopyStringsFile /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources/en.lproj/InfoPlist.strings Resources/en.lproj/InfoPlist.strings    cd "/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding UTF-16 --outdir /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources/en.lproj -- Resources/en.lproj/InfoPlist.strings36"B9C88124-1623-4A78-A915-02BF6E47E0C4-
+b8255E887-FEC8-48F8-9ADC-44201E1F0E6D
+
+CCpResource Untitled-1.icns /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources/Untitled-1.icns
+s414265446.081337
+e414265446.083975
+r1
+xCpResource
+xUntitled-1.icns
+x/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources/Untitled-1.icns
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection184"Copy /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources/Untitled-1.icns206"CpResource Untitled-1.icns /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources/Untitled-1.icnsb7ec146630b1b841^d2aa1a6630b1b841^---0#0#1#-19%DVTDocumentLocation2@186"file:///Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources/Untitled-1.icns00341ca2deffdf42^692"CpResource Untitled-1.icns /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources/Untitled-1.icns    cd "/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Untitled-1.icns /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Resources36"F624AE5F-207D-4871-B480-2A7B426268E1-
+b8255E887-FEC8-48F8-9ADC-44201E1F0E6D
+
+CLd /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/MacOS/QuadroCalibration normal x86_64
+s414265445.238147
+e414265446.034602
+r1
+xLd
+x/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/MacOS/QuadroCalibration
+xnormal
+xx86_64
+d/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/QuadroCalibration.LinkFileList
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/crt1.10.6.o
+d/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/main.o
+d/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/AppDelegate.o
+d/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/QuadroCalibrationAppController.o
+d/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPort.o
+d/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/ORSSerialPortManager.o
+d/Library/Frameworks/CorePlot.framework/CorePlot
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework/IOKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework/Cocoa
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/arc/libarclite_macosx.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libobjc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.osx.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcache.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcommonCrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcompiler_rt.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcopyfile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libcorecrypto.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libdyld.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libkeymgr.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/liblaunch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libmacho.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libquarantine.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libremovefile.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_asl.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_kernel.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_malloc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_notify.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_platform.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_pthread.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_sandbox.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libsystem_stats.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuartzCore.framework/Versions/A/Frameworks/CoreImage.framework/Versions/A/CoreImage
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuartzCore.framework/Versions/A/Frameworks/ScalableUserInterface.framework/Versions/A/ScalableUserInterface
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AppKit.framework/AppKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreData.framework/CoreData
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ImageIO.framework/ImageIO
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/CoreServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/LangAnalysis
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection182"Link /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/MacOS/QuadroCalibration194"Ld /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/MacOS/QuadroCalibration normal x86_64a60b3d6530b1b841^3cde086630b1b841^---0#0#1#--1650"Ld /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/MacOS/QuadroCalibration normal x86_64    cd "/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main"    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug -F/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug -F/Library/Frameworks -filelist /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/QuadroCalibration.LinkFileList -mmacosx-version-min=10.6 -fobjc-arc -fobjc-link-runtime -framework CorePlot -framework QuartzCore -framework IOKit -framework Cocoa -Xlinker -dependency_info -Xlinker /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/Objects-normal/x86_64/QuadroCalibration_dependency_info.dat -o /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/MacOS/QuadroCalibration36"A5B78017-4559-43BF-9283-A35216B28469-
+b8255E887-FEC8-48F8-9ADC-44201E1F0E6D
+
+CProcessInfoPlistFile /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Info.plist /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Resources/QuadroCalibration-Info.plist
+s414265442.417745
+e414265442.421208
+r1
+xProcessInfoPlistFile
+x/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Info.plist
+x/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Resources/QuadroCalibration-Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection136"Process /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Resources/QuadroCalibration-Info.plist224"ProcessInfoPlistFile /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Info.plist Resources/QuadroCalibration-Info.pliste00f6b6230b1b841^0c59716230b1b841^---0#0#1#-19%DVTDocumentLocation2@143"file:///Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration%20QDC%20MK%20I/QuadroCalibration%20Main/Resources/QuadroCalibration-Info.plist0000000000000000^866"ProcessInfoPlistFile /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Info.plist Resources/QuadroCalibration-Info.plist    cd "/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main"    builtin-infoPlistUtility /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Resources/QuadroCalibration-Info.plist -genpkginfo /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app/Contents/Info.plist36"9E2CF3E1-4D38-4C36-8993-B85EDCA0AC10-
+b8255E887-FEC8-48F8-9ADC-44201E1F0E6D
+
+CProcessPCH /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/PrecompiledHeaders/QuadroCalibration-Prefix-gmcnspfkihonjfglctaqpwpbfoeo/QuadroCalibration-Prefix.pch.pch Sources/QuadroCalibration-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s414265442.422116
+e414265444.684038
+r1
+xProcessPCH
+x/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/PrecompiledHeaders/QuadroCalibration-Prefix-gmcnspfkihonjfglctaqpwpbfoeo/QuadroCalibration-Prefix.pch.pch
+xSources/QuadroCalibration-Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main/Sources/QuadroCalibration-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Precompile Sources/QuadroCalibration-Prefix.pch345"ProcessPCH /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/PrecompiledHeaders/QuadroCalibration-Prefix-gmcnspfkihonjfglctaqpwpbfoeo/QuadroCalibration-Prefix.pch.pch Sources/QuadroCalibration-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler823b6c6230b1b841^e71daf6430b1b841^---0#0#1#-19%DVTDocumentLocation2@141"file:///Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration%20QDC%20MK%20I/QuadroCalibration%20Main/Sources/QuadroCalibration-Prefix.pch0000000000000000^4126"ProcessPCH /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/PrecompiledHeaders/QuadroCalibration-Prefix-gmcnspfkihonjfglctaqpwpbfoeo/QuadroCalibration-Prefix.pch.pch Sources/QuadroCalibration-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main"    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -mmacosx-version-min=10.6 -g -Wno-sign-conversion -iquote /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-generated-files.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-own-target-headers.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-all-target-headers.hmap -iquote /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/QuadroCalibration-project-headers.hmap -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/DerivedSources/x86_64 -I/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/QuadroCalibration.build/Debug/QuadroCalibration.build/DerivedSources -F/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug -F/Library/Frameworks --serialize-diagnostics /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/PrecompiledHeaders/QuadroCalibration-Prefix-gmcnspfkihonjfglctaqpwpbfoeo/QuadroCalibration-Prefix.pch.dia -MMD -MT dependencies -MF /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/PrecompiledHeaders/QuadroCalibration-Prefix-gmcnspfkihonjfglctaqpwpbfoeo/QuadroCalibration-Prefix.pch.d -c /Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration\ QDC\ MK\ I/QuadroCalibration\ Main/Sources/QuadroCalibration-Prefix.pch -o /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Intermediates/PrecompiledHeaders/QuadroCalibration-Prefix-gmcnspfkihonjfglctaqpwpbfoeo/QuadroCalibration-Prefix.pch.pch36"6E643267-04C8-461B-ACF5-58CC4A36682F-
+b8255E887-FEC8-48F8-9ADC-44201E1F0E6D
+
+CProcessPCH /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Index/PrecompiledHeaders/QuadroCalibration-Prefix-bdawxjbcokenvnfzwicweyobvcqv_ast/QuadroCalibration-Prefix.pch.pch Sources/QuadroCalibration-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CTouch /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app
+s414265446.485067
+e414265446.507783
+r1
+xTouch
+x/Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection150"Touch /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app150"Touch /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app6d3c7c6630b1b841^f513826630b1b841^---0#0#1#--417"Touch /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app    cd "/Users/kesenheimer/Desktop/Quadrocopter/QuadroCalibration QDC MK I/QuadroCalibration Main"    /usr/bin/touch -c /Users/kesenheimer/Library/Developer/Xcode/DerivedData/QuadroCalibration-hdezoyndbjestlestlwsvrlhqrmt/Build/Products/Debug/QuadroCalibration.app36"42FBC88E-7D07-4B83-95B3-10D7DE75906E-
+b8255E887-FEC8-48F8-9ADC-44201E1F0E6D
+
