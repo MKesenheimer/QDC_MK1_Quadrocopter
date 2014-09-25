@@ -30,9 +30,6 @@
  * werden koennen.
  */
 
-// TODO: Das gesamte Programm kann mit dem Einsatz von Funktionen eleganter geschrieben werden.
-// Zum Beispiel so: sendValues(uint_8 Identifier, uint_8 value1, uint_8 value2, ...)
-
 void changeConfig()
 {	
 	//neue Daten gleich ins EEPROM schreiben
@@ -51,182 +48,54 @@ void send16(int16_t a)
 	}
 }
 
+//aufrufen z.B. mit sendArrayToGUI(&array[0],length,0x68) wobei 0x68 = h
+void sendArrayToGUI(int16_t array[], uint8_t length, uint16_t ident)
+{
+      uint8_t oldSREG;
+      oldSREG = SREG; cli();
+      
+      int i;
+      for (i = 0; i < length; i++) {
+            while (!( USARTD1.STATUS & USART_DREIF_bm));
+            USARTD1.DATA = ident;
+            send16(array[i]);
+      }
+      
+      while (!( USARTD1.STATUS & USART_DREIF_bm));
+      USARTD1.DATA = 0x0A; //WagenrŸcklauf - \r
+      
+      SREG = oldSREG; sei();
+}
+
+void sendFourValues(int16_t a, int16_t b, int16_t c, int16_t d, uint16_t ident)
+{
+      int16_t array[4] = {a,b,c,d};
+      sendArrayToGUI(&array[0],4,ident);
+}
+
+void sendThreeValues(int16_t a, int16_t b, int16_t c, uint16_t ident)
+{
+      int16_t array[3] = {a,b,c};
+      sendArrayToGUI(&array[0],3,ident);
+}
+
+void sendTwoValues(int16_t a, int16_t b, uint16_t ident)
+{
+      int16_t array[2] = {a,b};
+      sendArrayToGUI(&array[0],2,ident);
+}
+
 void sendPIDToGUI(int16_t p, int16_t i, int16_t d)
 {
-	uint8_t oldSREG;
-	oldSREG = SREG; cli();
-	
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x2E; //Punkt senden
-	send16(p);
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x2E; //Punkt senden
-	send16(i);
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x2E; //Punkt senden
-	send16(d);
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x0A; //WagenrŸcklauf - \r
-
-	SREG = oldSREG; sei();
-	//_delay_ms(10);
-      //_delay_loop_2(65535);	// 8.2 ms
+      sendThreeValues(p, i, d, 0x2E); //identifier = Punkt
 }
 
 void sendAnglesToGUI(int16_t a, int16_t b)
 {
-	uint8_t oldSREG;
-	oldSREG = SREG; cli();
-
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x2C; //Komma senden
-	send16(a);
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x2C; //Komma senden
-	send16(b);
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x0A; //WagenrŸcklauf - \r
-	
-	SREG = oldSREG; sei();
+      sendTwoValues(a, b, 0x2C); //identifier = Komma
 }
-
 
 //Zu sendender String: (die Buchstaben dienen als Identifier der Wertepaare)
-
-//a KP[ROLL] a KI[ROLL] a KD[ROLL] \r
-//b KP[PITCH] b KI[PITCH] b KD[PITCH] \r
-//c KP[YAW] c KI[YAW] c KD[YAW] \r
-//d KP[PIDLEVEL] d KI[PIDLEVEL] d KD[PIDLEVEL] \r
-//e rcRate8 e rollPitchRate e yawRate e rcExpo8 \r
-//f dynThrPID f thrMid8 f thrExpo8 \r
-//g angleTrim[0] g angleTrim[1] \r
-
-void sendConfPIDRoll()
-{
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x61; //a senden
-	send16(conf.KP[ROLL]);
-	
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x61;
-	send16(conf.KI[ROLL]);
-	
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x61;
-	send16(conf.KD[ROLL]);
-
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x0A; //WagenrŸcklauf - \r
-}
-
-void sendConfPIDPitch()
-{
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x62; //b senden
-	send16(conf.KP[PITCH]);
-	
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x62;
-	send16(conf.KI[PITCH]);
-	
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x62;
-	send16(conf.KD[PITCH]);
-
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x0A; //WagenrŸcklauf - \r
-}
-
-void sendConfPIDYaw()
-{
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x63; //c senden
-	send16(conf.KP[YAW]);
-	
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x63;
-	send16(conf.KI[YAW]); 
-	
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x63;
-	send16(conf.KD[YAW]);
-
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x0A; //WagenrŸcklauf - \r
-}
-
-void sendConfPIDPidlevel()
-{
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x64; //d senden
-	send16(conf.KP[PIDLEVEL]); //frŸher PIDLEVEL, lšschen!
-	
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x64;
-	send16(conf.KD[PIDLEVEL]);
-	
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x64;
-	send16(conf.KD[PIDLEVEL]);
-
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x0A; //WagenrŸcklauf - \r
-}
-
-void sendConfrcRate()
-{
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x65; //e senden
-	send16(conf.rcRate8);
-
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x65;
-	send16(conf.rollPitchRate);
-	
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x65;
-	send16(conf.yawRate);
-	
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x65;
-	send16(conf.rcExpo8);
-
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x0A; //WagenrŸcklauf - \r
-}
-
-void sendConfThr()
-{
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x66; //f senden
-	send16(conf.dynThrPID);
-	
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x66;
-	send16(conf.thrMid8);
-	
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x66;
-	send16(conf.thrExpo8);
-
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x0A; //WagenrŸcklauf - \r
-}
-
-void sendConfAngleTrim()
-{
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x67; //g senden
-	send16(conf.angleTrim[0]); //Achtung: int8_t Wert, TODO
-	
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x67;
-	send16(conf.angleTrim[1]); //Achtung: int8_t Wert, TODO
-
-	while (!( USARTD1.STATUS & USART_DREIF_bm));
-	USARTD1.DATA = 0x0A; //WagenrŸcklauf - \r
-}
-
 ISR(USARTD1_RXC_vect)
 {
       
@@ -375,27 +244,20 @@ ISR(USARTD1_RXC_vect)
                         plot = NOT;
                         break;
                   case 0x44: //D - Struct Conf senden
-                        sendConfPIDRoll();
-                        //_delay_ms(100);
+                        sendThreeValues(conf.KP[ROLL],conf.KI[ROLL],conf.KD[ROLL],0x61);
                         for (a=0; a<10; a++) {_delay_loop_2(65535);}	// ca. 100ms
-                        sendConfPIDPitch();
-                        //_delay_ms(100);
-                        for (a=0; a<10; a++) {_delay_loop_2(65535);}	// ca. 100ms
-                        sendConfPIDYaw();
-                        //_delay_ms(100);
-                        for (a=0; a<10; a++) {_delay_loop_2(65535);}	// ca. 100ms
-                        sendConfPIDPidlevel();
-                        //_delay_ms(100);
-                        for (a=0; a<10; a++) {_delay_loop_2(65535);}	// ca. 100ms
-                        sendConfrcRate();
-                        //_delay_ms(100);
-                        for (a=0; a<10; a++) {_delay_loop_2(65535);}	// ca. 100ms
-                        sendConfThr();
-                        //_delay_ms(100);
-                        for (a=0; a<10; a++) {_delay_loop_2(65535);}	// ca. 100ms
-                        sendConfAngleTrim();
-                        //_delay_ms(100);
-                        for (a=0; a<10; a++) {_delay_loop_2(65535);}	// ca. 100ms
+                        sendThreeValues(conf.KP[PITCH],conf.KI[PITCH],conf.KD[PITCH],0x62);
+                        for (a=0; a<10; a++) {_delay_loop_2(65535);}
+                        sendThreeValues(conf.KP[YAW],conf.KI[YAW],conf.KD[YAW],0x63);
+                        for (a=0; a<10; a++) {_delay_loop_2(65535);}
+                        sendThreeValues(conf.KP[PIDLEVEL],conf.KI[PIDLEVEL],conf.KD[PIDLEVEL],0x64);
+                        for (a=0; a<10; a++) {_delay_loop_2(65535);}
+                        sendFourValues(conf.rcRate8,conf.rollPitchRate,conf.yawRate,conf.rcExpo8,0x65);
+                        for (a=0; a<10; a++) {_delay_loop_2(65535);}
+                        sendThreeValues(conf.dynThrPID,conf.thrMid8,conf.thrExpo8,0x66);
+                        for (a=0; a<10; a++) {_delay_loop_2(65535);}
+                        sendTwoValues(conf.angleTrim[ROLL],conf.angleTrim[PITCH],0x67); //Achtung: int8_t Wert (GUI kann bisher keine negativen Zahlen senden/empfangen), TODO!
+                        for (a=0; a<10; a++) {_delay_loop_2(65535);}
                         break;
                   case 0x52: //R - Reset
                         while(1); //Endlossschleife um den Watchdog auszuloesen, der den QDC zuruecksetzt.
