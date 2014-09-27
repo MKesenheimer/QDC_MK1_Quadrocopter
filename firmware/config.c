@@ -37,7 +37,7 @@ void configFirstRun()
       conf.KI[PIDLEVEL] = 0;
       conf.KD[PIDLEVEL] = 0;
       
-	conf.rcRate8 = 90; 
+	/*conf.rcRate8 = 90;
 	conf.rcExpo8 = 65;
 	conf.rollPitchRate = 0;
 	conf.yawRate = 0;
@@ -45,7 +45,8 @@ void configFirstRun()
 	
 	conf.thrMid8 = 50; 
 	conf.thrExpo8 = 0;
-	
+	*/
+      
 	conf.angleTrim[0] = 0;
 	conf.angleTrim[1] = 0;
 }
@@ -67,7 +68,7 @@ void config()
 	
 	EEpromReadBlock(&conf, (void*)&startAd, sizeof(conf));
 	
-	uint8_t i;
+      int i;
 	for (i=0; i<8;i++)
 		rcData[i] = (RCMIN+RCMAX)/2; //Startwerte setzen
       

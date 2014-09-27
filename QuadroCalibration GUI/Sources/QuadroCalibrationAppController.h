@@ -104,27 +104,6 @@
 @property (unsafe_unretained) IBOutlet NSTextField *textFieldIPidlevelReceive;
 @property (unsafe_unretained) IBOutlet NSTextField *textFieldDPidlevelReceive;
 
-@property (unsafe_unretained) IBOutlet NSTextField *textFieldrcRateSend;
-@property (unsafe_unretained) IBOutlet NSTextField *textFieldrcRateReceive;
-
-@property (unsafe_unretained) IBOutlet NSTextField *textFieldrcExpoSend;
-@property (unsafe_unretained) IBOutlet NSTextField *textFieldrcExpoReceive;
-
-@property (unsafe_unretained) IBOutlet NSTextField *textFieldrollPitchRateSend;
-@property (unsafe_unretained) IBOutlet NSTextField *textFieldrollPitchRateReceive;
-
-@property (unsafe_unretained) IBOutlet NSTextField *textFieldyawRateSend;
-@property (unsafe_unretained) IBOutlet NSTextField *textFieldyawRateReceive;
-
-@property (unsafe_unretained) IBOutlet NSTextField *textFielddynThrPidSend;
-@property (unsafe_unretained) IBOutlet NSTextField *textFielddynThrPidReive;
-
-@property (unsafe_unretained) IBOutlet NSTextField *textFieldthrMidSend;
-@property (unsafe_unretained) IBOutlet NSTextField *textFieldthrMidReceive;
-
-@property (unsafe_unretained) IBOutlet NSTextField *textFieldthrExpoSend;
-@property (unsafe_unretained) IBOutlet NSTextField *textFieldthrExpoReceive;
-
 @property (unsafe_unretained) IBOutlet NSTextField *textFieldangleTrim0Send;
 @property (unsafe_unretained) IBOutlet NSTextField *textFieldangleTrim0Receive;
 

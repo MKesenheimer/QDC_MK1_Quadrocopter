@@ -42,7 +42,7 @@
     plotIndex = @"NickRoll"; //gibt an, welche Daten geplottet werden sollen
     [self createPlotNR];
     [popUp removeAllItems];
-    [popUp addItemsWithTitles:[NSArray arrayWithObjects:[NSString stringWithFormat:@"Nick & Roll"], [NSString stringWithFormat:@"PIDROLL"], [NSString stringWithFormat:@"PIDPITCH"], [NSString stringWithFormat:@"PIDYAW"], nil]];
+    [popUp addItemsWithTitles:[NSArray arrayWithObjects:[NSString stringWithFormat:@"Nick & Roll"], [NSString stringWithFormat:@"PIDROLL"], [NSString stringWithFormat:@"PIDPITCH"], [NSString stringWithFormat:@"PIDYAW"],[NSString stringWithFormat:@"DEBUG"], nil]];
     
     //TODO: Auch hier sollte sich das Programm die letzten Konfigurationswerte merken, 
     //so dass beim nächsten Starten des Programms die letzten eingegebenen Werte wieder da sind.
@@ -61,16 +61,7 @@
     [_textFieldPYawSend setIntValue:90];
     [_textFieldIYawSend setIntValue:60];
     [_textFieldDYawSend setIntValue:0];
-    
-    [_textFieldrollPitchRateSend setIntValue:0];
-    [_textFieldrcRateSend setIntValue:90];
-    [_textFieldrcExpoSend setIntValue:65];
-    
-    [_textFieldyawRateSend setIntValue:0];
-    [_textFielddynThrPidSend setIntValue:0];
-    [_textFieldthrMidSend setIntValue:50];
-    
-    [_textFieldthrExpoSend setIntValue:0];
+
     [_textFieldangleTrim0Send setIntValue:0];
     [_textFieldangleTrim1Send setIntValue:0];
     
@@ -378,14 +369,19 @@
 }
 
 #pragma mark - Actions
+- (IBAction)receive:(id)sender
+{
+      //QDC aufforden die Config Werte zu senden
+      char identifier = 0x44; //D
+      NSMutableData *dataToSend = [NSMutableData dataWithBytes:&identifier length:sizeof(identifier)];
+      NSLog(@"zu sendender String: %@", dataToSend);
+      [self.serialPort sendData:dataToSend];
+      //usleep(1000);
+}
 
 - (IBAction)send:(id)sender
 {
     [self sendFct];
-}
-
-- (IBAction)receive:(id)sender
-{
     //QDC aufforden die Config Werte zu senden
     char identifier = 0x44; //D
     NSMutableData *dataToSend = [NSMutableData dataWithBytes:&identifier length:sizeof(identifier)];
@@ -465,7 +461,7 @@
     NSLog(@"zu sendender String: %@", dataToSend);
     [self.serialPort sendData:dataToSend];
     usleep(1000);
-    //dRoll Wert senden
+    //DRoll Wert senden
     data = [self.textFieldDRollSend intValue];
     dataToSend = [NSMutableData dataWithBytes:&data length:sizeof(data)];
     NSLog(@"zu sendender String: %@", dataToSend);
@@ -524,50 +520,6 @@
     usleep(1000);
     //dPidlevel Wert senden
     data = [self.textFieldDPidlevelSend intValue];
-    dataToSend = [NSMutableData dataWithBytes:&data length:sizeof(data)];
-    NSLog(@"zu sendender String: %@", dataToSend);
-    [self.serialPort sendData:dataToSend];
-    usleep(1000);
-    
-    //rcRate Wert senden
-    data = [self.textFieldrcRateSend intValue];
-    dataToSend = [NSMutableData dataWithBytes:&data length:sizeof(data)];
-    NSLog(@"zu sendender String: %@", dataToSend);
-    [self.serialPort sendData:dataToSend];
-    usleep(1000);
-    //rollPitchRate Wert senden
-    data = [self.textFieldrollPitchRateSend intValue];
-    dataToSend = [NSMutableData dataWithBytes:&data length:sizeof(data)];
-    NSLog(@"zu sendender String: %@", dataToSend);
-    [self.serialPort sendData:dataToSend];
-    usleep(1000);
-    //yawRate Wert senden
-    data = [self.textFieldyawRateSend intValue];
-    dataToSend = [NSMutableData dataWithBytes:&data length:sizeof(data)];
-    NSLog(@"zu sendender String: %@", dataToSend);
-    [self.serialPort sendData:dataToSend];
-    usleep(1000);
-    //rcExpo Wert senden
-    data = [self.textFieldrcExpoSend intValue];
-    dataToSend = [NSMutableData dataWithBytes:&data length:sizeof(data)];
-    NSLog(@"zu sendender String: %@", dataToSend);
-    [self.serialPort sendData:dataToSend];
-    usleep(1000);
-    
-    //dynThrPID Wert senden
-    data = [self.textFielddynThrPidSend intValue];
-    dataToSend = [NSMutableData dataWithBytes:&data length:sizeof(data)];
-    NSLog(@"zu sendender String: %@", dataToSend);
-    [self.serialPort sendData:dataToSend];
-    usleep(1000);
-    //thrMid Wert senden
-    data = [self.textFieldthrMidSend intValue];
-    dataToSend = [NSMutableData dataWithBytes:&data length:sizeof(data)];
-    NSLog(@"zu sendender String: %@", dataToSend);
-    [self.serialPort sendData:dataToSend];
-    usleep(1000);
-    //thrExpo Wert senden
-    data = [self.textFieldthrExpoSend intValue];
     dataToSend = [NSMutableData dataWithBytes:&data length:sizeof(data)];
     NSLog(@"zu sendender String: %@", dataToSend);
     [self.serialPort sendData:dataToSend];
@@ -860,13 +812,6 @@
     NSInteger P8PIDLEVEL;
     NSInteger I8PIDLEVEL;
     NSInteger D8PIDLEVEL;
-    NSInteger rcRate8;
-    NSInteger rcExpo8;
-    NSInteger rollPitchRate;
-    NSInteger yawRate;
-    NSInteger dynThrPID;
-    NSInteger thrMid8;
-    NSInteger thrExpo8;
     NSInteger angleTrim0;
     NSInteger angleTrim1;
     
@@ -882,13 +827,6 @@
     NSString *strP8PIDLEVEL;
     NSString *strI8PIDLEVEL;
     NSString *strD8PIDLEVEL;
-    NSString *strrcRate8;
-    NSString *strrcExpo8;
-    NSString *strrollPitchRate;
-    NSString *stryawRate;
-    NSString *strdynThrPID;
-    NSString *strthrMid8;
-    NSString *strthrExpo8;
     NSString *strangleTrim0;
     NSString *strangleTrim1;
     
@@ -998,60 +936,6 @@
        [_textFieldIPidlevelReceive setIntegerValue:I8PIDLEVEL];
        [_textFieldDPidlevelReceive setIntegerValue:D8PIDLEVEL];
 
-   }
-
-   if ([string rangeOfString:@"e"].location != NSNotFound) {
-       //e rcRate8 e rollPitchRate e yawRate e rcExpo8 \r
-       NSCharacterSet *echar = [NSCharacterSet characterSetWithCharactersInString:@"e"];
-
-       [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
-       [scanner scanCharactersFromSet:numbers intoString:&strrcRate8];
-       [scanner scanUpToCharactersFromSet:echar intoString:NULL];
-        
-       [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
-       [scanner scanCharactersFromSet:numbers intoString:&strrollPitchRate];
-       [scanner scanUpToCharactersFromSet:echar intoString:NULL];
-        
-       [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
-       [scanner scanCharactersFromSet:numbers intoString:&stryawRate];
-       [scanner scanUpToCharactersFromSet:echar intoString:NULL];
-
-       [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
-       [scanner scanCharactersFromSet:numbers intoString:&strrcExpo8];
-	
-       rcRate8 = [strrcRate8 intValue];
-       rollPitchRate = [strrollPitchRate intValue];
-       yawRate = [stryawRate intValue];
-       rcExpo8 = [strrcExpo8 intValue];
-
-       [_textFieldrcRateReceive setIntegerValue:rcRate8];
-       [_textFieldrollPitchRateReceive setIntegerValue:rollPitchRate];
-       [_textFieldyawRateReceive setIntegerValue:yawRate];
-       [_textFieldrcExpoReceive setIntegerValue:rcExpo8];
-   }
-
-   if ([string rangeOfString:@"f"].location != NSNotFound) {
-       //f dynThrPID f thrMid8 f thrExpo8 \r
-       NSCharacterSet *fchar = [NSCharacterSet characterSetWithCharactersInString:@"f"];
-
-       [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
-       [scanner scanCharactersFromSet:numbers intoString:&strdynThrPID];
-       [scanner scanUpToCharactersFromSet:fchar intoString:NULL];
-        
-       [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
-       [scanner scanCharactersFromSet:numbers intoString:&strthrMid8];
-       [scanner scanUpToCharactersFromSet:fchar intoString:NULL];
-        
-       [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
-       [scanner scanCharactersFromSet:numbers intoString:&strthrExpo8];
-
-       dynThrPID = [strdynThrPID intValue];
-       thrMid8 = [strthrMid8 intValue];
-       thrExpo8 = [strthrExpo8 intValue];
-
-       [_textFielddynThrPidReive setIntegerValue:dynThrPID];
-       [_textFieldthrMidReceive setIntegerValue:thrMid8];
-       [_textFieldthrExpoReceive setIntegerValue:thrExpo8];
    }
 
    if ([string rangeOfString:@"g"].location != NSNotFound) {

@@ -34,7 +34,7 @@ void changeConfig()
 {	
 	//neue Daten gleich ins EEPROM schreiben
 	EEpromWriteBlock(&conf, (void*)&startAd, sizeof(conf));
-      EEpromReadBlock(&conf, (void*)&startAd, sizeof(conf));
+      config();
 }
 
 void send16(int16_t a)
@@ -164,10 +164,11 @@ ISR(USARTD1_RXC_vect)
             }
             if (iter == 11 && before != next) {
                   conf.KD[PIDLEVEL] = (uint8_t) receivedData;
-                  iter = 12;
+                  //iter = 12;
+                  iter = 19;
                   before = next;
             }
-            if (iter == 12 && before != next) {
+            /*if (iter == 12 && before != next) {
                   conf.rcRate8 = (uint8_t) receivedData;
                   iter = 13;
                   before = next;
@@ -201,7 +202,7 @@ ISR(USARTD1_RXC_vect)
                   conf.thrExpo8 = (uint8_t) receivedData;
                   iter = 19;
                   before = next;
-            }
+            }*/
             if (iter == 19 && before != next) {
                   conf.angleTrim[0] = (uint8_t) receivedData;
                   iter = 20;
@@ -252,10 +253,10 @@ ISR(USARTD1_RXC_vect)
                         for (a=0; a<10; a++) {_delay_loop_2(65535);}
                         sendThreeValues(conf.KP[PIDLEVEL],conf.KI[PIDLEVEL],conf.KD[PIDLEVEL],0x64);
                         for (a=0; a<10; a++) {_delay_loop_2(65535);}
-                        sendFourValues(conf.rcRate8,conf.rollPitchRate,conf.yawRate,conf.rcExpo8,0x65);
+                        /*sendFourValues(conf.rcRate8,conf.rollPitchRate,conf.yawRate,conf.rcExpo8,0x65);
                         for (a=0; a<10; a++) {_delay_loop_2(65535);}
                         sendThreeValues(conf.dynThrPID,conf.thrMid8,conf.thrExpo8,0x66);
-                        for (a=0; a<10; a++) {_delay_loop_2(65535);}
+                        for (a=0; a<10; a++) {_delay_loop_2(65535);}*/
                         sendTwoValues(conf.angleTrim[ROLL],conf.angleTrim[PITCH],0x67); //Achtung: int8_t Wert (GUI kann bisher keine negativen Zahlen senden/empfangen), TODO!
                         for (a=0; a<10; a++) {_delay_loop_2(65535);}
                         break;

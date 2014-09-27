@@ -27,7 +27,7 @@
 #define AUX2       5
 #define AUX3       6
 #define AUX4       7
-#define PIDLEVEL   7
+#define PIDLEVEL   7    //hat bisher keine Funktion!
 #define PIDITEMS   4
 
 //Senden und Empfangen
@@ -51,16 +51,16 @@ static struct
 {
 	uint8_t checkNewConf;
 	uint8_t KP[PIDITEMS], KI[PIDITEMS], KD[PIDITEMS];
-	uint8_t dynThrPID;
+	/*uint8_t dynThrPID;
 	uint8_t rcRate8;
 	uint8_t rcExpo8;
 	uint8_t rollPitchRate;
 	uint8_t yawRate;
 	uint8_t thrMid8;
-	uint8_t thrExpo8;
+	uint8_t thrExpo8;*/
 	int16_t angleTrim[2];
-	int16_t AccOffset[3];
-	uint8_t Smoothing[3];
+	//int16_t AccOffset[3];
+	//uint8_t Smoothing[3];
 } conf;
 
 static uint8_t EEMEM startAd[sizeof(conf)];
@@ -103,7 +103,7 @@ static uint8_t sendbuffer[2];
 static uint8_t ra;	//temporaere Registeradresse zum Senden der I2C Daten
 
 //Anzahl der Kalibrationsdurchgaenge Gyro/Acc
-static uint16_t calibratingG = 10000; //später 50000
+static uint16_t calibratingG = 10000;
 static uint16_t calibratingA = 10000;
 static float gyroOffset[3] = {0,0,0}; //alles int16_t
 static float accOffset[3] = {0,0,0};

@@ -45,7 +45,7 @@ void pid() {
       //mit rcAngle/10 lassen sich also Winkel von -50 bis 50 Deg ansteuern
       int angle = ROLL;
       for (angle = ROLL; angle<=PITCH; angle++) {
-            error[angle] = (float)rcAngle[angle]/10 - compAngle[angle]; //[-230,230]deg
+            error[angle] = (float)rcAngle[angle]/10 - compAngle[angle] + conf.angleTrim[angle]; //[-230,230]deg
             pTerm[angle] = error[angle]*conf.KP[angle];
             iSum[angle] += error[angle]*dt;
             iSum[angle] = constrain(iSum[angle],-50,50);
