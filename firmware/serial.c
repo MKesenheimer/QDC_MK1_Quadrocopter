@@ -95,6 +95,16 @@ void sendAnglesToGUI(int16_t a, int16_t b)
       sendTwoValues(a, b, 0x2C); //identifier = Komma
 }
 
+void sendMotorsToGUI(int16_t m1, int16_t m2, int16_t m3, int16_t m4)
+{
+    sendFourValues(m1, m2, m3, m4, 0x3A); //identifier = Doppelpunkt
+}
+
+void sendDebugToGUI(int16_t array[])
+{
+    sendArrayToGUI(&array[0],sizeof(array)/sizeof(array[0]),0x3B); //identifier = Strichpunkt
+}
+
 //Zu sendender String: (die Buchstaben dienen als Identifier der Wertepaare)
 ISR(USARTD1_RXC_vect)
 {
@@ -240,6 +250,9 @@ ISR(USARTD1_RXC_vect)
                   case 0x60: //Z - PIDROLL-Werte senden
                         plot = PID;
                         whichPIDToSend = 2;
+                        break;
+                  case 0x42: //B - Debug Werte senden
+                        plot = DEB;
                         break;
                   case 0x43: //C - nichts senden
                         plot = NOT;

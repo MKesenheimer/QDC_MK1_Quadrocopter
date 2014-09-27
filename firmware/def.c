@@ -34,6 +34,7 @@
 #define PID		   0
 #define NR		   1
 #define NOT		   2
+#define DEB        3
 #define RECON	   1
 #define RECOFF	   0
 
@@ -51,16 +52,7 @@ static struct
 {
 	uint8_t checkNewConf;
 	uint8_t KP[PIDITEMS], KI[PIDITEMS], KD[PIDITEMS];
-	/*uint8_t dynThrPID;
-	uint8_t rcRate8;
-	uint8_t rcExpo8;
-	uint8_t rollPitchRate;
-	uint8_t yawRate;
-	uint8_t thrMid8;
-	uint8_t thrExpo8;*/
 	int16_t angleTrim[2];
-	//int16_t AccOffset[3];
-	//uint8_t Smoothing[3];
 } conf;
 
 static uint8_t EEMEM startAd[sizeof(conf)];
@@ -80,7 +72,7 @@ static uint8_t EEMEM startAd[sizeof(conf)];
 #define BAUD_PRESCALED1 ((F_CPU / ((int16_t)(pow (2.0, USART_BSCALED1)) * (USART_BAUDRATED1 * 16UL)))  - 1)
 
 //DEBUG
-//static float debug[10];
+static int16_t debug[10] = {0,10,20,0,0,0,0,0,0,0};
 static uint32_t meanTime = 0;
 static uint32_t sumTime = 0;
 static int num = 0;

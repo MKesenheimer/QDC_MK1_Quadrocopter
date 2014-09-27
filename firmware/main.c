@@ -178,24 +178,20 @@ int main()
 			sendTime = currentTime + 20000;
 			switch (plot) {
 				case NR:
-                              //hier werden die Winkel mit 10 multipliziert,
-                              //da die †bertragung nur mit Integerwerte funktionert.
-                              //Es soll aber eine Auflšsung von 0.1 Grad erhalten bleiben,
-                              //somit dividiert die GUI die erhaltenen Werte wieder durch 10.
+                    //hier werden die Winkel mit 10 multipliziert,
+                    //da die †bertragung nur mit Integerwerte funktionert.
+                    //Es soll aber eine Auflšsung von 0.1 Grad erhalten bleiben,
+                    //somit dividiert die GUI die erhaltenen Werte wieder durch 10.
 					sendAnglesToGUI(compAngle[ROLL]*10, compAngle[PITCH]*10);
-                              //DEBUG
-                              //sendAnglesToGUI(gyroAngle[YAW]*10, rcAngle[YAW]*10);
+                    sendMotorsToGUI(motor[0]/1000, motor[1]/1000, motor[2]/1000, motor[3]/1000);
 					break;
 				case PID:
 					sendPIDToGUI(pTerm[whichPIDToSend]/100, iTerm[whichPIDToSend]/100, dTerm[whichPIDToSend]/100);
-					//DEBUG
-                              //sendPIDToGUI(axisPID[ROLL]/1000, axisPID[PITCH]/1000, axisPID[YAW]/1000);
-					//sendPIDToGUI(motor[0]/1000, motor[1]/1000, motor[2]/1000);
-					//sendPIDToGUI(rcAngle[ROLL],rcAngle[PITCH],rcAngle[YAW]);
-                              //sendPIDToGUI(gyroRate[YAW],gyroAngle[YAW],gyroOffset[YAW]);
-                              //sendPIDToGUI(0,0,cycleTime);
-                              //sendPIDToGUI(debug[0],debug[2],debug[4]);
+                    sendMotorsToGUI(motor[0]/1000, motor[1]/1000, motor[2]/1000, motor[3]/1000);
 					break;
+                case DEB:
+                    sendDebugToGUI(&debug[0]);
+                    break;
 				case NOT:
 					//nichts senden
 					break;

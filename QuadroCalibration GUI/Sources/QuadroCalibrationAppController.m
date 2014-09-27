@@ -39,6 +39,12 @@
     numberP = 0;
     numberI = 0;
     numberD = 0;
+    
+    numberMotor1 = 0;
+    numberMotor2 = 0;
+    numberMotor3 = 0;
+    numberMotor4 = 0;
+    
     plotIndex = @"NickRoll"; //gibt an, welche Daten geplottet werden sollen
     [self createPlotNR];
     [popUp removeAllItems];
@@ -64,6 +70,11 @@
 
     [_textFieldangleTrim0Send setIntValue:0];
     [_textFieldangleTrim1Send setIntValue:0];
+      
+    [_levelMotor1 setIntValue:0];
+    [_levelMotor2 setIntValue:0];
+    [_levelMotor3 setIntValue:0];
+    [_levelMotor4 setIntValue:0];
     
     [self.sendButton setEnabled: NO];
     [self.receiveButton setEnabled:NO];
@@ -648,6 +659,21 @@
         [self createPlotNR];
         [self createPlotPID];
     }
+    
+    if ([popUp indexOfSelectedItem] == 4) { //DEBUG Diagramm ausgewählt
+        plotIndex = @"DEBUG";
+        char data = 0x42; //B
+        NSMutableData *dataToSend = [NSMutableData dataWithBytes:&data length:sizeof(data)];
+        NSLog(@"zu sendender String: %@", dataToSend);
+        [self.serialPort sendData:dataToSend];
+        usleep(1000);
+        /*[plotDataP removeAllObjects];
+        [plotDataI removeAllObjects];
+        [plotDataD removeAllObjects];
+        [self createPlotNR];
+        [self createPlotPID];
+         */
+    }
 }
 
 - (IBAction)plotStateChange:(id)sender
@@ -696,9 +722,6 @@
     // Intermediate
     NSString *nick;
     NSString *roll;
-    NSString *d;
-    NSString *i;
-    NSString *p;
 
     // Scanner für Winkelwerte
     if ([string rangeOfString:@","].location != NSNotFound) {
@@ -707,13 +730,13 @@
         // Lösche das Semikolon -> string = -123,456
         [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
         // Sammle die Zahlen auf -> nick = -123
-        [scanner scanCharactersFromSet:numbers intoString:&nick];
+        [scanner scanCharactersFromSet:numbers intoString:&roll];
         // Lösche die gerade gelesene Zahlen -> string = ,456
         [scanner scanUpToCharactersFromSet:characters intoString:NULL];
         // Lösche das Komma -> string = 456
         [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
         // Sammle die Zahlen auf -> roll = 456
-        [scanner scanCharactersFromSet:numbers intoString:&roll];
+        [scanner scanCharactersFromSet:numbers intoString:&nick];
         
         float numberNick = [nick floatValue]/10;
         float numberRoll = [roll floatValue]/10;
@@ -745,6 +768,11 @@
         [graph reloadData];
     }
     
+    // Intermediate
+    NSString *d;
+    NSString *i;
+    NSString *p;
+      
     // Scanner für Reglerwerte
     if ([string rangeOfString:@"."].location != NSNotFound) {
         //Der vom Arduino eingelesene String hat folgende Form für Reglerwerte: .-123.456.789\n
@@ -798,6 +826,44 @@
         
         [graph reloadData];
     }
+    
+    // Intermediate
+    NSString *motor1;
+    NSString *motor2;
+    NSString *motor3;
+    NSString *motor4;
+    
+    // Scanner für Motorwerte
+    if ([string rangeOfString:@":"].location != NSNotFound) {
+        //Der vom Arduino eingelesene String hat folgende Form für Reglerwerte: :123:456:789:123\n
+        NSCharacterSet *characters = [NSCharacterSet characterSetWithCharactersInString:@":"];
+        
+        [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+        [scanner scanCharactersFromSet:numbers intoString:&motor1];
+        [scanner scanUpToCharactersFromSet:characters intoString:NULL];
+        
+        [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+        [scanner scanCharactersFromSet:numbers intoString:&motor2];
+        [scanner scanUpToCharactersFromSet:characters intoString:NULL];
+        
+        [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+        [scanner scanCharactersFromSet:numbers intoString:&motor3];
+        [scanner scanUpToCharactersFromSet:characters intoString:NULL];
+        
+        [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+        [scanner scanCharactersFromSet:numbers intoString:&motor4];
+        
+        numberMotor1 = [motor1 integerValue];
+        numberMotor2 = [motor2 integerValue];
+        numberMotor3 = [motor3 integerValue];
+        numberMotor4 = [motor4 integerValue];
+        
+        [_levelMotor1 setIntValue:numberMotor1];
+        [_levelMotor2 setIntValue:numberMotor2];
+        [_levelMotor3 setIntValue:numberMotor3];
+        [_levelMotor4 setIntValue:numberMotor4];
+    }
+    
     
     // Scanner für config Werte   
     NSInteger P8ROLL;

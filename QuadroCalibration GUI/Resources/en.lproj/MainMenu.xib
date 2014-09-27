@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment version="1060" defaultVersion="1060" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6245"/>
@@ -1623,6 +1623,10 @@
                 <outlet property="dSliderValueReceive" destination="734" id="831"/>
                 <outlet property="hostView" destination="736" id="745"/>
                 <outlet property="iSliderValueReceive" destination="731" id="830"/>
+                <outlet property="levelMotor1" destination="BXq-nP-WQV" id="EzM-uC-qBu"/>
+                <outlet property="levelMotor2" destination="aWX-QJ-kWx" id="U67-Lc-Pod"/>
+                <outlet property="levelMotor3" destination="yF2-hy-NQI" id="Yjw-VX-hgf"/>
+                <outlet property="levelMotor4" destination="LwA-Um-eoT" id="FUw-IK-j7z"/>
                 <outlet property="nickSlider" destination="706" id="710"/>
                 <outlet property="openCloseButton" destination="690" id="692"/>
                 <outlet property="pSliderValueReceive" destination="730" id="829"/>

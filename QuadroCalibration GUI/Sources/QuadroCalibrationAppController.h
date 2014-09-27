@@ -42,6 +42,7 @@
     NSInteger countPointsNR;
     NSInteger countPointsPID;
     NSInteger numberI, numberP, numberD;
+    NSInteger numberMotor1, numberMotor2, numberMotor3, numberMotor4;
     NSString *plotIndex;
     IBOutlet NSMatrix *plotState;       
 }
@@ -109,6 +110,11 @@
 
 @property (unsafe_unretained) IBOutlet NSTextField *textFieldangleTrim1Send;
 @property (unsafe_unretained) IBOutlet NSTextField *textFieldangleTrim1Receive;
+
+@property (unsafe_unretained) IBOutlet NSLevelIndicatorCell *levelMotor1;
+@property (unsafe_unretained) IBOutlet NSLevelIndicatorCell *levelMotor2;
+@property (unsafe_unretained) IBOutlet NSLevelIndicatorCell *levelMotor3;
+@property (unsafe_unretained) IBOutlet NSLevelIndicatorCell *levelMotor4;
 
 @property (nonatomic, strong) ORSSerialPortManager *serialPortManager;
 @property (nonatomic, strong) ORSSerialPort *serialPort;
