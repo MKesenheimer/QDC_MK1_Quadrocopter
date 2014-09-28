@@ -13,7 +13,7 @@ main.d main.o: main.c /opt/local/avr/include/stdlib.h \
  /opt/local/lib/gcc/avr/4.9.1/include/stdbool.h \
  /opt/local/avr/include/avr/pgmspace.h MPU6050.h twi_master_driver.h \
  twi_master_driver.c xeeprom.h def.c watchdog.c watchdog.h time.c IMU.c \
- config.c output.c receive.c init.c serial.c filters.c pid.c
+ config.c output.c receive.c init.c serial.c filters.c pid.c led.c
 
 /opt/local/avr/include/stdlib.h:
 
@@ -90,3 +90,5 @@ serial.c:
 filters.c:
 
 pid.c:
+
+led.c:

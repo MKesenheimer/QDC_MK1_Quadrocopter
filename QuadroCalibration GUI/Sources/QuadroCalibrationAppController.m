@@ -296,7 +296,7 @@
         d3Plot.identifier = @"d3Diagramm";
         CPTMutableLineStyle *lineStyleD3 = [d3Plot.dataLineStyle mutableCopy];
         lineStyleD3.lineWidth = 1.f;
-        lineStyleD3.lineColor = [CPTColor redColor];
+        lineStyleD3.lineColor = [CPTColor yellowColor];
         d3Plot.dataLineStyle = lineStyleD3;
         d3Plot.dataSource = self;
         
@@ -309,7 +309,7 @@
         d4Plot.identifier = @"d4Diagramm";
         CPTMutableLineStyle *lineStyleD4 = [d4Plot.dataLineStyle mutableCopy];
         lineStyleD4.lineWidth = 1.f;
-        lineStyleD4.lineColor = [CPTColor redColor];
+        lineStyleD4.lineColor = [CPTColor purpleColor];
         d4Plot.dataLineStyle = lineStyleD4;
         d4Plot.dataSource = self;
         
@@ -322,7 +322,7 @@
         d5Plot.identifier = @"d5Diagramm";
         CPTMutableLineStyle *lineStyleD5 = [d5Plot.dataLineStyle mutableCopy];
         lineStyleD5.lineWidth = 1.f;
-        lineStyleD5.lineColor = [CPTColor redColor];
+        lineStyleD5.lineColor = [CPTColor blackColor];
         d5Plot.dataLineStyle = lineStyleD5;
         d5Plot.dataSource = self;
         
@@ -335,7 +335,7 @@
         d6Plot.identifier = @"d6Diagramm";
         CPTMutableLineStyle *lineStyleD6 = [d6Plot.dataLineStyle mutableCopy];
         lineStyleD6.lineWidth = 1.f;
-        lineStyleD6.lineColor = [CPTColor redColor];
+        lineStyleD6.lineColor = [CPTColor grayColor];
         d6Plot.dataLineStyle = lineStyleD6;
         d6Plot.dataSource = self;
         
@@ -348,7 +348,7 @@
         d7Plot.identifier = @"d7Diagramm";
         CPTMutableLineStyle *lineStyleD7 = [d7Plot.dataLineStyle mutableCopy];
         lineStyleD7.lineWidth = 1.f;
-        lineStyleD7.lineColor = [CPTColor redColor];
+        lineStyleD7.lineColor = [CPTColor magentaColor];
         d7Plot.dataLineStyle = lineStyleD7;
         d7Plot.dataSource = self;
         
@@ -361,7 +361,7 @@
         d8Plot.identifier = @"d8Diagramm";
         CPTMutableLineStyle *lineStyleD8 = [d8Plot.dataLineStyle mutableCopy];
         lineStyleD8.lineWidth = 1.f;
-        lineStyleD8.lineColor = [CPTColor redColor];
+        lineStyleD8.lineColor = [CPTColor brownColor];
         d8Plot.dataLineStyle = lineStyleD8;
         d8Plot.dataSource = self;
         
@@ -374,7 +374,7 @@
         d9Plot.identifier = @"d9Diagramm";
         CPTMutableLineStyle *lineStyleD9 = [d9Plot.dataLineStyle mutableCopy];
         lineStyleD9.lineWidth = 1.f;
-        lineStyleD9.lineColor = [CPTColor redColor];
+        lineStyleD9.lineColor = [CPTColor orangeColor];
         d9Plot.dataLineStyle = lineStyleD9;
         d9Plot.dataSource = self;
         
@@ -697,16 +697,36 @@
 }
 
 -(void)removeAllObjectsDBG{
-    [plotDataDBG0 removeAllObjects];
-    [plotDataDBG1 removeAllObjects];
-    [plotDataDBG2 removeAllObjects];
-    [plotDataDBG3 removeAllObjects];
-    [plotDataDBG4 removeAllObjects];
-    [plotDataDBG5 removeAllObjects];
-    [plotDataDBG6 removeAllObjects];
-    [plotDataDBG7 removeAllObjects];
-    [plotDataDBG8 removeAllObjects];
-    [plotDataDBG9 removeAllObjects];
+    if ([checkDBG0 state] == NSOnState) {
+        [plotDataDBG0 removeAllObjects];
+    }
+    if ([checkDBG1 state] == NSOnState) {
+        [plotDataDBG1 removeAllObjects];
+    }
+    if ([checkDBG2 state] == NSOnState) {
+        [plotDataDBG2 removeAllObjects];
+    }
+    if ([checkDBG3 state] == NSOnState) {
+        [plotDataDBG3 removeAllObjects];
+    }
+    if ([checkDBG4 state] == NSOnState) {
+        [plotDataDBG4 removeAllObjects];
+    }
+    if ([checkDBG5 state] == NSOnState) {
+        [plotDataDBG5 removeAllObjects];
+    }
+    if ([checkDBG6 state] == NSOnState) {
+        [plotDataDBG6 removeAllObjects];
+    }
+    if ([checkDBG7 state] == NSOnState) {
+        [plotDataDBG7 removeAllObjects];
+    }
+    if ([checkDBG8 state] == NSOnState) {
+        [plotDataDBG8 removeAllObjects];
+    }
+    if ([checkDBG9 state] == NSOnState) {
+        [plotDataDBG9 removeAllObjects];
+    }
 }
 
 - (IBAction)checkDBG0Change:(id)sender
@@ -1124,158 +1144,165 @@
     if ([string length] == 0) return;
 	NSLog(@"eingelesener String: %@", string);
 
-    // Intermediate
-    NSString *nick;
-    NSString *roll;
-
     // Scanner für Winkelwerte
-    if ([string rangeOfString:@","].location != NSNotFound) {
-	NSCharacterSet *characters = [NSCharacterSet characterSetWithCharactersInString:@","];
-        //Der vom Arduino eingelesene String hat folgende Form für Winkelwerte: ,-123,456\n
-        // Lösche das Semikolon -> string = -123,456
-        [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
-        // Sammle die Zahlen auf -> nick = -123
-        [scanner scanCharactersFromSet:numbers intoString:&roll];
-        // Lösche die gerade gelesene Zahlen -> string = ,456
-        [scanner scanUpToCharactersFromSet:characters intoString:NULL];
-        // Lösche das Komma -> string = 456
-        [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
-        // Sammle die Zahlen auf -> roll = 456
-        [scanner scanCharactersFromSet:numbers intoString:&nick];
+    if ( [plotIndex isEqualToString:@"NickRoll"] ) {
         
-        float numberNick = [nick floatValue]/10;
-        float numberRoll = [roll floatValue]/10;
-        
-        [_nickSlider setFloatValue:numberNick];
-        [_rollSlider setFloatValue:numberRoll];
-        [_textFieldNick setIntValue:numberNick];
-        [_textFieldRoll setIntValue:numberRoll];
-        
-        if (countPointsNR >= 0) { //Nur jeden x. Wert plotten
-            [plotDataNick addObject:[NSDecimalNumber numberWithFloat:numberNick]];
-            [plotDataRoll addObject:[NSDecimalNumber numberWithFloat:numberRoll]];
-            countPointsNR = 0;
-        }
-        countPointsNR++;
-        
-        if ([plotDataNick count] >= 300) {
-            if ([[plotState selectedCell] tag] == 1) {
-                [plotDataNick removeObjectAtIndex:0];
-                [plotDataRoll removeObjectAtIndex:0];
+        // Intermediate
+        NSString *nick;
+        NSString *roll;
+        if ([string rangeOfString:@","].location != NSNotFound) {
+            NSCharacterSet *characters = [NSCharacterSet characterSetWithCharactersInString:@","];
+            //Der vom Arduino eingelesene String hat folgende Form für Winkelwerte: ,-123,456\n
+            // Lösche das Semikolon -> string = -123,456
+            [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+            // Sammle die Zahlen auf -> nick = -123
+            [scanner scanCharactersFromSet:numbers intoString:&roll];
+            // Lösche die gerade gelesene Zahlen -> string = ,456
+            [scanner scanUpToCharactersFromSet:characters intoString:NULL];
+            // Lösche das Komma -> string = 456
+            [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+            // Sammle die Zahlen auf -> roll = 456
+            [scanner scanCharactersFromSet:numbers intoString:&nick];
+            
+            float numberNick = [nick floatValue]/10;
+            float numberRoll = [roll floatValue]/10;
+            
+            [_nickSlider setFloatValue:numberNick];
+            [_rollSlider setFloatValue:numberRoll];
+            [_textFieldNick setIntValue:numberNick];
+            [_textFieldRoll setIntValue:numberRoll];
+            
+            if (countPointsNR >= 0) { //Nur jeden x. Wert plotten
+                [plotDataNick addObject:[NSDecimalNumber numberWithFloat:numberNick]];
+                [plotDataRoll addObject:[NSDecimalNumber numberWithFloat:numberRoll]];
+                countPointsNR = 0;
+            }
+            countPointsNR++;
+            
+            if ([plotDataNick count] >= 300) {
+                if ([[plotState selectedCell] tag] == 1) {
+                    [plotDataNick removeObjectAtIndex:0];
+                    [plotDataRoll removeObjectAtIndex:0];
+                }
+                
+                if ([[plotState selectedCell] tag] == 0) {
+                    [plotDataNick removeAllObjects];
+                    [plotDataRoll removeAllObjects];
+                }
             }
             
-            if ([[plotState selectedCell] tag] == 0) {
-                [plotDataNick removeAllObjects];
-                [plotDataRoll removeAllObjects];
-            }
+            [graph reloadData];
         }
-        
-        [graph reloadData];
     }
     
-    // Intermediate
-    NSString *d;
-    NSString *i;
-    NSString *p;
-      
     // Scanner für Reglerwerte
-    if ([string rangeOfString:@"."].location != NSNotFound) {
-        //Der vom Arduino eingelesene String hat folgende Form für Reglerwerte: .-123.456.789\n
-	NSCharacterSet *characters = [NSCharacterSet characterSetWithCharactersInString:@"."];
-
-        [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
-        [scanner scanCharactersFromSet:numbers intoString:&p];
-        [scanner scanUpToCharactersFromSet:characters intoString:NULL];
-
-        [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
-        [scanner scanCharactersFromSet:numbers intoString:&i];
-        [scanner scanUpToCharactersFromSet:characters intoString:NULL];
-
-        [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
-        [scanner scanCharactersFromSet:numbers intoString:&d];
+    if ( [plotIndex isEqualToString:@"PID"] ) {
+        // Intermediate
+        NSString *d;
+        NSString *i;
+        NSString *p;
         
-        numberD = [d floatValue];
-        numberI = [i floatValue];
-        numberP = [p floatValue];
-        
-        //NSLog(@"PID Werte sortiert.");
-       
-        [_textFieldDReceive setIntegerValue:numberD];
-        [_textFieldIReceive setIntegerValue:numberI];
-        [_textFieldPReceive setIntegerValue:numberP];
-        [_dSliderValueReceive setFloatValue:numberD];
-        [_iSliderValueReceive setFloatValue:numberI];
-        [_pSliderValueReceive setFloatValue:numberP];
-        
-        if (countPointsPID >= 0) { //Nur jeden x. Wert plotten
-            [plotDataP addObject:[NSDecimalNumber numberWithFloat:numberP]];
-            [plotDataI addObject:[NSDecimalNumber numberWithFloat:numberI]];
-            [plotDataD addObject:[NSDecimalNumber numberWithFloat:numberD]];
-            countPointsPID = 0;
-        }
-        countPointsPID++;
-        
-        if ([plotDataP count] >= 300) {
-            if ([[plotState selectedCell] tag] == 1) {
-                [plotDataP removeObjectAtIndex:0];
-                [plotDataI removeObjectAtIndex:0];
-                [plotDataD removeObjectAtIndex:0];
+        if ([string rangeOfString:@"."].location != NSNotFound) {
+            //Der vom Arduino eingelesene String hat folgende Form für Reglerwerte: .-123.456.789\n
+            NSCharacterSet *characters = [NSCharacterSet characterSetWithCharactersInString:@"."];
+            
+            [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+            [scanner scanCharactersFromSet:numbers intoString:&p];
+            [scanner scanUpToCharactersFromSet:characters intoString:NULL];
+            
+            [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+            [scanner scanCharactersFromSet:numbers intoString:&i];
+            [scanner scanUpToCharactersFromSet:characters intoString:NULL];
+            
+            [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+            [scanner scanCharactersFromSet:numbers intoString:&d];
+            
+            numberD = [d floatValue];
+            numberI = [i floatValue];
+            numberP = [p floatValue];
+            
+            //NSLog(@"PID Werte sortiert.");
+            
+            [_textFieldDReceive setIntegerValue:numberD];
+            [_textFieldIReceive setIntegerValue:numberI];
+            [_textFieldPReceive setIntegerValue:numberP];
+            [_dSliderValueReceive setFloatValue:numberD];
+            [_iSliderValueReceive setFloatValue:numberI];
+            [_pSliderValueReceive setFloatValue:numberP];
+            
+            if (countPointsPID >= 0) { //Nur jeden x. Wert plotten
+                [plotDataP addObject:[NSDecimalNumber numberWithFloat:numberP]];
+                [plotDataI addObject:[NSDecimalNumber numberWithFloat:numberI]];
+                [plotDataD addObject:[NSDecimalNumber numberWithFloat:numberD]];
+                countPointsPID = 0;
+            }
+            countPointsPID++;
+            
+            if ([plotDataP count] >= 300) {
+                if ([[plotState selectedCell] tag] == 1) {
+                    [plotDataP removeObjectAtIndex:0];
+                    [plotDataI removeObjectAtIndex:0];
+                    [plotDataD removeObjectAtIndex:0];
+                }
+                
+                if ([[plotState selectedCell] tag] == 0) {
+                    [plotDataP removeAllObjects];
+                    [plotDataI removeAllObjects];
+                    [plotDataD removeAllObjects];
+                }
             }
             
-            if ([[plotState selectedCell] tag] == 0) {
-                [plotDataP removeAllObjects];
-                [plotDataI removeAllObjects];
-                [plotDataD removeAllObjects];
-            }
+            [graph reloadData];
         }
-        
-        [graph reloadData];
     }
-    
-    // Intermediate
-    NSString *motor1;
-    NSString *motor2;
-    NSString *motor3;
-    NSString *motor4;
     
     // Scanner für Motorwerte
-    if ([string rangeOfString:@":"].location != NSNotFound) {
-        //Der vom Arduino eingelesene String hat folgende Form für Reglerwerte: :123:456:789:123\n
-        NSCharacterSet *characters = [NSCharacterSet characterSetWithCharactersInString:@":"];
+    if ( [plotIndex isEqualToString:@"PID"] || [plotIndex isEqualToString:@"NickRoll"] ) {
+    
+        // Intermediate
+        NSString *motor1;
+        NSString *motor2;
+        NSString *motor3;
+        NSString *motor4;
         
-        [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
-        [scanner scanCharactersFromSet:numbers intoString:&motor1];
-        [scanner scanUpToCharactersFromSet:characters intoString:NULL];
-        
-        [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
-        [scanner scanCharactersFromSet:numbers intoString:&motor2];
-        [scanner scanUpToCharactersFromSet:characters intoString:NULL];
-        
-        [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
-        [scanner scanCharactersFromSet:numbers intoString:&motor3];
-        [scanner scanUpToCharactersFromSet:characters intoString:NULL];
-        
-        [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
-        [scanner scanCharactersFromSet:numbers intoString:&motor4];
-        
-        numberMotor1 = [motor1 integerValue];
-        numberMotor2 = [motor2 integerValue];
-        numberMotor3 = [motor3 integerValue];
-        numberMotor4 = [motor4 integerValue];
-        
-        [_levelMotor1 setIntValue:(int)numberMotor1];
-        [_levelMotor2 setIntValue:(int)numberMotor2];
-        [_levelMotor3 setIntValue:(int)numberMotor3];
-        [_levelMotor4 setIntValue:(int)numberMotor4];
+        if ([string rangeOfString:@":"].location != NSNotFound) {
+            //Der vom Arduino eingelesene String hat folgende Form für Reglerwerte: :123:456:789:123\n
+            NSCharacterSet *characters = [NSCharacterSet characterSetWithCharactersInString:@":"];
+            
+            [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+            [scanner scanCharactersFromSet:numbers intoString:&motor1];
+            [scanner scanUpToCharactersFromSet:characters intoString:NULL];
+            
+            [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+            [scanner scanCharactersFromSet:numbers intoString:&motor2];
+            [scanner scanUpToCharactersFromSet:characters intoString:NULL];
+            
+            [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+            [scanner scanCharactersFromSet:numbers intoString:&motor3];
+            [scanner scanUpToCharactersFromSet:characters intoString:NULL];
+            
+            [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+            [scanner scanCharactersFromSet:numbers intoString:&motor4];
+            
+            numberMotor1 = [motor1 integerValue];
+            numberMotor2 = [motor2 integerValue];
+            numberMotor3 = [motor3 integerValue];
+            numberMotor4 = [motor4 integerValue];
+            
+            [_levelMotor1 setIntValue:(int)numberMotor1];
+            [_levelMotor2 setIntValue:(int)numberMotor2];
+            [_levelMotor3 setIntValue:(int)numberMotor3];
+            [_levelMotor4 setIntValue:(int)numberMotor4];
+        }
     }
     
-    // Intermediate
-    NSString *str;
-    NSMutableArray *debug = [[NSMutableArray alloc] init];
-    
-    
     // Scanner für Debug-Werte
-    if ([plotIndex isEqualToString:@"DEBUG"] && ([popUp indexOfSelectedItem] == 4)) {
+    if ([plotIndex isEqualToString:@"DEBUG"]) {
+        
+        // Intermediate
+        NSString *str;
+        NSMutableArray *debug = [[NSMutableArray alloc] init];
+        
         if ([string rangeOfString:@";"].location != NSNotFound) {
             //Der vom Arduino eingelesene String hat folgende Form für Reglerwerte: ;123;456;789;...\n
             NSCharacterSet *characters = [NSCharacterSet characterSetWithCharactersInString:@";"];
@@ -1292,65 +1319,102 @@
             
             NSLog(@"Debug String %@", [debug objectAtIndex:0]);
             
-            numberDebug0 = [[debug objectAtIndex:0] floatValue];
-            numberDebug1 = [[debug objectAtIndex:1] floatValue];
-            numberDebug2 = [[debug objectAtIndex:2] floatValue];
-            numberDebug3 = [[debug objectAtIndex:3] floatValue];
-            numberDebug4 = [[debug objectAtIndex:4] floatValue];
-            numberDebug5 = [[debug objectAtIndex:5] floatValue];
-            numberDebug6 = [[debug objectAtIndex:6] floatValue];
-            numberDebug7 = [[debug objectAtIndex:7] floatValue];
-            numberDebug8 = [[debug objectAtIndex:8] floatValue];
-            numberDebug9 = [[debug objectAtIndex:9] floatValue];
-            
             if (countPointsDBG >= 0) { //Nur jeden x. Wert plotten
-                [plotDataDBG0 addObject:[NSDecimalNumber numberWithFloat:numberDebug0]];
-                [plotDataDBG1 addObject:[NSDecimalNumber numberWithFloat:numberDebug1]];
-                [plotDataDBG2 addObject:[NSDecimalNumber numberWithFloat:numberDebug2]];
-                [plotDataDBG3 addObject:[NSDecimalNumber numberWithFloat:numberDebug3]];
-                [plotDataDBG4 addObject:[NSDecimalNumber numberWithFloat:numberDebug4]];
-                [plotDataDBG5 addObject:[NSDecimalNumber numberWithFloat:numberDebug5]];
-                [plotDataDBG6 addObject:[NSDecimalNumber numberWithFloat:numberDebug6]];
-                [plotDataDBG7 addObject:[NSDecimalNumber numberWithFloat:numberDebug7]];
-                [plotDataDBG8 addObject:[NSDecimalNumber numberWithFloat:numberDebug8]];
-                [plotDataDBG9 addObject:[NSDecimalNumber numberWithFloat:numberDebug9]];
+                if ([checkDBG0 state] == NSOnState) {
+                    numberDebug0 = [[debug objectAtIndex:0] floatValue];
+                    [plotDataDBG0 addObject:[NSDecimalNumber numberWithFloat:numberDebug0]];
+                }
+                if ([checkDBG1 state] == NSOnState) {
+                    numberDebug1 = [[debug objectAtIndex:1] floatValue];
+                    [plotDataDBG1 addObject:[NSDecimalNumber numberWithFloat:numberDebug1]];
+                }
+                if ([checkDBG2 state] == NSOnState) {
+                    numberDebug2 = [[debug objectAtIndex:2] floatValue];
+                    [plotDataDBG2 addObject:[NSDecimalNumber numberWithFloat:numberDebug2]];
+                }
+                if ([checkDBG3 state] == NSOnState) {
+                    numberDebug3 = [[debug objectAtIndex:3] floatValue];
+                    [plotDataDBG3 addObject:[NSDecimalNumber numberWithFloat:numberDebug3]];
+                }
+                if ([checkDBG4 state] == NSOnState) {
+                    numberDebug4 = [[debug objectAtIndex:4] floatValue];
+                    [plotDataDBG4 addObject:[NSDecimalNumber numberWithFloat:numberDebug4]];
+                }
+                if ([checkDBG5 state] == NSOnState) {
+                    numberDebug5 = [[debug objectAtIndex:5] floatValue];
+                    [plotDataDBG5 addObject:[NSDecimalNumber numberWithFloat:numberDebug5]];
+                }
+                if ([checkDBG6 state] == NSOnState) {
+                    numberDebug6 = [[debug objectAtIndex:6] floatValue];
+                    [plotDataDBG6 addObject:[NSDecimalNumber numberWithFloat:numberDebug6]];
+                }
+                if ([checkDBG7 state] == NSOnState) {
+                    numberDebug7 = [[debug objectAtIndex:7] floatValue];
+                    [plotDataDBG7 addObject:[NSDecimalNumber numberWithFloat:numberDebug7]];
+                }
+                if ([checkDBG8 state] == NSOnState) {
+                    numberDebug8 = [[debug objectAtIndex:8] floatValue];
+                    [plotDataDBG8 addObject:[NSDecimalNumber numberWithFloat:numberDebug8]];
+                }
+                if ([checkDBG9 state] == NSOnState) {
+                    numberDebug9 = [[debug objectAtIndex:9] floatValue];
+                    [plotDataDBG9 addObject:[NSDecimalNumber numberWithFloat:numberDebug9]];
+                }
                 countPointsDBG = 0;
             }
             countPointsDBG++;
             
             if ([plotDataDBG0 count] >= 300) {
                 if ([[plotState selectedCell] tag] == 1) {
-                    [plotDataDBG0 removeObjectAtIndex:0];
-                    [plotDataDBG1 removeObjectAtIndex:0];
-                    [plotDataDBG2 removeObjectAtIndex:0];
-                    [plotDataDBG3 removeObjectAtIndex:0];
-                    [plotDataDBG4 removeObjectAtIndex:0];
-                    [plotDataDBG5 removeObjectAtIndex:0];
-                    [plotDataDBG6 removeObjectAtIndex:0];
-                    [plotDataDBG7 removeObjectAtIndex:0];
-                    [plotDataDBG8 removeObjectAtIndex:0];
-                    [plotDataDBG9 removeObjectAtIndex:0];
+                    if ([checkDBG0 state] == NSOnState) {
+                        [plotDataDBG0 removeObjectAtIndex:0];
+                    }
+                    if ([checkDBG1 state] == NSOnState) {
+                        [plotDataDBG1 removeObjectAtIndex:0];
+                    }
+                    if ([checkDBG2 state] == NSOnState) {
+                        [plotDataDBG2 removeObjectAtIndex:0];
+                    }
+                    if ([checkDBG3 state] == NSOnState) {
+                        [plotDataDBG3 removeObjectAtIndex:0];
+                    }
+                    if ([checkDBG4 state] == NSOnState) {
+                        [plotDataDBG4 removeObjectAtIndex:0];
+                    }
+                    if ([checkDBG5 state] == NSOnState) {
+                        [plotDataDBG5 removeObjectAtIndex:0];
+                    }
+                    if ([checkDBG6 state] == NSOnState) {
+                        [plotDataDBG6 removeObjectAtIndex:0];
+                    }
+                    if ([checkDBG7 state] == NSOnState) {
+                        [plotDataDBG7 removeObjectAtIndex:0];
+                    }
+                    if ([checkDBG8 state] == NSOnState) {
+                        [plotDataDBG8 removeObjectAtIndex:0];
+                    }
+                    if ([checkDBG9 state] == NSOnState) {
+                        [plotDataDBG9 removeObjectAtIndex:0];
+                    }
                 }
                 
                 if ([[plotState selectedCell] tag] == 0) {
-                    [plotDataDBG0 removeAllObjects];
-                    [plotDataDBG1 removeAllObjects];
-                    [plotDataDBG2 removeAllObjects];
-                    [plotDataDBG3 removeAllObjects];
-                    [plotDataDBG4 removeAllObjects];
-                    [plotDataDBG5 removeAllObjects];
-                    [plotDataDBG6 removeAllObjects];
-                    [plotDataDBG7 removeAllObjects];
-                    [plotDataDBG8 removeAllObjects];
-                    [plotDataDBG9 removeAllObjects];
+                    [self removeAllObjectsDBG];
                 }
             }
             [graph reloadData];
         }
     }
     
+    // Scanner für Cycle Time
+    NSString *cycleTime;
+    if ([string rangeOfString:@"*"].location != NSNotFound) {
+        [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+        [scanner scanCharactersFromSet:numbers intoString:&cycleTime];
+        [cycleTimeTextField setStringValue:[NSString stringWithFormat:@"%@%@%@", @"cycle time: ", cycleTime, @"µs"]];
+    }
     
-    // Scanner für config Werte   
+    // Scanner für config Werte
     NSInteger P8ROLL;
     NSInteger I8ROLL;
     NSInteger D8ROLL;
@@ -1389,8 +1453,6 @@
     //e rcRate8 e rollPitchRate e yawRate e rcExpo8 \r
     //f dynThrPID f thrMid8 f thrExpo8 \r
     //g angleTrim[0] g angleTrim[1] \r
-
-    //TODO: Das gesamte Programm mit dem Einsatz von Funktion eleganter schreiben!
 
     if ([string rangeOfString:@"a"].location != NSNotFound) {
         //a P8[ROLL] a I8[ROLL] a D8[ROLL] \r

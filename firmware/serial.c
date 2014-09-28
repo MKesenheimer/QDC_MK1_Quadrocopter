@@ -105,6 +105,12 @@ void sendDebugToGUI(int16_t array[],uint8_t length)
     sendArrayToGUI(&array[0],length,0x3B); //identifier = Strichpunkt
 }
 
+void sendStatusToGUI()
+{
+    int16_t array[1] = {cycleTime}; //ggf. kšnnen hier weitere Informationen gesendet werden
+    sendArrayToGUI(&array[0],1,0x2A); //identifier = *
+}
+
 //Zu sendender String: (die Buchstaben dienen als Identifier der Wertepaare)
 ISR(USARTD1_RXC_vect)
 {

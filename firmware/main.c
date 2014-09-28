@@ -58,43 +58,7 @@
 #include "serial.c"
 #include "filters.c"
 #include "pid.c"
-
-void blinkleds(int option) {
-      if (option == 0) {
-            if (LEDCOUNT == 500 || LEDCOUNT == 700) {
-                  SETLED1; SETLED2; SETLED3; SETLED4;
-            }
-            if (LEDCOUNT == 600 || LEDCOUNT == 900) {
-                  CLRLED1; CLRLED2; CLRLED3; CLRLED4;
-            }
-            if (LEDCOUNT > 1000) {
-            LEDCOUNT = 0;
-            }
-      }
-      
-      if (option == 1) {
-            if (LEDCOUNT == 125) {
-                  CLRLED1;
-                  SETLED2;
-            }
-            if (LEDCOUNT == 250) {
-                  CLRLED2;
-                  SETLED3;
-            }
-            if (LEDCOUNT == 375) {
-                  CLRLED3;
-                  SETLED4;
-            }
-            if (LEDCOUNT == 500) {
-                  CLRLED4;
-                  SETLED1;
-            }
-            if (LEDCOUNT > 500) {
-                  LEDCOUNT = 0;
-            }
-      }
-      LEDCOUNT++;
-}
+#include "led.c"
 
 int main()
 {
@@ -125,8 +89,8 @@ int main()
 		//Acc und Gyro Daten einlesen und integrieren
 		Gyro_getADC();
 		ACC_getADC();
-        first_order_comp_filter();
-		second_order_comp_filter();
+        //first_order_comp_filter();
+		//second_order_comp_filter();
         kalman_filter();
 		pid();
             
@@ -186,16 +150,19 @@ int main()
                     //somit dividiert die GUI die erhaltenen Werte wieder durch 10.
 					sendAnglesToGUI(compAngle[ROLL]*10, compAngle[PITCH]*10);
                     sendMotorsToGUI(motor[0]/1000, motor[1]/1000, motor[2]/1000, motor[3]/1000);
+                    sendStatusToGUI(); //cycle Time usw.
 					break;
 				case PID:
 					sendPIDToGUI(pTerm[whichPIDToSend]/100, iTerm[whichPIDToSend]/100, dTerm[whichPIDToSend]/100);
                     sendMotorsToGUI(motor[0]/1000, motor[1]/1000, motor[2]/1000, motor[3]/1000);
+                    sendStatusToGUI();
 					break;
                 case DEB:
                     for (t = 0; t<DEBUGITEMS; t++) {
                         array[t] = (int16_t)debug[t];
                     }
                     sendDebugToGUI(&array[0],DEBUGITEMS);
+                    sendStatusToGUI();
                     break;
 				case NOT:
 					//nichts senden
@@ -203,14 +170,9 @@ int main()
 			}
 		}
             
-            if (rcThrottle < 200) {
-                  blinkleds(1);
-            }
-            if (rcThrottle >= 200) {
-                  blinkleds(0);
-            }
+        ledThrottlePattern();
 		mixTable();
-            writeMotors();
+        writeMotors();
 		WDT_Reset();
 	}
 

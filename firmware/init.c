@@ -46,10 +46,10 @@ void initPWM()
 	TCC0.CTRLA = 0x02;		//Prescaler auf 3
 	TCC0.CTRLB = 0xf3;		//Single Slope und PWM an allen PWM Ausgaengen freischalten
 	
-	motor[0] = 0x00;
-	motor[1] = 0x00;
-	motor[2] = 0x00;
-	motor[3] = 0x00;
+    motor[0] = MOTORMIN;
+    motor[1] = MOTORMIN;
+    motor[2] = MOTORMIN;
+    motor[3] = MOTORMIN;
 }
 
 void initPorts()
