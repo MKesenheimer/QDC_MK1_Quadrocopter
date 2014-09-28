@@ -27,15 +27,31 @@
 -(void)awakeFromNib
 {
     [super awakeFromNib];
-    plotDataNick = [NSMutableArray arrayWithCapacity:1000];
+    plotDataNick = [NSMutableArray arrayWithCapacity:1000]; //[[NSMutableArray alloc]init];
     plotDataRoll = [NSMutableArray arrayWithCapacity:1000];
     
     plotDataP = [NSMutableArray arrayWithCapacity:1000];
     plotDataI = [NSMutableArray arrayWithCapacity:1000];
     plotDataD = [NSMutableArray arrayWithCapacity:1000];
     
+    //plotDataDBG = [NSMutableArray arrayWithCapacity:1000]; //hier werden die empfangenen Werte gespeichert (history)
+    //arrayPlotDataDBG = [NSMutableArray arrayWithCapacity:10]; //dieses Array enthält plotDataDBG für insgesamt 10 Debug-Kanäle, d.h. [plotDataDBG1, plotDataDBG2, ...]
+    
+    plotDataDBG0 = [NSMutableArray arrayWithCapacity:1000];
+    plotDataDBG1 = [NSMutableArray arrayWithCapacity:1000];
+    plotDataDBG2 = [NSMutableArray arrayWithCapacity:1000];
+    plotDataDBG3 = [NSMutableArray arrayWithCapacity:1000];
+    plotDataDBG4 = [NSMutableArray arrayWithCapacity:1000];
+    plotDataDBG5 = [NSMutableArray arrayWithCapacity:1000];
+    plotDataDBG6 = [NSMutableArray arrayWithCapacity:1000];
+    plotDataDBG7 = [NSMutableArray arrayWithCapacity:1000];
+    plotDataDBG8 = [NSMutableArray arrayWithCapacity:1000];
+    plotDataDBG9 = [NSMutableArray arrayWithCapacity:1000];
+    
     countPointsNR = 0;
     countPointsPID = 0;
+    countPointsDBG = 0;
+    
     numberP = 0;
     numberI = 0;
     numberD = 0;
@@ -205,30 +221,232 @@
     [graph addPlot:dPlot];
 }
 
+-(void)createPlotDBG
+{
+    // Create graph from theme
+    graph = [(CPTXYGraph *)[CPTXYGraph alloc] initWithFrame:CGRectZero];
+    CPTTheme *theme = [CPTTheme themeNamed:kCPTPlainWhiteTheme]; //kCPTDarkGradientTheme
+    [graph applyTheme:theme];
+    hostView.hostedGraph = graph;
+    
+    //Setup scatter plot space
+    CPTXYPlotSpace *plotSpace = (CPTXYPlotSpace *)graph.defaultPlotSpace;
+    plotSpace.yRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(-100.f)
+                                                    length:CPTDecimalFromFloat(200.f)];
+    plotSpace.xRange = [CPTPlotRange plotRangeWithLocation:CPTDecimalFromFloat(0.f)
+                                                    length:CPTDecimalFromFloat(300.0f)];
+    
+    // Axes
+    CPTXYAxisSet *axisSet = (CPTXYAxisSet *)graph.axisSet;
+    CPTXYAxis *x          = axisSet.xAxis;
+    x.majorIntervalLength         = CPTDecimalFromFloat(350);
+    x.orthogonalCoordinateDecimal = CPTDecimalFromString(@"0"); //Offset
+    x.minorTicksPerInterval       = 0;
+    //x.labelFormatter            = ;
+    
+    CPTXYAxis *y = axisSet.yAxis;
+    y.majorIntervalLength         = CPTDecimalFromFloat(50);
+    y.minorTicksPerInterval       = 0;
+    y.orthogonalCoordinateDecimal = CPTDecimalFromString(@"25");
+    
+    //--------------------------DBG--------------------------------------------------------------------------------
+    
+    if ([checkDBG0 state] == NSOnState) {
+        //ScatterPlot - DBG0
+        CPTScatterPlot *d0Plot = [[CPTScatterPlot alloc] init];
+        d0Plot.identifier = @"d0Diagramm";
+        CPTMutableLineStyle *lineStyleD0 = [d0Plot.dataLineStyle mutableCopy];
+        lineStyleD0.lineWidth = 1.f;
+        lineStyleD0.lineColor = [CPTColor greenColor];
+        d0Plot.dataLineStyle = lineStyleD0;
+        d0Plot.dataSource = self;
+        
+        [graph addPlot:d0Plot];
+    }
+    
+    if ([checkDBG1 state] == NSOnState) {
+        //ScatterPlot - DBG1
+        CPTScatterPlot *d1Plot = [[CPTScatterPlot alloc] init];
+        d1Plot.identifier = @"d1Diagramm";
+        CPTMutableLineStyle *lineStyleD1 = [d1Plot.dataLineStyle mutableCopy];
+        lineStyleD1.lineWidth = 1.f;
+        lineStyleD1.lineColor = [CPTColor blueColor];
+        d1Plot.dataLineStyle = lineStyleD1;
+        d1Plot.dataSource = self;
+        
+        [graph addPlot:d1Plot];
+    }
+    
+    if ([checkDBG2 state] == NSOnState) {
+        //ScatterPlot - DBG2
+        CPTScatterPlot *d2Plot = [[CPTScatterPlot alloc] init];
+        d2Plot.identifier = @"d2Diagramm";
+        CPTMutableLineStyle *lineStyleD2 = [d2Plot.dataLineStyle mutableCopy];
+        lineStyleD2.lineWidth = 1.f;
+        lineStyleD2.lineColor = [CPTColor redColor];
+        d2Plot.dataLineStyle = lineStyleD2;
+        d2Plot.dataSource = self;
+        
+        [graph addPlot:d2Plot];
+    }
+
+    if ([checkDBG3 state] == NSOnState) {
+        //ScatterPlot - DBG3
+        CPTScatterPlot *d3Plot = [[CPTScatterPlot alloc] init];
+        d3Plot.identifier = @"d3Diagramm";
+        CPTMutableLineStyle *lineStyleD3 = [d3Plot.dataLineStyle mutableCopy];
+        lineStyleD3.lineWidth = 1.f;
+        lineStyleD3.lineColor = [CPTColor redColor];
+        d3Plot.dataLineStyle = lineStyleD3;
+        d3Plot.dataSource = self;
+        
+        [graph addPlot:d3Plot];
+    }
+    
+    if ([checkDBG4 state] == NSOnState) {
+        //ScatterPlot - DBG4
+        CPTScatterPlot *d4Plot = [[CPTScatterPlot alloc] init];
+        d4Plot.identifier = @"d4Diagramm";
+        CPTMutableLineStyle *lineStyleD4 = [d4Plot.dataLineStyle mutableCopy];
+        lineStyleD4.lineWidth = 1.f;
+        lineStyleD4.lineColor = [CPTColor redColor];
+        d4Plot.dataLineStyle = lineStyleD4;
+        d4Plot.dataSource = self;
+        
+        [graph addPlot:d4Plot];
+    }
+    
+    if ([checkDBG5 state] == NSOnState) {
+        //ScatterPlot - DBG5
+        CPTScatterPlot *d5Plot = [[CPTScatterPlot alloc] init];
+        d5Plot.identifier = @"d5Diagramm";
+        CPTMutableLineStyle *lineStyleD5 = [d5Plot.dataLineStyle mutableCopy];
+        lineStyleD5.lineWidth = 1.f;
+        lineStyleD5.lineColor = [CPTColor redColor];
+        d5Plot.dataLineStyle = lineStyleD5;
+        d5Plot.dataSource = self;
+        
+        [graph addPlot:d5Plot];
+    }
+    
+    if ([checkDBG6 state] == NSOnState) {
+        //ScatterPlot - DBG6
+        CPTScatterPlot *d6Plot = [[CPTScatterPlot alloc] init];
+        d6Plot.identifier = @"d6Diagramm";
+        CPTMutableLineStyle *lineStyleD6 = [d6Plot.dataLineStyle mutableCopy];
+        lineStyleD6.lineWidth = 1.f;
+        lineStyleD6.lineColor = [CPTColor redColor];
+        d6Plot.dataLineStyle = lineStyleD6;
+        d6Plot.dataSource = self;
+        
+        [graph addPlot:d6Plot];
+    }
+    
+    if ([checkDBG7 state] == NSOnState) {
+        //ScatterPlot - DBG7
+        CPTScatterPlot *d7Plot = [[CPTScatterPlot alloc] init];
+        d7Plot.identifier = @"d7Diagramm";
+        CPTMutableLineStyle *lineStyleD7 = [d7Plot.dataLineStyle mutableCopy];
+        lineStyleD7.lineWidth = 1.f;
+        lineStyleD7.lineColor = [CPTColor redColor];
+        d7Plot.dataLineStyle = lineStyleD7;
+        d7Plot.dataSource = self;
+        
+        [graph addPlot:d7Plot];
+    }
+    
+    if ([checkDBG8 state] == NSOnState) {
+        //ScatterPlot - DBG8
+        CPTScatterPlot *d8Plot = [[CPTScatterPlot alloc] init];
+        d8Plot.identifier = @"d8Diagramm";
+        CPTMutableLineStyle *lineStyleD8 = [d8Plot.dataLineStyle mutableCopy];
+        lineStyleD8.lineWidth = 1.f;
+        lineStyleD8.lineColor = [CPTColor redColor];
+        d8Plot.dataLineStyle = lineStyleD8;
+        d8Plot.dataSource = self;
+        
+        [graph addPlot:d8Plot];
+    }
+    
+    if ([checkDBG9 state] == NSOnState) {
+        //ScatterPlot - DBG9
+        CPTScatterPlot *d9Plot = [[CPTScatterPlot alloc] init];
+        d9Plot.identifier = @"d9Diagramm";
+        CPTMutableLineStyle *lineStyleD9 = [d9Plot.dataLineStyle mutableCopy];
+        lineStyleD9.lineWidth = 1.f;
+        lineStyleD9.lineColor = [CPTColor redColor];
+        d9Plot.dataLineStyle = lineStyleD9;
+        d9Plot.dataSource = self;
+        
+        [graph addPlot:d9Plot];
+    }
+}
 
 -(NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plot
 {
     //--------------------Nick and Roll--------------------------------------------------------------------------------
     if ([(NSString *)plot.identifier isEqualToString:@"NickDiagramm"] && [plotIndex isEqualToString:@"NickRoll"]) {
-        return plotDataNick.count;
+        return [plotDataNick count];
     }
     
     if ([(NSString *)plot.identifier isEqualToString:@"RollDiagramm"] && [plotIndex isEqualToString:@"NickRoll"]) {
-        return plotDataRoll.count;
+        return [plotDataRoll count];
     }
     
     
     //--------------------------PID------------------------------------------------------------------------------------
     if ([(NSString *)plot.identifier isEqualToString:@"pDiagramm"] && [plotIndex isEqualToString:@"PID"]) {
-        return plotDataP.count;
+        return [plotDataP count];
     }
     
     if ([(NSString *)plot.identifier isEqualToString:@"iDiagramm"] && [plotIndex isEqualToString:@"PID"]) {
-        return plotDataI.count;
+        return [plotDataI count];
     }
     
     if ([(NSString *)plot.identifier isEqualToString:@"dDiagramm"] && [plotIndex isEqualToString:@"PID"]) {
-        return plotDataD.count;
+        return [plotDataD count];
+    }
+    
+    //--------------------------DBG------------------------------------------------------------------------------------
+    if ([(NSString *)plot.identifier isEqualToString:@"d0Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG0 state] == NSOnState) ) {
+        //return [[arrayPlotDataDBG1 objectAtIndex:1] count];
+        return [plotDataDBG0 count];
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d1Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG1 state] == NSOnState) ) {
+        return [plotDataDBG1 count];
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d2Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG2 state] == NSOnState) ) {
+        return [plotDataDBG2 count];
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d3Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG3 state] == NSOnState) ) {
+        return [plotDataDBG3 count];
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d4Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG4 state] == NSOnState) ) {
+        return [plotDataDBG4 count];
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d5Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG5 state] == NSOnState) ) {
+        return [plotDataDBG5 count];
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d6Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG6 state] == NSOnState) ) {
+        return [plotDataDBG6 count];
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d7Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG7 state] == NSOnState) ) {
+        return [plotDataDBG7 count];
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d8Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG8 state] == NSOnState) ) {
+        return [plotDataDBG8 count];
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d9Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG9 state] == NSOnState) ) {
+        return [plotDataDBG9 count];
     }
     
     return nil;
@@ -289,13 +507,115 @@
         return nil;
     }
     
+    //--------------------------DBG--------------------------------------------------------------------------------------
+    if ([(NSString *)plot.identifier isEqualToString:@"d0Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG0 state] == NSOnState) ) {
+        switch ( fieldEnum ) {
+            case CPTScatterPlotFieldX:
+                return (NSDecimalNumber *)[NSDecimalNumber numberWithUnsignedInteger:index];
+            case CPTScatterPlotFieldY:
+                //return [[arrayPlotDataDBG objectAtIndex:0] objectAtIndex:index];
+                return [plotDataDBG0 objectAtIndex:index];
+        }
+        return nil;
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d1Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG1 state] == NSOnState) ) {
+        switch ( fieldEnum ) {
+            case CPTScatterPlotFieldX:
+                return (NSDecimalNumber *)[NSDecimalNumber numberWithUnsignedInteger:index];
+            case CPTScatterPlotFieldY:
+                return [plotDataDBG1 objectAtIndex:index];
+        }
+        return nil;
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d2Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG2 state] == NSOnState) ) {
+        switch ( fieldEnum ) {
+            case CPTScatterPlotFieldX:
+                return (NSDecimalNumber *)[NSDecimalNumber numberWithUnsignedInteger:index];
+            case CPTScatterPlotFieldY:
+                return [plotDataDBG2 objectAtIndex:index];
+        }
+        return nil;
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d3Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG3 state] == NSOnState) ) {
+        switch ( fieldEnum ) {
+            case CPTScatterPlotFieldX:
+                return (NSDecimalNumber *)[NSDecimalNumber numberWithUnsignedInteger:index];
+            case CPTScatterPlotFieldY:
+                return [plotDataDBG3 objectAtIndex:index];
+        }
+        return nil;
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d4Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG4 state] == NSOnState) ) {
+        switch ( fieldEnum ) {
+            case CPTScatterPlotFieldX:
+                return (NSDecimalNumber *)[NSDecimalNumber numberWithUnsignedInteger:index];
+            case CPTScatterPlotFieldY:
+                return [plotDataDBG4 objectAtIndex:index];
+        }
+        return nil;
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d5Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG5 state] == NSOnState) ) {
+        switch ( fieldEnum ) {
+            case CPTScatterPlotFieldX:
+                return (NSDecimalNumber *)[NSDecimalNumber numberWithUnsignedInteger:index];
+            case CPTScatterPlotFieldY:
+                return [plotDataDBG5 objectAtIndex:index];
+        }
+        return nil;
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d6Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG6 state] == NSOnState) ) {
+        switch ( fieldEnum ) {
+            case CPTScatterPlotFieldX:
+                return (NSDecimalNumber *)[NSDecimalNumber numberWithUnsignedInteger:index];
+            case CPTScatterPlotFieldY:
+                return [plotDataDBG6 objectAtIndex:index];
+        }
+        return nil;
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d7Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG7 state] == NSOnState) ) {
+        switch ( fieldEnum ) {
+            case CPTScatterPlotFieldX:
+                return (NSDecimalNumber *)[NSDecimalNumber numberWithUnsignedInteger:index];
+            case CPTScatterPlotFieldY:
+                return [plotDataDBG7 objectAtIndex:index];
+        }
+        return nil;
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d8Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG8 state] == NSOnState) ) {
+        switch ( fieldEnum ) {
+            case CPTScatterPlotFieldX:
+                return (NSDecimalNumber *)[NSDecimalNumber numberWithUnsignedInteger:index];
+            case CPTScatterPlotFieldY:
+                return [plotDataDBG8 objectAtIndex:index];
+        }
+        return nil;
+    }
+    
+    if ([(NSString *)plot.identifier isEqualToString:@"d9Diagramm"] && [plotIndex isEqualToString:@"DEBUG"] && ([checkDBG9 state] == NSOnState) ) {
+        switch ( fieldEnum ) {
+            case CPTScatterPlotFieldX:
+                return (NSDecimalNumber *)[NSDecimalNumber numberWithUnsignedInteger:index];
+            case CPTScatterPlotFieldY:
+                return [plotDataDBG9 objectAtIndex:index];
+        }
+        return nil;
+    }
+    
     return nil;
 }
 
 - (IBAction)plot:(id)sender
 {
     
-    if ([plotIndex isEqualToString:@"NickRoll"]) {
+    if ([plotIndex isEqualToString:@"NickRoll"] && ([popUp indexOfSelectedItem] == 0)) {
         char data = 0x41; //A
         NSMutableData *dataToSend = [NSMutableData dataWithBytes:&data length:sizeof(data)];
         NSLog(@"zu sendender String: %@", dataToSend);
@@ -313,7 +633,7 @@
         [self createPlotPID];
     }
     
-    if ([plotIndex isEqualToString:@"PID"] && ([popUp indexOfSelectedItem] == 1)) { //PIDPITCH
+    if ([plotIndex isEqualToString:@"PID"] && ([popUp indexOfSelectedItem] == 2)) { //PIDPITCH
         char data = 0x59; //Y
         NSMutableData *dataToSend = [NSMutableData dataWithBytes:&data length:sizeof(data)];
         NSLog(@"zu sendender String: %@", dataToSend);
@@ -322,13 +642,22 @@
         [self createPlotPID];
     }
     
-    if ([plotIndex isEqualToString:@"PID"] && ([popUp indexOfSelectedItem] == 1)) { //PIDYAW
+    if ([plotIndex isEqualToString:@"PID"] && ([popUp indexOfSelectedItem] == 3)) { //PIDYAW
         char data = 0x60; //Z
         NSMutableData *dataToSend = [NSMutableData dataWithBytes:&data length:sizeof(data)];
         NSLog(@"zu sendender String: %@", dataToSend);
         [self.serialPort sendData:dataToSend];
         usleep(1000);
         [self createPlotPID];
+    }
+    
+    if ([plotIndex isEqualToString:@"DEBUG"] && ([popUp indexOfSelectedItem] == 4)) { //DEBUG
+        char data = 0x42; //B
+        NSMutableData *dataToSend = [NSMutableData dataWithBytes:&data length:sizeof(data)];
+        NSLog(@"zu sendender String: %@", dataToSend);
+        [self.serialPort sendData:dataToSend];
+        usleep(1000);
+        [self createPlotDBG];
     }
 }
 
@@ -349,7 +678,115 @@
     [plotDataP removeAllObjects];
     [plotDataI removeAllObjects];
     [plotDataD removeAllObjects];
+    
+    //[plotDataDBG removeAllObjects];
+    //[arrayPlotDataDBG removeAllObjects];
+    
+    [plotDataDBG0 removeAllObjects];
+    [plotDataDBG1 removeAllObjects];
+    [plotDataDBG2 removeAllObjects];
+    [plotDataDBG3 removeAllObjects];
+    [plotDataDBG4 removeAllObjects];
+    [plotDataDBG5 removeAllObjects];
+    [plotDataDBG6 removeAllObjects];
+    [plotDataDBG7 removeAllObjects];
+    [plotDataDBG8 removeAllObjects];
+    [plotDataDBG9 removeAllObjects];
+    
     [graph reloadData];
+}
+
+-(void)removeAllObjectsDBG{
+    [plotDataDBG0 removeAllObjects];
+    [plotDataDBG1 removeAllObjects];
+    [plotDataDBG2 removeAllObjects];
+    [plotDataDBG3 removeAllObjects];
+    [plotDataDBG4 removeAllObjects];
+    [plotDataDBG5 removeAllObjects];
+    [plotDataDBG6 removeAllObjects];
+    [plotDataDBG7 removeAllObjects];
+    [plotDataDBG8 removeAllObjects];
+    [plotDataDBG9 removeAllObjects];
+}
+
+- (IBAction)checkDBG0Change:(id)sender
+{
+    if ([plotIndex isEqualToString:@"DEBUG"] && ([popUp indexOfSelectedItem] == 4)) {
+        [self createPlotDBG];
+    }
+    [self removeAllObjectsDBG];
+}
+
+- (IBAction)checkDBG1Change:(id)sender
+{
+    if ([plotIndex isEqualToString:@"DEBUG"] && ([popUp indexOfSelectedItem] == 4)) {
+        [self createPlotDBG];
+    }
+    [self removeAllObjectsDBG];
+}
+
+- (IBAction)checkDBG2Change:(id)sender
+{
+    if ([plotIndex isEqualToString:@"DEBUG"] && ([popUp indexOfSelectedItem] == 4)) {
+        [self createPlotDBG];
+    }
+    [self removeAllObjectsDBG];
+}
+
+- (IBAction)checkDBG3Change:(id)sender
+{
+    if ([plotIndex isEqualToString:@"DEBUG"] && ([popUp indexOfSelectedItem] == 4)) {
+        [self createPlotDBG];
+    }
+    [self removeAllObjectsDBG];
+}
+
+- (IBAction)checkDBG4Change:(id)sender
+{
+    if ([plotIndex isEqualToString:@"DEBUG"] && ([popUp indexOfSelectedItem] == 4)) {
+        [self createPlotDBG];
+    }
+    [self removeAllObjectsDBG];
+}
+
+- (IBAction)checkDBG5Change:(id)sender
+{
+    if ([plotIndex isEqualToString:@"DEBUG"] && ([popUp indexOfSelectedItem] == 4)) {
+        [self createPlotDBG];
+    }
+    [self removeAllObjectsDBG];
+}
+
+- (IBAction)checkDBG6Change:(id)sender
+{
+    if ([plotIndex isEqualToString:@"DEBUG"] && ([popUp indexOfSelectedItem] == 4)) {
+        [self createPlotDBG];
+    }
+    [self removeAllObjectsDBG];
+}
+
+- (IBAction)checkDBG7Change:(id)sender
+{
+    if ([plotIndex isEqualToString:@"DEBUG"] && ([popUp indexOfSelectedItem] == 4)) {
+        [self createPlotDBG];
+    }
+    [self removeAllObjectsDBG];
+}
+
+- (IBAction)checkDBG8Change:(id)sender
+{
+    if ([plotIndex isEqualToString:@"DEBUG"] && ([popUp indexOfSelectedItem] == 4)) {
+        [self createPlotDBG];
+    }
+    [self removeAllObjectsDBG];
+}
+
+- (IBAction)checkDBG9Change:(id)sender
+{
+    if ([plotIndex isEqualToString:@"DEBUG"] && ([popUp indexOfSelectedItem] == 4)) {
+        [self createPlotDBG];
+    }
+    [self removeAllObjectsDBG];
 }
 
 #pragma Init
@@ -562,41 +999,6 @@
     //e rcRate8 e rollPitchRate e yawRate e rcExpo8 \r
     //f dynThrPID f thrMid8 f thrExpo8 \r
     //g angleTrim[0] g angleTrim[1] \r
-    
-    /*
-    //Senden des QDC wieder einschalten
-    if ([popUp indexOfSelectedItem] == 0) { //Nick und Roll Diagramm ausgewählt
-        plotIndex = @"NickRoll";
-        identifier = 0x41; //A
-        dataToSend = [NSMutableData dataWithBytes:&identifier length:sizeof(identifier)];
-        [self.serialPort sendData:dataToSend];
-        usleep(1000);
-    }
-    
-    if ([popUp indexOfSelectedItem] == 1) { //PIDROLL Diagramm ausgewählt
-        plotIndex = @"PID";
-        identifier = 0x58; //X
-        dataToSend = [NSMutableData dataWithBytes:&identifier length:sizeof(identifier)];
-        [self.serialPort sendData:dataToSend];
-        usleep(1000);
-    }
-     
-     if ([popUp indexOfSelectedItem] == 1) { //PIDPITCH Diagramm ausgewählt
-     plotIndex = @"PID";
-     identifier = 0x59; //Y
-     dataToSend = [NSMutableData dataWithBytes:&identifier length:sizeof(identifier)];
-     [self.serialPort sendData:dataToSend];
-     usleep(1000);
-     }
-     
-     if ([popUp indexOfSelectedItem] == 1) { //PIDYAW Diagramm ausgewählt
-     plotIndex = @"PID";
-     identifier = 0x60; //Z
-     dataToSend = [NSMutableData dataWithBytes:&identifier length:sizeof(identifier)];
-     [self.serialPort sendData:dataToSend];
-     usleep(1000);
-     }
-     */
 }
 
 - (IBAction)openOrClosePort:(id)sender
@@ -628,7 +1030,6 @@
         [plotDataP removeAllObjects];
         [plotDataI removeAllObjects];
         [plotDataD removeAllObjects];
-        [self createPlotNR];
         [self createPlotPID];
     }
     
@@ -642,7 +1043,6 @@
         [plotDataP removeAllObjects];
         [plotDataI removeAllObjects];
         [plotDataD removeAllObjects];
-        [self createPlotNR];
         [self createPlotPID];
     }
     
@@ -656,7 +1056,6 @@
         [plotDataP removeAllObjects];
         [plotDataI removeAllObjects];
         [plotDataD removeAllObjects];
-        [self createPlotNR];
         [self createPlotPID];
     }
     
@@ -667,12 +1066,12 @@
         NSLog(@"zu sendender String: %@", dataToSend);
         [self.serialPort sendData:dataToSend];
         usleep(1000);
-        /*[plotDataP removeAllObjects];
-        [plotDataI removeAllObjects];
-        [plotDataD removeAllObjects];
-        [self createPlotNR];
-        [self createPlotPID];
-         */
+        
+        //[plotDataDBG removeAllObjects];
+        //[arrayPlotDataDBG removeAllObjects];
+        
+        [self removeAllObjectsDBG];
+        [self createPlotDBG];
     }
 }
 
@@ -684,6 +1083,12 @@
     [plotDataP removeAllObjects];
     [plotDataI removeAllObjects];
     [plotDataD removeAllObjects];
+    
+    //[plotDataDBG removeAllObjects];
+    //[arrayPlotDataDBG removeAllObjects];
+    
+    [self removeAllObjectsDBG];
+    
     [graph reloadData];
 }
 
@@ -858,10 +1263,90 @@
         numberMotor3 = [motor3 integerValue];
         numberMotor4 = [motor4 integerValue];
         
-        [_levelMotor1 setIntValue:numberMotor1];
-        [_levelMotor2 setIntValue:numberMotor2];
-        [_levelMotor3 setIntValue:numberMotor3];
-        [_levelMotor4 setIntValue:numberMotor4];
+        [_levelMotor1 setIntValue:(int)numberMotor1];
+        [_levelMotor2 setIntValue:(int)numberMotor2];
+        [_levelMotor3 setIntValue:(int)numberMotor3];
+        [_levelMotor4 setIntValue:(int)numberMotor4];
+    }
+    
+    // Intermediate
+    NSString *str;
+    NSMutableArray *debug = [[NSMutableArray alloc] init];
+    
+    
+    // Scanner für Debug-Werte
+    if ([plotIndex isEqualToString:@"DEBUG"] && ([popUp indexOfSelectedItem] == 4)) {
+        if ([string rangeOfString:@";"].location != NSNotFound) {
+            //Der vom Arduino eingelesene String hat folgende Form für Reglerwerte: ;123;456;789;...\n
+            NSCharacterSet *characters = [NSCharacterSet characterSetWithCharactersInString:@";"];
+            
+            for (int t = 0; t<9; t++) {
+                [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+                [scanner scanCharactersFromSet:numbers intoString:&str];
+                [debug addObject:str];
+                [scanner scanUpToCharactersFromSet:characters intoString:NULL];
+            }
+            [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+            [scanner scanCharactersFromSet:numbers intoString:&str];
+            [debug addObject:str];
+            
+            NSLog(@"Debug String %@", [debug objectAtIndex:0]);
+            
+            numberDebug0 = [[debug objectAtIndex:0] floatValue];
+            numberDebug1 = [[debug objectAtIndex:1] floatValue];
+            numberDebug2 = [[debug objectAtIndex:2] floatValue];
+            numberDebug3 = [[debug objectAtIndex:3] floatValue];
+            numberDebug4 = [[debug objectAtIndex:4] floatValue];
+            numberDebug5 = [[debug objectAtIndex:5] floatValue];
+            numberDebug6 = [[debug objectAtIndex:6] floatValue];
+            numberDebug7 = [[debug objectAtIndex:7] floatValue];
+            numberDebug8 = [[debug objectAtIndex:8] floatValue];
+            numberDebug9 = [[debug objectAtIndex:9] floatValue];
+            
+            if (countPointsDBG >= 0) { //Nur jeden x. Wert plotten
+                [plotDataDBG0 addObject:[NSDecimalNumber numberWithFloat:numberDebug0]];
+                [plotDataDBG1 addObject:[NSDecimalNumber numberWithFloat:numberDebug1]];
+                [plotDataDBG2 addObject:[NSDecimalNumber numberWithFloat:numberDebug2]];
+                [plotDataDBG3 addObject:[NSDecimalNumber numberWithFloat:numberDebug3]];
+                [plotDataDBG4 addObject:[NSDecimalNumber numberWithFloat:numberDebug4]];
+                [plotDataDBG5 addObject:[NSDecimalNumber numberWithFloat:numberDebug5]];
+                [plotDataDBG6 addObject:[NSDecimalNumber numberWithFloat:numberDebug6]];
+                [plotDataDBG7 addObject:[NSDecimalNumber numberWithFloat:numberDebug7]];
+                [plotDataDBG8 addObject:[NSDecimalNumber numberWithFloat:numberDebug8]];
+                [plotDataDBG9 addObject:[NSDecimalNumber numberWithFloat:numberDebug9]];
+                countPointsDBG = 0;
+            }
+            countPointsDBG++;
+            
+            if ([plotDataDBG0 count] >= 300) {
+                if ([[plotState selectedCell] tag] == 1) {
+                    [plotDataDBG0 removeObjectAtIndex:0];
+                    [plotDataDBG1 removeObjectAtIndex:0];
+                    [plotDataDBG2 removeObjectAtIndex:0];
+                    [plotDataDBG3 removeObjectAtIndex:0];
+                    [plotDataDBG4 removeObjectAtIndex:0];
+                    [plotDataDBG5 removeObjectAtIndex:0];
+                    [plotDataDBG6 removeObjectAtIndex:0];
+                    [plotDataDBG7 removeObjectAtIndex:0];
+                    [plotDataDBG8 removeObjectAtIndex:0];
+                    [plotDataDBG9 removeObjectAtIndex:0];
+                }
+                
+                if ([[plotState selectedCell] tag] == 0) {
+                    [plotDataDBG0 removeAllObjects];
+                    [plotDataDBG1 removeAllObjects];
+                    [plotDataDBG2 removeAllObjects];
+                    [plotDataDBG3 removeAllObjects];
+                    [plotDataDBG4 removeAllObjects];
+                    [plotDataDBG5 removeAllObjects];
+                    [plotDataDBG6 removeAllObjects];
+                    [plotDataDBG7 removeAllObjects];
+                    [plotDataDBG8 removeAllObjects];
+                    [plotDataDBG9 removeAllObjects];
+                }
+            }
+            [graph reloadData];
+        }
     }
     
     

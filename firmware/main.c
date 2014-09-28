@@ -101,6 +101,8 @@ int main()
 	setup();
 	uint32_t sendTime = 0;
 	uint32_t rcTime = 0;
+    int t;
+    int16_t array[DEBUGITEMS];
 	
 	while (1) {
             
@@ -123,9 +125,9 @@ int main()
 		//Acc und Gyro Daten einlesen und integrieren
 		Gyro_getADC();
 		ACC_getADC();
-            //first_order_comp_filter();
-		//second_order_comp_filter();
-            kalman_filter();
+        first_order_comp_filter();
+		second_order_comp_filter();
+        kalman_filter();
 		pid();
             
 		//alle 20ms rcData einlesen
@@ -190,7 +192,10 @@ int main()
                     sendMotorsToGUI(motor[0]/1000, motor[1]/1000, motor[2]/1000, motor[3]/1000);
 					break;
                 case DEB:
-                    sendDebugToGUI(&debug[0]);
+                    for (t = 0; t<DEBUGITEMS; t++) {
+                        array[t] = (int16_t)debug[t];
+                    }
+                    sendDebugToGUI(&array[0],DEBUGITEMS);
                     break;
 				case NOT:
 					//nichts senden

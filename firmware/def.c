@@ -72,7 +72,8 @@ static uint8_t EEMEM startAd[sizeof(conf)];
 #define BAUD_PRESCALED1 ((F_CPU / ((int16_t)(pow (2.0, USART_BSCALED1)) * (USART_BAUDRATED1 * 16UL)))  - 1)
 
 //DEBUG
-static int16_t debug[10] = {0,10,20,0,0,0,0,0,0,0};
+#define DEBUGITEMS 10
+static float debug[DEBUGITEMS];
 static uint32_t meanTime = 0;
 static uint32_t sumTime = 0;
 static int num = 0;

@@ -1130,6 +1130,9 @@
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="checkDBG1Change:" target="536" id="Xz1-ty-U0K"/>
+                                    </connections>
                                 </button>
                                 <button id="ayN-m7-7MN">
                                     <rect key="frame" x="764" y="148" width="81" height="18"/>
@@ -1138,6 +1141,9 @@
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="checkDBG2Change:" target="536" id="SVQ-S2-eez"/>
+                                    </connections>
                                 </button>
                                 <button id="YGq-sG-J5Y">
                                     <rect key="frame" x="764" y="129" width="81" height="18"/>
@@ -1146,6 +1152,9 @@
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="checkDBG3Change:" target="536" id="G0E-5Z-da3"/>
+                                    </connections>
                                 </button>
                                 <button id="kLQ-uK-2ZR">
                                     <rect key="frame" x="764" y="109" width="81" height="18"/>
@@ -1154,6 +1163,9 @@
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="checkDBG4Change:" target="536" id="xf5-tL-0nk"/>
+                                    </connections>
                                 </button>
                                 <button id="pO0-PJ-WfT">
                                     <rect key="frame" x="764" y="90" width="81" height="18"/>
@@ -1162,6 +1174,9 @@
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="checkDBG5Change:" target="536" id="9QR-5O-Jm2"/>
+                                    </connections>
                                 </button>
                                 <button id="ygp-Sg-sg2">
                                     <rect key="frame" x="764" y="70" width="81" height="18"/>
@@ -1170,6 +1185,9 @@
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="checkDBG6Change:" target="536" id="fPa-Uy-MLq"/>
+                                    </connections>
                                 </button>
                                 <button id="UmG-Zc-Pnd">
                                     <rect key="frame" x="764" y="51" width="81" height="18"/>
@@ -1178,6 +1196,9 @@
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="checkDBG7Change:" target="536" id="ImZ-nL-iSB"/>
+                                    </connections>
                                 </button>
                                 <button id="Lws-xN-1jH">
                                     <rect key="frame" x="764" y="31" width="81" height="18"/>
@@ -1186,6 +1207,9 @@
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="checkDBG8Change:" target="536" id="RVk-fA-idm"/>
+                                    </connections>
                                 </button>
                                 <button id="RtP-iK-sMg">
                                     <rect key="frame" x="764" y="12" width="81" height="18"/>
@@ -1194,6 +1218,9 @@
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="checkDBG9Change:" target="536" id="Qwi-cu-a6L"/>
+                                    </connections>
                                 </button>
                                 <button id="0vR-kI-nAO">
                                     <rect key="frame" x="764" y="188" width="81" height="18"/>
@@ -1202,6 +1229,9 @@
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                         <font key="font" metaFont="system"/>
                                     </buttonCell>
+                                    <connections>
+                                        <action selector="checkDBG0Change:" target="536" id="w1Y-I1-Phf"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </view>
@@ -1620,6 +1650,16 @@
         <customObject id="420" customClass="NSFontManager"/>
         <customObject id="536" customClass="QuadroCalibrationAppController">
             <connections>
+                <outlet property="checkDBG0" destination="0vR-kI-nAO" id="Wk2-Bv-dho"/>
+                <outlet property="checkDBG1" destination="uWO-4a-UjJ" id="4en-3O-5v4"/>
+                <outlet property="checkDBG2" destination="ayN-m7-7MN" id="fDp-bH-Pi6"/>
+                <outlet property="checkDBG3" destination="YGq-sG-J5Y" id="7NS-Hc-Yfv"/>
+                <outlet property="checkDBG4" destination="kLQ-uK-2ZR" id="hVO-If-Rr4"/>
+                <outlet property="checkDBG5" destination="pO0-PJ-WfT" id="je8-mB-DxP"/>
+                <outlet property="checkDBG6" destination="ygp-Sg-sg2" id="8nA-Oc-eul"/>
+                <outlet property="checkDBG7" destination="UmG-Zc-Pnd" id="rIY-Xz-Qt0"/>
+                <outlet property="checkDBG8" destination="Lws-xN-1jH" id="qXP-3O-oc2"/>
+                <outlet property="checkDBG9" destination="RtP-iK-sMg" id="0gW-NO-mrM"/>
                 <outlet property="dSliderValueReceive" destination="734" id="831"/>
                 <outlet property="hostView" destination="736" id="745"/>
                 <outlet property="iSliderValueReceive" destination="731" id="830"/>

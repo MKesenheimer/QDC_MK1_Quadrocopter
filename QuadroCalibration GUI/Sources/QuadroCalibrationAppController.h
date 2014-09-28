@@ -39,12 +39,38 @@
     NSMutableArray *plotDataP;
     NSMutableArray *plotDataI;
     NSMutableArray *plotDataD;
+    //NSMutableArray *plotDataDBG; //hier werden die empfangenen Werte gespeichert
+    //NSMutableArray *arrayPlotDataDBG; //dieses Array enthält plotDataDBG für insgesamt 10 Debug-Kanäle, d.h. [plotDataDBG1, plotDataDBG2, ...]
+    
+    NSMutableArray *plotDataDBG0;
+    NSMutableArray *plotDataDBG1;
+    NSMutableArray *plotDataDBG2;
+    NSMutableArray *plotDataDBG3;
+    NSMutableArray *plotDataDBG4;
+    NSMutableArray *plotDataDBG5;
+    NSMutableArray *plotDataDBG6;
+    NSMutableArray *plotDataDBG7;
+    NSMutableArray *plotDataDBG8;
+    NSMutableArray *plotDataDBG9;
+    
     NSInteger countPointsNR;
     NSInteger countPointsPID;
+    NSInteger countPointsDBG;
     NSInteger numberI, numberP, numberD;
     NSInteger numberMotor1, numberMotor2, numberMotor3, numberMotor4;
+    NSInteger numberDebug0, numberDebug1, numberDebug2, numberDebug3, numberDebug4, numberDebug5, numberDebug6, numberDebug7, numberDebug8, numberDebug9;
     NSString *plotIndex;
-    IBOutlet NSMatrix *plotState;       
+    IBOutlet NSMatrix *plotState;
+    IBOutlet NSButton *checkDBG0;
+    IBOutlet NSButton *checkDBG1;
+    IBOutlet NSButton *checkDBG2;
+    IBOutlet NSButton *checkDBG3;
+    IBOutlet NSButton *checkDBG4;
+    IBOutlet NSButton *checkDBG5;
+    IBOutlet NSButton *checkDBG6;
+    IBOutlet NSButton *checkDBG7;
+    IBOutlet NSButton *checkDBG8;
+    IBOutlet NSButton *checkDBG9;
 }
 
 - (IBAction)openOrClosePort:(id)sender;
@@ -56,6 +82,16 @@
 - (IBAction)send:(id)sender;
 - (IBAction)receive:(id)sender;
 - (IBAction)reset:(id)sender;
+- (IBAction)checkDBG0Change:(id)sender;
+- (IBAction)checkDBG1Change:(id)sender;
+- (IBAction)checkDBG2Change:(id)sender;
+- (IBAction)checkDBG3Change:(id)sender;
+- (IBAction)checkDBG4Change:(id)sender;
+- (IBAction)checkDBG5Change:(id)sender;
+- (IBAction)checkDBG6Change:(id)sender;
+- (IBAction)checkDBG7Change:(id)sender;
+- (IBAction)checkDBG8Change:(id)sender;
+- (IBAction)checkDBG9Change:(id)sender;
 - (void)sendFct;
 
 @property (unsafe_unretained) IBOutlet NSButton *openCloseButton;

@@ -100,9 +100,9 @@ void sendMotorsToGUI(int16_t m1, int16_t m2, int16_t m3, int16_t m4)
     sendFourValues(m1, m2, m3, m4, 0x3A); //identifier = Doppelpunkt
 }
 
-void sendDebugToGUI(int16_t array[])
+void sendDebugToGUI(int16_t array[],uint8_t length)
 {
-    sendArrayToGUI(&array[0],sizeof(array)/sizeof(array[0]),0x3B); //identifier = Strichpunkt
+    sendArrayToGUI(&array[0],length,0x3B); //identifier = Strichpunkt
 }
 
 //Zu sendender String: (die Buchstaben dienen als Identifier der Wertepaare)

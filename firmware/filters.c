@@ -22,23 +22,23 @@
 void first_order_comp_filter()
 {
       //DEBUG
-      //compAngle[ROLL] = debug[0];
-      //compAngle[PITCH] = debug[1];
+      compAngle[ROLL] = debug[0];
+      compAngle[PITCH] = debug[1];
       
 	compAngle[ROLL] = (float)(compAngle[ROLL] + gyroRate[ROLL]*dt)*ratio + accAngle[ROLL]*(1-ratio);
 	compAngle[PITCH] = (float)(compAngle[PITCH] + gyroRate[PITCH]*dt)*ratio + accAngle[PITCH]*(1-ratio);
       
       //DEBUG
-      //debug[0] = compAngle[ROLL];
-      //debug[1] = compAngle[PITCH];
+      debug[0] = compAngle[ROLL];
+      debug[1] = compAngle[PITCH];
 }
 
 //Runs 2nd order complementary filter
 void second_order_comp_filter() //Aeroquad, oder http://robottini.altervista.org/tag/complementary-filter
 {
       //DEBUG
-      //compAngle[ROLL] = debug[2];
-      //compAngle[PITCH] = debug[3];
+      compAngle[ROLL] = debug[2];
+      compAngle[PITCH] = debug[3];
       
 	filter_RollTerm[0] = (accAngle[ROLL] - compAngle[ROLL]) * timeConstant * timeConstant;
 	filter_PitchTerm[0] = (accAngle[PITCH] - compAngle[PITCH]) * timeConstant * timeConstant;
@@ -50,8 +50,8 @@ void second_order_comp_filter() //Aeroquad, oder http://robottini.altervista.org
   	compAngle[PITCH] = (dt * filter_PitchTerm[1]) + compAngle[PITCH];
       
       //DEBUG
-      //debug[2] = compAngle[ROLL];
-      //debug[3] = compAngle[PITCH];
+      debug[2] = compAngle[ROLL];
+      debug[3] = compAngle[PITCH];
 }
 
 
@@ -59,8 +59,8 @@ void second_order_comp_filter() //Aeroquad, oder http://robottini.altervista.org
 void kalman_filter()
 {
       //DEBUG
-      //compAngle[ROLL] = debug[4];
-      //compAngle[PITCH] = debug[5];
+      compAngle[ROLL] = debug[4];
+      compAngle[PITCH] = debug[5];
       
       float y, S, K_0, K_1;
       
@@ -103,6 +103,6 @@ void kalman_filter()
       P_11[PITCH] -= K_1 * P_01[PITCH];
       
       //DEBUG
-      //debug[4] = compAngle[ROLL];
-      //debug[5] = compAngle[PITCH];
+      debug[4] = compAngle[ROLL];
+      debug[5] = compAngle[PITCH];
 }
