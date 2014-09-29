@@ -48,7 +48,7 @@ void pid() {
             error[angle] = (float)rcAngle[angle]/10 - compAngle[angle] + conf.angleTrim[angle]; //[-230,230]deg
             pTerm[angle] = error[angle]*conf.KP[angle];
             iSum[angle] += error[angle]*dt;
-            iSum[angle] = constrain(iSum[angle],-50,50);
+            iSum[angle] = constrain(iSum[angle],-20,20); //vorher 50 -> gute Ergebnis mit KI = 145
             iTerm[angle] = iSum[angle]*conf.KI[angle];
             dTerm[angle] = gyroRate[angle]*conf.KD[angle]; //[-10,10]deg/sec //TODO Intervall messen
       }
@@ -72,7 +72,7 @@ void pid() {
       error[YAW] = (float)rcYawRate - gyroRate[YAW]; //hier wird auf die Winkelgeschwdg. geregelt
       pTerm[YAW] = error[YAW]*conf.KP[YAW];
       iSum[YAW] += error[YAW]*dt;
-      iSum[YAW] = constrain(iSum[YAW],-100,100);
+      iSum[YAW] = constrain(iSum[YAW],-50,50);
       iTerm[YAW] = iSum[YAW]*conf.KI[YAW];
       dTerm[YAW] = gyroRate[YAW]*conf.KD[YAW];
       

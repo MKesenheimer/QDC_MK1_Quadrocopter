@@ -136,9 +136,18 @@ Das ganze Quadrocopter Projekt wurde ein bisschen besser strukturiert und auf Gi
 
 \b0 \cf0 Au\'dferdem wurde serial.c \'fcberarbeitet. Der Code ist nun eleganter und k\'fcrzer.\
 \
+26.-29. September\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
-\b \cf0 TODO:
+\b \cf0 Arbeit an
+\b0  
+\b QDC_MK1_Quadrocopter: 
+\b0 In der GUI wurde eine Debug-Option eingebaut. Jetzt k\'f6nnen mit Check-Boxen zehn verschiedene Debug-Werte ausgew\'e4hlt und geplottet werden. Das Programm kann noch mit dem Einsatz von Arrays verbessert werden.\
+Au\'dferdem werden die Motorwerte und die cycle time w\'e4hrend der Konfiguration angezeigt, was ebenfalls die Fehlersuche bzw. das Einstellen des QDC erleichtert. In pid.c wurde der Constrain der Integralwerte herabgesetzt, so reagiert der QDC schneller auf andauernde St\'f6rungen. Der LowPassFilter wurde wieder auf 42Hz ge\'e4ndert und der SecondOrderComplementaryFilter wird wieder benutzt, was denke ich gute Resultate erzielt.\
+Flugversuche sehen vielversprechend aus.\
+\
+
+\b TODO:
 \b0 \
 - TODOs in IMU.c
 \b \
@@ -153,10 +162,4 @@ Das ganze Quadrocopter Projekt wurde ein bisschen besser strukturiert und auf Gi
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
 \b0 \cf0 - Die serielle Kommunikation in QuadroCalibration.app \'e4ndern: Erst auf Nachfrage der GUI soll der QDC einen bestimmten Wert senden.\
-- In QuadroCalibration.app eine Debug Option einbauen. Sodass die Werte 
-\i debug[] 
-\i0 auf Nachfrage geplottet oder angezeigt werden\
-- Motorwerte 
-\i motor[] 
-\i0 mit vertikalen Slidern anzeigen\
 }

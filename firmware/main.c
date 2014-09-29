@@ -87,9 +87,9 @@ int main()
 		//Acc und Gyro Daten einlesen und integrieren
 		Gyro_getADC();
 		ACC_getADC();
-        first_order_comp_filter();
+        //first_order_comp_filter();
 		second_order_comp_filter();
-        kalman_filter();
+        //kalman_filter();
 		pid();
             
 		//alle 20ms rcData einlesen
