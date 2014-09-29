@@ -40,6 +40,7 @@ void changeConfig()
 void send16(int16_t a)
 {
 	uint8_t i;
+    a = constrain(a,-9999,9999); //Constrain auf den Bereich, den send16() senden kann
 	char buffer[6] = {0, 0, 0, 0, 0, 0}; //längste erwartete Zeichenfolge: -1234
 	itoa(a, buffer, 10); //Zahl in Ascii umwandeln, 10 = Dezimalsystem
 	for (i = 0; buffer[i] != 0; i++) {
@@ -53,7 +54,7 @@ void sendArrayToGUI(int16_t array[], uint8_t length, uint16_t ident)
 {
       uint8_t oldSREG;
       oldSREG = SREG; cli();
-      
+    
       int i;
       for (i = 0; i < length; i++) {
             while (!( USARTD1.STATUS & USART_DREIF_bm));
@@ -100,8 +101,13 @@ void sendMotorsToGUI(int16_t m1, int16_t m2, int16_t m3, int16_t m4)
     sendFourValues(m1, m2, m3, m4, 0x3A); //identifier = Doppelpunkt
 }
 
-void sendDebugToGUI(int16_t array[],uint8_t length)
+void sendDebugToGUI(float debug[],uint8_t length)
 {
+    int t;
+    int16_t array[DEBUGITEMS];
+    for (t = 0; t<DEBUGITEMS; t++) {
+        array[t] = (int16_t)debug[t]; //cast von float zu int
+    }
     sendArrayToGUI(&array[0],length,0x3B); //identifier = Strichpunkt
 }
 

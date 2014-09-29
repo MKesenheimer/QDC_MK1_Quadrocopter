@@ -955,9 +955,9 @@
                                     </textFieldCell>
                                 </textField>
                                 <textField verticalHuggingPriority="750" id="700">
-                                    <rect key="frame" x="74" y="118" width="32" height="17"/>
+                                    <rect key="frame" x="74" y="118" width="35" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Nick" id="701">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Pitch" id="701">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1225,7 +1225,7 @@
                                 <textField verticalHuggingPriority="750" id="xfw-Hc-dYb">
                                     <rect key="frame" x="16" y="380" width="145" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="cycle time: " id="qdm-sW-l31">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cycle Time: " id="qdm-sW-l31">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -1242,6 +1242,15 @@
                                         <action selector="stop:" target="536" id="836"/>
                                     </connections>
                                 </button>
+                                <textField verticalHuggingPriority="750" id="MYR-Ds-RKO">
+                                    <rect key="frame" x="207" y="380" width="201" height="17"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Cycle Frequency:" id="zow-IW-e1D">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
                             </subviews>
                         </view>
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
@@ -1669,6 +1678,7 @@
                 <outlet property="checkDBG7" destination="UmG-Zc-Pnd" id="rIY-Xz-Qt0"/>
                 <outlet property="checkDBG8" destination="Lws-xN-1jH" id="qXP-3O-oc2"/>
                 <outlet property="checkDBG9" destination="RtP-iK-sMg" id="0gW-NO-mrM"/>
+                <outlet property="cycleFreqTextField" destination="MYR-Ds-RKO" id="5HN-lY-b0f"/>
                 <outlet property="cycleTimeTextField" destination="xfw-Hc-dYb" id="y02-eS-9fb"/>
                 <outlet property="dSliderValueReceive" destination="734" id="831"/>
                 <outlet property="hostView" destination="736" id="745"/>

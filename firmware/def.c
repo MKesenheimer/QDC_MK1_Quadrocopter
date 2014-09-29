@@ -59,7 +59,7 @@ static uint8_t EEMEM startAd[sizeof(conf)];
 #define FIRST_RUN 0 //auf Eins setzen, wenn das Programm zum ersten Mal auf den QDC geladen wird. Ist nur dazu da, das EEPROM zu initialiseren/formatieren.
 
 // WATCHDOG
-#define WATCHDOG_TIMEOUT WDT_PER_1KCLK_gc
+#define WATCHDOG_TIMEOUT WDT_PER_2KCLK_gc
 
 //Baudrate für den DSM2 Empfänger (rx31c-K1)
 #define USART_BSCALED0 0

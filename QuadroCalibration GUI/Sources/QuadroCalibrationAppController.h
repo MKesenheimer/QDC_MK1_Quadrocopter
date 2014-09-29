@@ -72,6 +72,7 @@
     IBOutlet NSButton *checkDBG8;
     IBOutlet NSButton *checkDBG9;
     IBOutlet NSTextField *cycleTimeTextField;
+    IBOutlet NSTextField *cycleFreqTextField;
 }
 
 - (IBAction)openOrClosePort:(id)sender;

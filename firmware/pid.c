@@ -77,8 +77,14 @@ void pid() {
       dTerm[YAW] = gyroRate[YAW]*conf.KD[YAW];
       
       //Mischen
-	axisPID[ROLL] = pTerm[ROLL] - dTerm[ROLL] + iTerm[ROLL];
-	axisPID[PITCH] = pTerm[PITCH] - dTerm[PITCH] + iTerm[PITCH];
-	axisPID[YAW] = pTerm[YAW] - dTerm[YAW] + iTerm[YAW];
+	  axisPID[ROLL] = pTerm[ROLL] - dTerm[ROLL] + iTerm[ROLL];
+      axisPID[PITCH] = pTerm[PITCH] - dTerm[PITCH] + iTerm[PITCH];
+	  axisPID[YAW] = pTerm[YAW] - dTerm[YAW] + iTerm[YAW];
+    
+      //DEBUG
+      debug[6] = axisPID[ROLL]/100;
+      debug[7] = pTerm[ROLL]/100;
+      debug[8] = dTerm[ROLL]/100;
+      debug[9] = iTerm[ROLL]/100;
 }
 

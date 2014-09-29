@@ -64,7 +64,7 @@
     plotIndex = @"NickRoll"; //gibt an, welche Daten geplottet werden sollen
     [self createPlotNR];
     [popUp removeAllItems];
-    [popUp addItemsWithTitles:[NSArray arrayWithObjects:[NSString stringWithFormat:@"Nick & Roll"], [NSString stringWithFormat:@"PIDROLL"], [NSString stringWithFormat:@"PIDPITCH"], [NSString stringWithFormat:@"PIDYAW"],[NSString stringWithFormat:@"DEBUG"], nil]];
+    [popUp addItemsWithTitles:[NSArray arrayWithObjects:[NSString stringWithFormat:@"Pitch & Roll"], [NSString stringWithFormat:@"PIDROLL"], [NSString stringWithFormat:@"PIDPITCH"], [NSString stringWithFormat:@"PIDYAW"],[NSString stringWithFormat:@"DEBUG"], nil]];
     
     //TODO: Auch hier sollte sich das Programm die letzten Konfigurationswerte merken, 
     //so dass beim nächsten Starten des Programms die letzten eingegebenen Werte wieder da sind.
@@ -1364,7 +1364,7 @@
             }
             countPointsDBG++;
             
-            if ([plotDataDBG0 count] >= 300) {
+            if (([plotDataDBG0 count] >= 300) || ([plotDataDBG1 count] >= 300) || ([plotDataDBG2 count] >= 300) || ([plotDataDBG3 count] >= 300) || ([plotDataDBG4 count] >= 300) || ([plotDataDBG5 count] >= 300) || ([plotDataDBG6 count] >= 300) || ([plotDataDBG7 count] >= 300) || ([plotDataDBG8 count] >= 300) || ([plotDataDBG9 count] >= 300)) {
                 if ([[plotState selectedCell] tag] == 1) {
                     if ([checkDBG0 state] == NSOnState) {
                         [plotDataDBG0 removeObjectAtIndex:0];
@@ -1411,7 +1411,11 @@
     if ([string rangeOfString:@"*"].location != NSNotFound) {
         [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
         [scanner scanCharactersFromSet:numbers intoString:&cycleTime];
-        [cycleTimeTextField setStringValue:[NSString stringWithFormat:@"%@%@%@", @"cycle time: ", cycleTime, @"µs"]];
+        float ctime = [cycleTime floatValue];
+        float freq = 1/ctime*1000000;
+        NSString *freqString = [NSString stringWithFormat:@"%.02f",freq];
+        [cycleTimeTextField setStringValue:[NSString stringWithFormat:@"%@%@%@", @"Cycle Time: ", cycleTime, @"µs"]];
+        [cycleFreqTextField setStringValue:[NSString stringWithFormat:@"%@%@%@", @"Cycle Frequency: ", freqString, @"Hz"]];
     }
     
     // Scanner für config Werte

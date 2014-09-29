@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Sources/QuadroCalibrationAppController.h"
-            timestampString = "433635475.341124"
+            timestampString = "433673656.653435"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "-reset:"
             landmarkType = "4">
          </BreakpointContent>
