@@ -117,10 +117,10 @@ static float accAngle[3] = {0,0,0};
 #define MOTORMAX 60000 //PWM Maximalwert
 #define MOTORMID (MOTORMAX + MOTORMIN)/2
 #define MOTORRANGE (MOTORMAX - MOTORMIN)
-#define PIDRATIO 1 //Bestimmt den Einfluss der PID-Werte auf die Drehzahl der Motoren in Bezug auf den Gaswert von der Fernsteuerung
-#define THROTTLERATIO 60
 #define MINCHECK 0
 #define MAXCHECK 1000
+#define PIDRATIO 1 //Bestimmt den Einfluss der PID-Werte auf die Drehzahl der Motoren in Bezug auf den Gaswert von der Fernsteuerung
+#define THROTTLERATIO 60
 static uint32_t rcData[8]; // interval [1150,1850], aktuelle rcDaten gemittelt
 static int32_t rcAngle[2]; // interval [-500,500]
 static int32_t rcYawRate; // interval [-500,500]
@@ -144,10 +144,14 @@ static float iSum[PIDITEMS] = {0,0,0,0};
 static float compAngle[3] = {0,0,0}; //Eulerwinkel in Grad
 static float filter_RollTerm[3] = {0,0,0};
 static float filter_PitchTerm[3] = {0,0,0};
-//First and second order complementary filter
+//First order complementary filter
 static float ratio = 0.9994; //Verhältnis von ACC zu GYRO
-#define timeConstant 0.1
-//kalman Filter
+//Second order complementary filter
+//BIG4825 0.1, je größer dieser Wert, desto mehr Einfluss
+//hat das ACC bei der Filterung. Driftet das Gyro findet
+//der QDC mit einem höheren Wert schneller zu den "richtigen" Werten zurück.
+#define timeConstant 1
+//Kalman Filter
 static float Q_angle  =  0.001; //0.001    //Q indicates how much we trust the acceleromter
 static float Q_gyro   =  0.003;  //0.003 //relative to the gyros
 static float R_angle  =  0.3;  //0.03 oder 0.3 (BIG4825) //we expect 0.01 rad jitter from the accelerometer
