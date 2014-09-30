@@ -68,20 +68,20 @@
     
     //TODO: Auch hier sollte sich das Programm die letzten Konfigurationswerte merken, 
     //so dass beim nächsten Starten des Programms die letzten eingegebenen Werte wieder da sind.
-    [_textFieldPRollSend setIntValue:145];
-    [_textFieldIRollSend setIntValue:130];
-    [_textFieldDRollSend setIntValue:50];
+    [_textFieldPRollSend setIntValue:135];
+    [_textFieldIRollSend setIntValue:145];
+    [_textFieldDRollSend setIntValue:60];
     
-    [_textFieldPPitchSend setIntValue:145];
-    [_textFieldIPitchSend setIntValue:130];
-    [_textFieldDPitchSend setIntValue:50];
+    [_textFieldPPitchSend setIntValue:135];
+    [_textFieldIPitchSend setIntValue:145];
+    [_textFieldDPitchSend setIntValue:60];
     
     [_textFieldPPidlevelSend setIntValue:0];
     [_textFieldIPidlevelSend setIntValue:0];
     [_textFieldDPidlevelSend setIntValue:0];
     
     [_textFieldPYawSend setIntValue:90];
-    [_textFieldIYawSend setIntValue:60];
+    [_textFieldIYawSend setIntValue:140];
     [_textFieldDYawSend setIntValue:0];
 
     [_textFieldangleTrim0Send setIntValue:0];
