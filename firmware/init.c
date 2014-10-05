@@ -43,7 +43,7 @@ void initPWM()
 {
 	//Timer C0 als PWM initialisieren
 	TCC0.PER = 0xefff;		//ganzer Zaehlerbereich wird verwendet
-	TCC0.CTRLA = 0x02;		//Prescaler auf 3
+	TCC0.CTRLA = 0x01;		//Prescaler auf 2
 	TCC0.CTRLB = 0xf3;		//Single Slope und PWM an allen PWM Ausgaengen freischalten
 	
     motor[0] = MOTORMIN;
