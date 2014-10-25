@@ -74,4 +74,3 @@ void config()
       
       rcData[THROTTLE] = RCMIN;
 }
-

@@ -117,8 +117,8 @@ static float accAngle[3] = {0,0,0};
 #define MOTORMAX 60000 //PWM Maximalwert
 #define MOTORMID (MOTORMAX + MOTORMIN)/2
 #define MOTORRANGE (MOTORMAX - MOTORMIN)
-#define MINCHECK 0
-#define MAXCHECK 1000
+#define MINCHECK 40
+#define MAXCHECK 420
 #define PIDRATIO 1 //Bestimmt den Einfluss der PID-Werte auf die Drehzahl der Motoren in Bezug auf den Gaswert von der Fernsteuerung
 #define THROTTLERATIO 60
 static uint32_t rcData[8]; // interval [1150,1850], aktuelle rcDaten gemittelt

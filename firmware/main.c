@@ -97,10 +97,10 @@ int main()
 			USARTD0.CTRLB = USART_RXEN_bm;
 			rcTime = currentTime + 20000;
 			computeRC(); //berechnet die rcDaten -> rcData[channel] im Intervall [SIGNALMIN,SIGNALMAX]
-                  
+            
                   //Wenn linker Stick nach rechts unten und
                   //rechter Stick nach links unten gedrückt wird kalibriert sich der QDC neu
-                  if ( (rcThrottle < 20) && (rcAngle[ROLL] < -450) && (rcAngle[PITCH]<-450) && (rcYawRate < -450) ) {
+                  if ( (rcThrottle < MINCHECK) && (rcAngle[ROLL] < -MAXCHECK) && (rcAngle[PITCH]< -MAXCHECK) && (rcYawRate < -MAXCHECK) ) {
                         SETLED1; SETLED2; SETLED3; SETLED4;
                         for (a=0; a<8; a++) {_delay_loop_2(65535);}	// ca. 1s
                         while (1) {}; //Watchdog ausloesen
@@ -108,7 +108,7 @@ int main()
                   
                   //Wenn linker Stick nach rechts unten und
                   //rechter Stick nach rechts unten gedrückt werden die Motoren gestartet/gestopt
-                  if ( (rcThrottle < 20) && (rcAngle[ROLL] > 450) && (rcAngle[PITCH]<-450) && (rcYawRate < -450) ) {
+                  if ( (rcThrottle < MINCHECK) && (rcAngle[ROLL] > MAXCHECK) && (rcAngle[PITCH]< -MAXCHECK) && (rcYawRate < -MAXCHECK) ) {
                         int first = 0;
                         
                         //Motoren ausschalten
@@ -151,7 +151,7 @@ int main()
                     sendStatusToGUI(); //cycle Time usw.
 					break;
 				case PID:
-					sendPIDToGUI(pTerm[whichPIDToSend]/100, iTerm[whichPIDToSend]/100, dTerm[whichPIDToSend]/100);
+					//sendPIDToGUI(pTerm[whichPIDToSend]/100, iTerm[whichPIDToSend]/100, dTerm[whichPIDToSend]/100);
                     sendMotorsToGUI(motor[0]/1000, motor[1]/1000, motor[2]/1000, motor[3]/1000);
                     sendStatusToGUI();
 					break;

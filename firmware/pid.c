@@ -87,4 +87,3 @@ void pid() {
       debug[8] = dTerm[ROLL]/100;
       debug[9] = iTerm[ROLL]/100;
 }
-
