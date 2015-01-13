@@ -87,9 +87,9 @@ int main()
 		//Acc und Gyro Daten einlesen und integrieren
 		Gyro_getADC();
 		ACC_getADC();
-        //first_order_comp_filter();
+            //first_order_comp_filter();
 		second_order_comp_filter();
-        //kalman_filter();
+            //kalman_filter();
 		pid();
             
 		//alle 20ms rcData einlesen
@@ -142,32 +142,32 @@ int main()
 			sendTime = currentTime + 20000;
 			switch (plot) {
 				case NR:
-                    //hier werden die Winkel mit 10 multipliziert,
-                    //da die †bertragung nur mit Integerwerte funktionert.
-                    //Es soll aber eine Auflšsung von 0.1 Grad erhalten bleiben,
-                    //somit dividiert die GUI die erhaltenen Werte wieder durch 10.
+                              //hier werden die Winkel mit 10 multipliziert,
+                              //da die †bertragung nur mit Integerwerte funktionert.
+                              //Es soll aber eine Auflšsung von 0.1 Grad erhalten bleiben,
+                              //somit dividiert die GUI die erhaltenen Werte wieder durch 10.
 					sendAnglesToGUI(compAngle[ROLL]*10, compAngle[PITCH]*10);
-                    sendMotorsToGUI(motor[0]/1000, motor[1]/1000, motor[2]/1000, motor[3]/1000);
-                    sendStatusToGUI(); //cycle Time usw.
+                              sendMotorsToGUI(motor[0]/1000, motor[1]/1000, motor[2]/1000, motor[3]/1000);
+                              sendStatusToGUI(); //cycle Time usw.
 					break;
 				case PID:
 					//sendPIDToGUI(pTerm[whichPIDToSend]/100, iTerm[whichPIDToSend]/100, dTerm[whichPIDToSend]/100);
-                    sendMotorsToGUI(motor[0]/1000, motor[1]/1000, motor[2]/1000, motor[3]/1000);
-                    sendStatusToGUI();
+                              sendMotorsToGUI(motor[0]/1000, motor[1]/1000, motor[2]/1000, motor[3]/1000);
+                              sendStatusToGUI();
 					break;
-                case DEB:
-                    sendDebugToGUI(&debug[0],DEBUGITEMS);
-                    sendStatusToGUI();
-                    break;
+                        case DEB:
+                              sendDebugToGUI(&debug[0],DEBUGITEMS);
+                              sendStatusToGUI();
+                              break;
 				case NOT:
 					sendStatusToGUI();
 					break;
 			}
 		}
             
-        ledThrottlePattern();
+            ledThrottlePattern();
 		mixTable();
-        writeMotors();
+            writeMotors();
 		WDT_Reset();
 	}
 }

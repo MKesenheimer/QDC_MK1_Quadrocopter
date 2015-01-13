@@ -78,7 +78,7 @@ void pid() {
       
       //Mischen
 	  axisPID[ROLL] = pTerm[ROLL] - dTerm[ROLL] + iTerm[ROLL];
-      axisPID[PITCH] = pTerm[PITCH] - dTerm[PITCH] + iTerm[PITCH];
+        axisPID[PITCH] = pTerm[PITCH] - dTerm[PITCH] + iTerm[PITCH];
 	  axisPID[YAW] = pTerm[YAW] - dTerm[YAW] + iTerm[YAW];
     
       //DEBUG
