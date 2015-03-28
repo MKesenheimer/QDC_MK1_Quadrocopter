@@ -156,14 +156,16 @@ Flugversuche sehen vielversprechend aus.\
 \b Arbeit an Schaltplan f\'fcr Version 2: \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
 
-\b0 \cf0 F\'fcr die zweite Version des Quadrocopters sind einige Verbesserungen vorgesehen:
+\b0 \cf0 F\'fcr die zweite Version des Quadrocopters sind einige Verbesserungen vorgesehen:\
+- prinzipiell sind f\'fcr die Version 2 zwei Platinen vorgesehen. Auf der ersten befindet sich die Flugsteuerung (IMU, \'b5C, PWM-Ausgang, Receiver-Eingang) und auf der zweiten die Motortreiber, Spannungsversorgung, Laderegler usw. Die zweite Platine dient gleichzeitig als Rahmen und Motorhalter. Beide Platinen k\'f6nnten \'fcber UART miteinander verbunden werden (was allerdings einen zweiten \'b5C auf der Motorplatine n\'f6tig macht).\
+- Die Platine f\'fcr die Flugsteuerung soll wie die CC3D oder MultiWii mehrere Quadrocopter-Arten (Quadrocopter, ) ansteuern k\'f6nnen.
 \b \
 
 \b0 - Brushless Motoren (z.B. HobbyKing 7000kv Brushless Micro Motor) sollen mit Onboard-Reglern (SiLab F330 und Blheli Software) nativ angesteuert werden k\'f6nnen (keine zus\'e4tzlichen Platinen)\
-- Brushed Motoren werden weiterhin unterst\'fctzt\
+- Brushed Motoren sollen weiterhin unterst\'fctzt werden\
 - Laderegler f\'fcr das Laden des LiPos \'fcber USB\
 - Power \'fcber USB (Programmieren, Parameter, Debug)\
-- IMU auf extra Platine, die mit Schaumstoff vom Rest der Platine entkoppelt wird (bessere St\'f6rungsentkopplung)\
+- Flugsteuerung auf extra Platine, die mit Schaumstoff vom Rest der Platine entkoppelt wird (bessere St\'f6rungsentkopplung)\
 - ggf. werden Ausleger und Motorbefestigungen ge\'e4ndert\
 - besseres Routing\
 \

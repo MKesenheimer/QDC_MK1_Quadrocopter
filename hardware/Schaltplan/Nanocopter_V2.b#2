@@ -1336,8 +1336,6 @@ design rules under a new name.</description>
 <element name="JP4" library="pinhead" package="1X03" value="" x="-45.72" y="-71.12"/>
 <element name="JP6" library="pinhead" package="1X03" value="" x="-45.72" y="-76.835"/>
 <element name="JP7" library="pinhead" package="1X03" value="" x="-45.72" y="-82.55"/>
-<element name="JP8" library="pinhead" package="1X03" value="" x="-45.72" y="-88.265"/>
-<element name="JP9" library="pinhead" package="1X03" value="" x="-45.72" y="-93.98"/>
 </elements>
 <signals>
 <signal name="+5V">
@@ -1582,22 +1580,6 @@ design rules under a new name.</description>
 <wire x1="15.02716875" y1="-13.416228125" x2="15.02716875" y2="-14.18283125" width="0.3048" layer="1"/>
 <wire x1="15.02716875" y1="-14.18283125" x2="14.605" y2="-14.605" width="0.3048" layer="1"/>
 <via x="14.605" y="-14.605" extent="1-16" drill="0.5"/>
-<contactref element="JP1" pad="3"/>
-<contactref element="JP2" pad="3"/>
-<contactref element="JP3" pad="3"/>
-<contactref element="JP4" pad="3"/>
-<contactref element="JP6" pad="3"/>
-<contactref element="JP7" pad="3"/>
-<contactref element="JP8" pad="3"/>
-<contactref element="JP9" pad="3"/>
-<wire x1="-43.18" y1="-88.265" x2="-43.18" y2="-93.98" width="0" layer="19" extent="1-1"/>
-<wire x1="-43.18" y1="-82.55" x2="-43.18" y2="-88.265" width="0" layer="19" extent="1-1"/>
-<wire x1="-43.18" y1="-76.835" x2="-43.18" y2="-82.55" width="0" layer="19" extent="1-1"/>
-<wire x1="-43.18" y1="-71.12" x2="-43.18" y2="-76.835" width="0" layer="19" extent="1-1"/>
-<wire x1="-43.18" y1="-65.405" x2="-43.18" y2="-71.12" width="0" layer="19" extent="1-1"/>
-<wire x1="-43.18" y1="-59.69" x2="-43.18" y2="-65.405" width="0" layer="19" extent="1-1"/>
-<wire x1="-43.18" y1="-53.975" x2="-43.18" y2="-59.69" width="0" layer="19" extent="1-1"/>
-<wire x1="-21.905" y1="-22.395" x2="-43.18" y2="-53.975" width="0" layer="19" extent="1-1"/>
 <wire x1="-15.452828125" y1="-13.57126875" x2="-21.805" y2="-19.47" width="0" layer="19" extent="1-1"/>
 <wire x1="-13.6525" y1="-5.715" x2="-16.51" y2="-12.3825" width="0" layer="19" extent="1-1"/>
 <wire x1="-6.48" y1="-9.5525" x2="-13.6525" y2="-5.715" width="0" layer="19" extent="1-1"/>
@@ -1710,13 +1692,9 @@ design rules under a new name.</description>
 </signal>
 <signal name="PWM2">
 <contactref element="MC1" pad="11"/>
-<contactref element="JP2" pad="1"/>
-<wire x1="-2.095" y1="8.0225" x2="-48.26" y2="-59.69" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PWM3">
 <contactref element="MC1" pad="12"/>
-<contactref element="JP3" pad="1"/>
-<wire x1="-3.895" y1="6.2225" x2="-48.26" y2="-65.405" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PWM2_BASE">
 <contactref element="R12" pad="1"/>
@@ -1725,8 +1703,6 @@ design rules under a new name.</description>
 </signal>
 <signal name="PWM1">
 <contactref element="MC1" pad="10"/>
-<contactref element="JP1" pad="1"/>
-<wire x1="-1.295" y1="8.0225" x2="-48.26" y2="-53.975" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$19">
 <contactref element="T1" pad="3"/>
@@ -1777,29 +1753,13 @@ design rules under a new name.</description>
 <vertex x="49.9999" y="49.9999"/>
 <vertex x="-49.9999" y="49.9999"/>
 </polygon>
-<contactref element="JP1" pad="2"/>
-<contactref element="JP2" pad="2"/>
-<contactref element="JP3" pad="2"/>
-<contactref element="JP4" pad="2"/>
-<contactref element="JP6" pad="2"/>
-<contactref element="JP7" pad="2"/>
-<contactref element="JP8" pad="2"/>
-<contactref element="JP9" pad="2"/>
-<wire x1="-45.72" y1="-88.265" x2="-45.72" y2="-93.98" width="0" layer="19" extent="1-1"/>
-<wire x1="-45.72" y1="-82.55" x2="-45.72" y2="-88.265" width="0" layer="19" extent="1-1"/>
-<wire x1="-45.72" y1="-76.835" x2="-45.72" y2="-82.55" width="0" layer="19" extent="1-1"/>
-<wire x1="-45.72" y1="-71.12" x2="-45.72" y2="-76.835" width="0" layer="19" extent="1-1"/>
-<wire x1="-45.72" y1="-65.405" x2="-45.72" y2="-71.12" width="0" layer="19" extent="1-1"/>
-<wire x1="-45.72" y1="-59.69" x2="-45.72" y2="-65.405" width="0" layer="19" extent="1-1"/>
-<wire x1="-45.72" y1="-53.975" x2="-45.72" y2="-59.69" width="0" layer="19" extent="1-1"/>
-<wire x1="-38.1" y1="-43.815" x2="-45.72" y2="-53.975" width="0" layer="19" extent="1-1"/>
-<wire x1="-24.13" y1="-20.525" x2="-38.1" y2="-43.815" width="0" layer="19" extent="1-1"/>
-<wire x1="-6.35" y1="-7.7225" x2="-24.13" y2="-20.525" width="0" layer="19" extent="1-1"/>
+<wire x1="-4.3325" y1="21.9075" x2="38.1" y2="43.815" width="0" layer="19" extent="1-1"/>
+<wire x1="-6.35" y1="-7.7225" x2="-7.62" y2="18.9375" width="0" layer="19" extent="1-1"/>
+<wire x1="-24.13" y1="-20.525" x2="-6.35" y2="-7.7225" width="0" layer="19" extent="1-1"/>
 <wire x1="20.32" y1="-3.6975" x2="-4.7625" y2="-7.62" width="0" layer="19" extent="1-1"/>
-<wire x1="-7.62" y1="18.9375" x2="-6.35" y2="-7.7225" width="0" layer="19" extent="1-1"/>
+<wire x1="-38.1" y1="-43.815" x2="-24.13" y2="-20.525" width="0" layer="19" extent="1-1"/>
 <wire x1="-43.815" y1="38.1" x2="-7.7325" y2="19.05" width="0" layer="19" extent="1-1"/>
 <wire x1="38.4175" y1="-43.815" x2="20.32" y2="-3.6975" width="0" layer="19" extent="1-1"/>
-<wire x1="38.1" y1="43.815" x2="-4.3325" y2="21.9075" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PDI_DATA">
 <contactref element="MC1" pad="34"/>
@@ -2069,8 +2029,6 @@ design rules under a new name.</description>
 </signal>
 <signal name="PWM4">
 <contactref element="MC1" pad="13"/>
-<contactref element="JP4" pad="1"/>
-<wire x1="-3.895" y1="5.4225" x2="-48.26" y2="-71.12" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PWM1_BASE">
 <contactref element="R11" pad="1"/>
@@ -2093,23 +2051,15 @@ design rules under a new name.</description>
 </signal>
 <signal name="PWM5">
 <contactref element="MC1" pad="14"/>
-<contactref element="JP6" pad="1"/>
-<wire x1="-3.895" y1="4.6225" x2="-48.26" y2="-76.835" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PWM6">
 <contactref element="MC1" pad="15"/>
-<contactref element="JP7" pad="1"/>
-<wire x1="-3.895" y1="3.8225" x2="-48.26" y2="-82.55" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PWM7">
 <contactref element="MC1" pad="16"/>
-<contactref element="JP8" pad="1"/>
-<wire x1="-3.895" y1="3.0225" x2="-48.26" y2="-88.265" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PWM8">
 <contactref element="MC1" pad="17"/>
-<contactref element="JP9" pad="1"/>
-<wire x1="-3.895" y1="2.2225" x2="-48.26" y2="-93.98" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>

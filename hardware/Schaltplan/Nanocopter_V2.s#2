@@ -11234,29 +11234,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R20" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="R21" library="rcl" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="JP1" library="pinhead" deviceset="PINHD-1X3" device=""/>
-<part name="GND42" library="supply1" deviceset="GND" device=""/>
-<part name="P+3" library="supply1" deviceset="VCC" device=""/>
 <part name="JP2" library="pinhead" deviceset="PINHD-1X3" device=""/>
-<part name="GND19" library="supply1" deviceset="GND" device=""/>
-<part name="P+9" library="supply1" deviceset="VCC" device=""/>
 <part name="JP3" library="pinhead" deviceset="PINHD-1X3" device=""/>
-<part name="GND25" library="supply1" deviceset="GND" device=""/>
-<part name="P+11" library="supply1" deviceset="VCC" device=""/>
 <part name="JP4" library="pinhead" deviceset="PINHD-1X3" device=""/>
-<part name="GND26" library="supply1" deviceset="GND" device=""/>
-<part name="P+13" library="supply1" deviceset="VCC" device=""/>
 <part name="JP6" library="pinhead" deviceset="PINHD-1X3" device=""/>
-<part name="GND35" library="supply1" deviceset="GND" device=""/>
-<part name="P+14" library="supply1" deviceset="VCC" device=""/>
 <part name="JP7" library="pinhead" deviceset="PINHD-1X3" device=""/>
-<part name="GND37" library="supply1" deviceset="GND" device=""/>
-<part name="P+15" library="supply1" deviceset="VCC" device=""/>
-<part name="JP8" library="pinhead" deviceset="PINHD-1X3" device=""/>
-<part name="GND39" library="supply1" deviceset="GND" device=""/>
-<part name="P+16" library="supply1" deviceset="VCC" device=""/>
-<part name="JP9" library="pinhead" deviceset="PINHD-1X3" device=""/>
-<part name="GND44" library="supply1" deviceset="GND" device=""/>
-<part name="P+17" library="supply1" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11476,29 +11458,11 @@ der Schaltung trennen</text>
 <instance part="R20" gate="G$1" x="27.94" y="35.56" rot="R270"/>
 <instance part="R21" gate="G$1" x="27.94" y="50.8" rot="R270"/>
 <instance part="JP1" gate="A" x="314.96" y="236.22"/>
-<instance part="GND42" gate="1" x="299.72" y="228.6"/>
-<instance part="P+3" gate="VCC" x="292.1" y="236.22" rot="R90"/>
-<instance part="JP2" gate="A" x="314.96" y="215.9"/>
-<instance part="GND19" gate="1" x="299.72" y="208.28"/>
-<instance part="P+9" gate="VCC" x="292.1" y="215.9" rot="R90"/>
-<instance part="JP3" gate="A" x="314.96" y="195.58"/>
-<instance part="GND25" gate="1" x="299.72" y="187.96"/>
-<instance part="P+11" gate="VCC" x="292.1" y="195.58" rot="R90"/>
-<instance part="JP4" gate="A" x="314.96" y="175.26"/>
-<instance part="GND26" gate="1" x="299.72" y="167.64"/>
-<instance part="P+13" gate="VCC" x="292.1" y="175.26" rot="R90"/>
-<instance part="JP6" gate="A" x="360.68" y="238.76"/>
-<instance part="GND35" gate="1" x="345.44" y="231.14"/>
-<instance part="P+14" gate="VCC" x="337.82" y="238.76" rot="R90"/>
-<instance part="JP7" gate="A" x="360.68" y="218.44"/>
-<instance part="GND37" gate="1" x="345.44" y="210.82"/>
-<instance part="P+15" gate="VCC" x="337.82" y="218.44" rot="R90"/>
-<instance part="JP8" gate="A" x="360.68" y="198.12"/>
-<instance part="GND39" gate="1" x="345.44" y="190.5"/>
-<instance part="P+16" gate="VCC" x="337.82" y="198.12" rot="R90"/>
-<instance part="JP9" gate="A" x="360.68" y="177.8"/>
-<instance part="GND44" gate="1" x="345.44" y="170.18"/>
-<instance part="P+17" gate="VCC" x="337.82" y="177.8" rot="R90"/>
+<instance part="JP2" gate="A" x="314.96" y="220.98"/>
+<instance part="JP3" gate="A" x="314.96" y="205.74"/>
+<instance part="JP4" gate="A" x="358.14" y="236.22"/>
+<instance part="JP6" gate="A" x="358.14" y="220.98"/>
+<instance part="JP7" gate="A" x="358.14" y="205.74"/>
 </instances>
 <busses>
 </busses>
@@ -11779,6 +11743,7 @@ der Schaltung trennen</text>
 <pinref part="C20" gate="G$1" pin="2"/>
 <wire x1="17.78" y1="220.98" x2="17.78" y2="228.6" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="228.6" x2="17.78" y2="228.6" width="0.1524" layer="91"/>
+<junction x="17.78" y="228.6"/>
 <pinref part="C19" gate="G$1" pin="2"/>
 <wire x1="20.32" y1="220.98" x2="17.78" y2="220.98" width="0.1524" layer="91"/>
 <junction x="17.78" y="220.98"/>
@@ -11859,54 +11824,6 @@ der Schaltung trennen</text>
 <pinref part="GND43" gate="1" pin="GND"/>
 <wire x1="27.94" y1="30.48" x2="27.94" y2="27.94" width="0.1524" layer="91"/>
 </segment>
-<segment>
-<pinref part="JP1" gate="A" pin="3"/>
-<pinref part="GND42" gate="1" pin="GND"/>
-<wire x1="312.42" y1="233.68" x2="299.72" y2="233.68" width="0.1524" layer="91"/>
-<wire x1="299.72" y1="233.68" x2="299.72" y2="231.14" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JP2" gate="A" pin="3"/>
-<pinref part="GND19" gate="1" pin="GND"/>
-<wire x1="312.42" y1="213.36" x2="299.72" y2="213.36" width="0.1524" layer="91"/>
-<wire x1="299.72" y1="213.36" x2="299.72" y2="210.82" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JP3" gate="A" pin="3"/>
-<pinref part="GND25" gate="1" pin="GND"/>
-<wire x1="312.42" y1="193.04" x2="299.72" y2="193.04" width="0.1524" layer="91"/>
-<wire x1="299.72" y1="193.04" x2="299.72" y2="190.5" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JP4" gate="A" pin="3"/>
-<pinref part="GND26" gate="1" pin="GND"/>
-<wire x1="312.42" y1="172.72" x2="299.72" y2="172.72" width="0.1524" layer="91"/>
-<wire x1="299.72" y1="172.72" x2="299.72" y2="170.18" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JP6" gate="A" pin="3"/>
-<pinref part="GND35" gate="1" pin="GND"/>
-<wire x1="358.14" y1="236.22" x2="345.44" y2="236.22" width="0.1524" layer="91"/>
-<wire x1="345.44" y1="236.22" x2="345.44" y2="233.68" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JP7" gate="A" pin="3"/>
-<pinref part="GND37" gate="1" pin="GND"/>
-<wire x1="358.14" y1="215.9" x2="345.44" y2="215.9" width="0.1524" layer="91"/>
-<wire x1="345.44" y1="215.9" x2="345.44" y2="213.36" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JP8" gate="A" pin="3"/>
-<pinref part="GND39" gate="1" pin="GND"/>
-<wire x1="358.14" y1="195.58" x2="345.44" y2="195.58" width="0.1524" layer="91"/>
-<wire x1="345.44" y1="195.58" x2="345.44" y2="193.04" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JP9" gate="A" pin="3"/>
-<pinref part="GND44" gate="1" pin="GND"/>
-<wire x1="358.14" y1="175.26" x2="345.44" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="345.44" y1="175.26" x2="345.44" y2="172.72" width="0.1524" layer="91"/>
-</segment>
 </net>
 <net name="N$10" class="0">
 <segment>
@@ -11976,22 +11893,12 @@ der Schaltung trennen</text>
 <label x="231.14" y="86.36" size="1.778" layer="95"/>
 <pinref part="MC1" gate="G$1" pin="PC1(OC0B,OC0AHS,XCK0,SCL)"/>
 </segment>
-<segment>
-<pinref part="JP2" gate="A" pin="1"/>
-<wire x1="312.42" y1="218.44" x2="297.18" y2="218.44" width="0.1524" layer="91"/>
-<label x="297.18" y="218.44" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="PWM3" class="0">
 <segment>
 <wire x1="238.76" y1="83.82" x2="226.06" y2="83.82" width="0.1524" layer="91"/>
 <label x="231.14" y="83.82" size="1.778" layer="95"/>
 <pinref part="MC1" gate="G$1" pin="PC2(OC0C,OC0BLS,RXD0)"/>
-</segment>
-<segment>
-<pinref part="JP3" gate="A" pin="1"/>
-<wire x1="312.42" y1="198.12" x2="297.18" y2="198.12" width="0.1524" layer="91"/>
-<label x="297.18" y="198.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM2_BASE" class="0">
@@ -12010,11 +11917,6 @@ der Schaltung trennen</text>
 <wire x1="226.06" y1="88.9" x2="238.76" y2="88.9" width="0.1524" layer="91"/>
 <label x="231.14" y="88.9" size="1.778" layer="95"/>
 <pinref part="MC1" gate="G$1" pin="PC0(OC0A,OC0ALS,SDA)"/>
-</segment>
-<segment>
-<pinref part="JP1" gate="A" pin="1"/>
-<wire x1="312.42" y1="238.76" x2="297.18" y2="238.76" width="0.1524" layer="91"/>
-<label x="297.18" y="238.76" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$19" class="0">
@@ -12109,46 +12011,6 @@ der Schaltung trennen</text>
 <segment>
 <pinref part="P+8" gate="VCC" pin="VCC"/>
 <wire x1="96.52" y1="-78.74" x2="96.52" y2="-83.82" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="JP1" gate="A" pin="2"/>
-<wire x1="294.64" y1="236.22" x2="312.42" y2="236.22" width="0.1524" layer="91"/>
-<pinref part="P+3" gate="VCC" pin="VCC"/>
-</segment>
-<segment>
-<pinref part="JP2" gate="A" pin="2"/>
-<wire x1="294.64" y1="215.9" x2="312.42" y2="215.9" width="0.1524" layer="91"/>
-<pinref part="P+9" gate="VCC" pin="VCC"/>
-</segment>
-<segment>
-<pinref part="JP3" gate="A" pin="2"/>
-<wire x1="294.64" y1="195.58" x2="312.42" y2="195.58" width="0.1524" layer="91"/>
-<pinref part="P+11" gate="VCC" pin="VCC"/>
-</segment>
-<segment>
-<pinref part="JP4" gate="A" pin="2"/>
-<wire x1="294.64" y1="175.26" x2="312.42" y2="175.26" width="0.1524" layer="91"/>
-<pinref part="P+13" gate="VCC" pin="VCC"/>
-</segment>
-<segment>
-<pinref part="JP6" gate="A" pin="2"/>
-<wire x1="340.36" y1="238.76" x2="358.14" y2="238.76" width="0.1524" layer="91"/>
-<pinref part="P+14" gate="VCC" pin="VCC"/>
-</segment>
-<segment>
-<pinref part="JP7" gate="A" pin="2"/>
-<wire x1="340.36" y1="218.44" x2="358.14" y2="218.44" width="0.1524" layer="91"/>
-<pinref part="P+15" gate="VCC" pin="VCC"/>
-</segment>
-<segment>
-<pinref part="JP8" gate="A" pin="2"/>
-<wire x1="340.36" y1="198.12" x2="358.14" y2="198.12" width="0.1524" layer="91"/>
-<pinref part="P+16" gate="VCC" pin="VCC"/>
-</segment>
-<segment>
-<pinref part="JP9" gate="A" pin="2"/>
-<wire x1="340.36" y1="177.8" x2="358.14" y2="177.8" width="0.1524" layer="91"/>
-<pinref part="P+17" gate="VCC" pin="VCC"/>
 </segment>
 </net>
 <net name="PDI_DATA" class="0">
@@ -12476,11 +12338,6 @@ der Schaltung trennen</text>
 <label x="231.14" y="81.28" size="1.778" layer="95"/>
 <pinref part="MC1" gate="G$1" pin="PC3(OC0D,OC0BHS,TXD0)"/>
 </segment>
-<segment>
-<pinref part="JP4" gate="A" pin="1"/>
-<wire x1="312.42" y1="177.8" x2="297.18" y2="177.8" width="0.1524" layer="91"/>
-<label x="297.18" y="177.8" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="PWM1_BASE" class="0">
 <segment>
@@ -12521,22 +12378,12 @@ der Schaltung trennen</text>
 <wire x1="226.06" y1="78.74" x2="238.76" y2="78.74" width="0.1524" layer="91"/>
 <label x="231.14" y="78.74" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="JP6" gate="A" pin="1"/>
-<wire x1="358.14" y1="241.3" x2="342.9" y2="241.3" width="0.1524" layer="91"/>
-<label x="342.9" y="241.3" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="PWM6" class="0">
 <segment>
 <pinref part="MC1" gate="G$1" pin="PC5(OC0CHS,OC1B,XCK1,MOSI)"/>
 <wire x1="226.06" y1="76.2" x2="238.76" y2="76.2" width="0.1524" layer="91"/>
 <label x="231.14" y="76.2" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="JP7" gate="A" pin="1"/>
-<wire x1="358.14" y1="220.98" x2="342.9" y2="220.98" width="0.1524" layer="91"/>
-<label x="342.9" y="220.98" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM7" class="0">
@@ -12545,22 +12392,12 @@ der Schaltung trennen</text>
 <wire x1="226.06" y1="73.66" x2="238.76" y2="73.66" width="0.1524" layer="91"/>
 <label x="231.14" y="73.66" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="JP8" gate="A" pin="1"/>
-<wire x1="358.14" y1="200.66" x2="342.9" y2="200.66" width="0.1524" layer="91"/>
-<label x="342.9" y="200.66" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="PWM8" class="0">
 <segment>
 <pinref part="MC1" gate="G$1" pin="PC7(OC0DHS,TXD1,SCK,EVOUT,CLK)"/>
 <wire x1="226.06" y1="71.12" x2="238.76" y2="71.12" width="0.1524" layer="91"/>
 <label x="231.14" y="71.12" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="JP9" gate="A" pin="1"/>
-<wire x1="358.14" y1="180.34" x2="342.9" y2="180.34" width="0.1524" layer="91"/>
-<label x="342.9" y="180.34" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
