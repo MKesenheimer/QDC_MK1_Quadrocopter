@@ -28,6 +28,3 @@ Bekannte Fehler
 - kein Failsafe implementiert
 - keine Spannungsüberwachung
 - PID-Werte noch nicht optimal
-
-
-Bei Fragen, Anregungen, Wünsche und Verbesserungsvorschläge bin ich unter m.kesenheimer@gmx.net erreichbar.
