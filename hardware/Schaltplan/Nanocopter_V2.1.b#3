@@ -189,10 +189,10 @@
 <circle x="43.7826" y="-43.7523" radius="3.55" width="0.0508" layer="20"/>
 <circle x="-43.7749" y="43.8052" radius="3.55" width="0.0508" layer="20"/>
 <circle x="-43.7749" y="-43.7523" radius="3.55" width="0.0508" layer="20"/>
-<text x="20.0025" y="-42.8625" size="2.54" layer="21" font="vector" rot="R180">QDC MK2</text>
-<text x="13.6525" y="-19.3675" size="2.54" layer="22" font="vector" rot="MR0">Nano QDC MK2</text>
-<text x="10.16" y="-20.955" size="1.27" layer="22" font="vector" rot="MR0">M. Kesenheimer 2014</text>
-<text x="1.5875" y="-47.625" size="1.27" layer="21" font="vector">M. Kesenheimer 2014</text>
+<text x="20.0025" y="-42.8625" size="2.54" layer="21" font="vector" rot="R180">QDC MK2.1</text>
+<text x="13.6525" y="-19.3675" size="2.54" layer="22" font="vector" rot="MR0">Nano QDC MK2.1</text>
+<text x="10.16" y="-20.955" size="1.27" layer="22" font="vector" rot="MR0">M. Kesenheimer 2015</text>
+<text x="1.5875" y="-47.625" size="1.27" layer="21" font="vector">M. Kesenheimer 2015</text>
 <text x="2.2225" y="-23.495" size="0.8128" layer="21" font="vector" rot="R180">USB B</text>
 <text x="-10.4775" y="-13.0175" size="0.8128" layer="21" font="vector">VUSB</text>
 <text x="-19.3675" y="-11.43" size="0.8128" layer="21" font="vector">VBAT</text>
@@ -214,14 +214,16 @@
 <wire x1="-57.7088" y1="18.0086" x2="-56.0324" y2="16.3576" width="0" layer="20" curve="-90"/>
 <wire x1="-57.6834" y1="-18.0086" x2="-56.0324" y2="-16.3576" width="0" layer="20" curve="90"/>
 <wire x1="-56.0324" y1="-16.3576" x2="-56.0324" y2="16.3576" width="0" layer="20"/>
-<hole x="-89.8525" y="15.875" drill="3.2"/>
-<hole x="-89.8525" y="-15.875" drill="3.2"/>
-<hole x="-58.26125" y="-15.875" drill="3.2"/>
-<hole x="-58.26125" y="15.875" drill="3.2"/>
+<hole x="-89.8906" y="15.8496" drill="3.2"/>
+<hole x="-89.8906" y="-15.8496" drill="3.2"/>
+<hole x="-58.1914" y="-15.8496" drill="3.2"/>
+<hole x="-58.1914" y="15.8496" drill="3.2"/>
 <wire x1="-92.0496" y1="-18.0086" x2="-92.0496" y2="18.0086" width="0" layer="48"/>
 <wire x1="-92.0496" y1="-18.0086" x2="-56.0324" y2="-18.0086" width="0" layer="48"/>
 <wire x1="-56.0324" y1="18.0086" x2="-56.0324" y2="-18.0086" width="0" layer="48"/>
 <wire x1="-56.0324" y1="18.0086" x2="-92.0496" y2="18.0086" width="0" layer="48"/>
+<wire x1="-92.0496" y1="18.0086" x2="-56.0324" y2="-18.0086" width="0" layer="48"/>
+<wire x1="-56.0324" y1="18.0086" x2="-92.0496" y2="-18.0086" width="0" layer="48"/>
 </plain>
 <libraries>
 <library name="SparkFun">

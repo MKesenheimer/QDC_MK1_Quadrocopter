@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -218,6 +218,10 @@
 <hole x="-89.8525" y="-15.875" drill="3.2"/>
 <hole x="-58.26125" y="-15.875" drill="3.2"/>
 <hole x="-58.26125" y="15.875" drill="3.2"/>
+<wire x1="-92.0496" y1="-18.0086" x2="-92.0496" y2="18.0086" width="0" layer="48"/>
+<wire x1="-92.0496" y1="-18.0086" x2="-56.0324" y2="-18.0086" width="0" layer="48"/>
+<wire x1="-56.0324" y1="18.0086" x2="-56.0324" y2="-18.0086" width="0" layer="48"/>
+<wire x1="-56.0324" y1="18.0086" x2="-92.0496" y2="18.0086" width="0" layer="48"/>
 </plain>
 <libraries>
 <library name="SparkFun">
@@ -1230,6 +1234,9 @@ design rules under a new name.</description>
 <autorouter>
 <pass name="Default">
 <param name="RoutingGrid" value="50mil"/>
+<param name="AutoGrid" value="1"/>
+<param name="Efforts" value="0"/>
+<param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="|"/>
 <param name="PrefDir.2" value="0"/>
