@@ -10772,6 +10772,8 @@ mit Strom versorgt.</text>
 <text x="205.74" y="215.9" size="1.778" layer="97">von USB</text>
 <text x="205.74" y="208.28" size="1.778" layer="97">SJ2: Power über USB oder nur
 Batterie laden.</text>
+<text x="198.12" y="226.06" size="1.778" layer="97">TODO: 5V Step up nötig? Rx31c sollte
+eigentlich mit minimal 3V arbeiten können.</text>
 </plain>
 <instances>
 <instance part="U3" gate="G$1" x="215.9" y="195.58"/>
